@@ -410,6 +410,7 @@ Provide completed 7+1 to receive acknowledgement message:
 - Description of each piece of cargo
 - Number of pieces
 - Total weight of the cargo
+
 Provide at least one of each of the following test messages: 
 - Master air waybill (FWB)
 - House waybill (FHL)
