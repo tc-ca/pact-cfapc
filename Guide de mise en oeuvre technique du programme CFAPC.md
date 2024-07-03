@@ -4,101 +4,101 @@ AU CHARGEMENT
 
 Table des matières
 
-[1 Aperçu [6](#aperçu)](#aperçu)
+[1 Aperçu](#aperçu)
 
-[1.1 Contexte [6](#contexte)](#contexte)
+[1.1 Contexte](#contexte)
 
-[1.2 Portée [6](#portée)](#portée)
+[1.2 Portée](#portée)
 
-[1.3 Public visé [7](#public-visé)](#public-visé)
+[1.3 Public visé](#public-visé)
 
-[1.4 Participants nécessaires et admissibles [7](#participants-nécessaires-et-admissibles)](#participants-nécessaires-et-admissibles)
+[1.4 Participants nécessaires et admissibles](#participants-nécessaires-et-admissibles)
 
-[1.4.1 Participants nécessaires (transporteurs aériens) [7](#participants-nécessaires-transporteurs-aériens)](#participants-nécessaires-transporteurs-aériens)
+[1.4.1 Participants nécessaires (transporteurs aériens)](#participants-nécessaires-transporteurs-aériens)
 
-[1.4.2 Participants admissibles (autres présentateurs de données) [7](#participants-admissibles-autres-présentateurs-de-données)](#participants-admissibles-autres-présentateurs-de-données)
+[1.4.2 Participants admissibles (autres présentateurs de données)](#participants-admissibles-autres-présentateurs-de-données)
 
-[1.5 Points de contact réglementaires [7](#points-de-contact-réglementaires)](#points-de-contact-réglementaires)
+[1.5 Points de contact réglementaires](#points-de-contact-réglementaires)
 
-[1.6 Date d’entrée en vigueur [8](#date-dentrée-en-vigueur)](#date-dentrée-en-vigueur)
+[1.6 Date d’entrée en vigueur](#date-dentrée-en-vigueur)
 
-[2 Connexion au programme CFAPC [9](#connexion-au-programme-cfapc)](#connexion-au-programme-cfapc)
+[2 Connexion au programme CFAPC](#connexion-au-programme-cfapc)
 
-[2.1 Diagramme de ciblage du CFAPC [9](#diagramme-de-ciblage-du-cfapc)](#diagramme-de-ciblage-du-cfapc)
+[2.1 Diagramme de ciblage du CFAPC](#diagramme-de-ciblage-du-cfapc)
 
-[2.2 Inscription au CFAPC [9](#inscription-au-cfapc)](#inscription-au-cfapc)
+[2.2 Inscription au CFAPC](#inscription-au-cfapc)
 
-[2.2.1 Inscription [9](#inscription)](#inscription)
+[2.2.1 Inscription](#inscription)
 
-[2.2.2 Configuration initiale et connexion [10](#configuration-initiale-et-connexion)](#configuration-initiale-et-connexion)
+[2.2.2 Configuration initiale et connexion](#configuration-initiale-et-connexion)
 
-[2.2.3 Messages bidirectionnels [10](#messages-bidirectionnels)](#messages-bidirectionnels)
+[2.2.3 Messages bidirectionnels](#messages-bidirectionnels)
 
-[2.2.4 Configuration des webhook [11](#configuration-des-webhook)](#configuration-des-webhook)
+[2.2.4 Configuration des webhook](#configuration-des-webhook)
 
-[2.2.5 Exigences de présentation et réponses [11](#exigences-de-présentation-et-réponses)](#exigences-de-présentation-et-réponses)
+[2.2.5 Exigences de présentation et réponses](#exigences-de-présentation-et-réponses)
 
-[2.2.5.1.1 Règles opérationnelles et de mise en œuvre [13](#règles-opérationnelles-et-de-mise-en-œuvre)](#règles-opérationnelles-et-de-mise-en-œuvre)
+[2.2.5.1.1 Règles opérationnelles et de mise en œuvre](#règles-opérationnelles-et-de-mise-en-œuvre)
 
-[2.3 Environnements d’essai et de production du CFAPC [16](#environnements-dessai-et-de-production-du-cfapc)](#environnements-dessai-et-de-production-du-cfapc)
+[2.3 Environnements d’essai et de production du CFAPC](#environnements-dessai-et-de-production-du-cfapc)
 
-[2.3.1 Environnement d’essai du CFAPC [16](#environnement-dessai-du-cfapc)](#environnement-dessai-du-cfapc)
+[2.3.1 Environnement d’essai du CFAPC](#environnement-dessai-du-cfapc)
 
-[2.3.2 Environnement de production du CFAPC [22](#environnement-de-production-du-cfapc)](#environnement-de-production-du-cfapc)
+[2.3.2 Environnement de production du CFAPC](#environnement-de-production-du-cfapc)
 
-[3 Caractéristiques des messages du CFAPC [24](#caractéristiques-des-messages-du-cfapc)](#caractéristiques-des-messages-du-cfapc)
+[3 Caractéristiques des messages du CFAPC](#caractéristiques-des-messages-du-cfapc)
 
-[3.1 Formats des messages [24](#formats-des-messages)](#formats-des-messages)
+[3.1 Formats des messages](#formats-des-messages)
 
-[3.2 Versions prises en charge des messages du CFAPC [25](#versions-prises-en-charge-des-messages-du-cfapc)](#versions-prises-en-charge-des-messages-du-cfapc)
+[3.2 Versions prises en charge des messages du CFAPC](#versions-prises-en-charge-des-messages-du-cfapc)
 
-[3.2.1 Versions Cargo-XML prises en charge [25](#versions-cargo-xml-prises-en-charge)](#versions-cargo-xml-prises-en-charge)
+[3.2.1 Versions Cargo-XML prises en charge](#versions-cargo-xml-prises-en-charge)
 
-[3.2.2 Versions C-IMP prises en charge [25](#versions-c-imp-prises-en-charge)](#versions-c-imp-prises-en-charge)
+[3.2.2 Versions C-IMP prises en charge](#versions-c-imp-prises-en-charge)
 
-[3.2.3 Versions CAMIR prises en charge [26](#versions-camir-prises-en-charge)](#versions-camir-prises-en-charge)
+[3.2.3 Versions CAMIR prises en charge](#versions-camir-prises-en-charge)
 
-[3.3 Réponses aux messages Cargo-XML [26](#réponses-aux-messages-cargo-xml)](#réponses-aux-messages-cargo-xml)
+[3.3 Réponses aux messages Cargo-XML](#réponses-aux-messages-cargo-xml)
 
-[3.3.1 Réponses aux messages XFNM [26](#réponses-aux-messages-xfnm)](#réponses-aux-messages-xfnm)
+[3.3.1 Réponses aux messages XFNM](#réponses-aux-messages-xfnm)
 
-[3.3.2 Messages d’avis de statut XCSN [31](#messages-davis-de-statut-xcsn)](#messages-davis-de-statut-xcsn)
+[3.3.2 Messages d’avis de statut XCSN](#messages-davis-de-statut-xcsn)
 
-[3.4 Réponses aux messages CAMIR [37](#réponses-aux-messages-camir)](#réponses-aux-messages-camir)
+[3.4 Réponses aux messages CAMIR](#réponses-aux-messages-camir)
 
-[3.4.1 Messages de rapport d’erreur préliminaire (PER) [37](#messages-de-rapport-derreur-préliminaire-per)](#messages-de-rapport-derreur-préliminaire-per)
+[3.4.1 Messages de rapport d’erreur préliminaire (PER)](#messages-de-rapport-derreur-préliminaire-per)
 
-[3.4.2 Messages d’avis de statut préliminaire (PSN) [40](#messages-davis-de-statut-préliminaire-psn)](#messages-davis-de-statut-préliminaire-psn)
+[3.4.2 Messages d’avis de statut préliminaire (PSN)](#messages-davis-de-statut-préliminaire-psn)
 
-[3.4.3 Codes de réponse HTTP [41](#codes-de-réponse-http)](#codes-de-réponse-http)
+[3.4.3 Codes de réponse HTTP](#codes-de-réponse-http)
 
-[3.5 Exemples de messages du CFAPC [42](#exemples-de-messages-du-cfapc)](#exemples-de-messages-du-cfapc)
+[3.5 Exemples de messages du CFAPC](#exemples-de-messages-du-cfapc)
 
-[3.5.1 Exemple de présentation d’un message Cargo-XML [42](#exemple-de-présentation-dun-message-cargo-xml)](#exemple-de-présentation-dun-message-cargo-xml)
+[3.5.1 Exemple de présentation d’un message Cargo-XML](#exemple-de-présentation-dun-message-cargo-xml)
 
-[3.5.2 Exemple de présentation d’un message C-IMP [47](#exemple-de-présentation-dun-message-c-imp)](#exemple-de-présentation-dun-message-c-imp)
+[3.5.2 Exemple de présentation d’un message C-IMP](#exemple-de-présentation-dun-message-c-imp)
 
-[4 Diagramme du ciblage du CFAPC [51](#diagramme-du-ciblage-du-cfapc)](#diagramme-du-ciblage-du-cfapc)
+[4 Diagramme du ciblage du CFAPC](#diagramme-du-ciblage-du-cfapc)
 
-[5 Glossaire [52](#glossaire)](#glossaire)
+[5 Glossaire](#glossaire)
 
-[6 Caractères et descriptions inacceptables [53](#caractères-et-descriptions-inacceptables)](#caractères-et-descriptions-inacceptables)
+[6 Caractères et descriptions inacceptables](#caractères-et-descriptions-inacceptables)
 
-[6.1 Caractères inacceptables dans le nom ou l’adresse de l’expéditeur/du destinataire ou dans la description des marchandises [53](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)
+[6.1 Caractères inacceptables dans le nom ou l’adresse de l’expéditeur/du destinataire ou dans la description des marchandises](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)
 
-[6.2 Descriptions de marchandises inacceptables [54](#descriptions-de-marchandises-inacceptables)](#descriptions-de-marchandises-inacceptables)
+[6.2 Descriptions de marchandises inacceptables](#descriptions-de-marchandises-inacceptables)
 
-[6.3 Données insuffisantes/de mauvaise qualité [55](#données-insuffisantesde-mauvaise-qualité)](#données-insuffisantesde-mauvaise-qualité)
+[6.3 Données insuffisantes/de mauvaise qualité](#données-insuffisantesde-mauvaise-qualité)
 
-[7 Modèles de courriels [57](#modèles-de-courriels)](#modèles-de-courriels)
+[7 Modèles de courriels](#modèles-de-courriels)
 
-[7.1 Demande de renseignements [57](#demande-de-renseignements)](#demande-de-renseignements)
+[7.1 Demande de renseignements](#demande-de-renseignements)
 
-[7.2 Demande de vérification [58](#demande-de-vérification)](#demande-de-vérification)
+[7.2 Demande de vérification](#demande-de-vérification)
 
-[7.3 Ne pas charger [59](#ne-pas-charger)](#ne-pas-charger)
+[7.3 Ne pas charger](#ne-pas-charger)
 
-[7.4 Données insuffisantes/de mauvaise qualité [60](#données-insuffisantesde-mauvaise-qualité-1)](#données-insuffisantesde-mauvaise-qualité-1)
+[7.4 Données insuffisantes/de mauvaise qualité](#données-insuffisantesde-mauvaise-qualité-1)
 
 Historique des modifications
 
