@@ -4,124 +4,252 @@ AU CHARGEMENT
 
 Table des matières
 
-[1 Aperçu](#aperçu)
+[1 Aperçu [7](#aperçu)](#aperçu)
 
-[1.1 Contexte](#contexte)
+[1.1 Contexte [7](#contexte)](#contexte)
 
-[1.2 Portée](#portée)
+[1.2 Portée [7](#portée)](#portée)
 
-[1.3 Public visé](#public-visé)
+[1.3 Public visé [8](#public-visé)](#public-visé)
 
-[1.4 Participants nécessaires et admissibles](#participants-nécessaires-et-admissibles)
+[1.4 Participants nécessaires et admissibles [8](#participants-nécessaires-et-admissibles)](#participants-nécessaires-et-admissibles)
 
-[1.4.1 Participants nécessaires (transporteurs aériens)](#participants-nécessaires-transporteurs-aériens)
+[1.4.1 Participants nécessaires (transporteurs aériens) [8](#participants-nécessaires-transporteurs-aériens)](#participants-nécessaires-transporteurs-aériens)
 
-[1.4.2 Participants admissibles (autres présentateurs de données)](#participants-admissibles-autres-présentateurs-de-données)
+[1.4.2 Participants admissibles (autres présentateurs de données) [8](#participants-admissibles-autres-présentateurs-de-données)](#participants-admissibles-autres-présentateurs-de-données)
 
-[1.5 Points de contact réglementaires](#points-de-contact-réglementaires)
+[1.5 Points de contact réglementaires [8](#points-de-contact-réglementaires)](#points-de-contact-réglementaires)
 
-[1.6 Date d’entrée en vigueur](#date-dentrée-en-vigueur)
+[1.6 Date d’entrée en vigueur [9](#date-dentrée-en-vigueur)](#date-dentrée-en-vigueur)
 
-[2 Connexion au programme CFAPC](#connexion-au-programme-cfapc)
+[2 Connexion au programme CFAPC [10](#connexion-au-programme-cfapc)](#connexion-au-programme-cfapc)
 
-[2.1 Diagramme de ciblage du CFAPC](#diagramme-de-ciblage-du-cfapc)
+[2.1 Diagramme de ciblage du CFAPC [10](#diagramme-de-ciblage-du-cfapc)](#diagramme-de-ciblage-du-cfapc)
 
-[2.2 Inscription au CFAPC](#inscription-au-cfapc)
+[2.2 Inscription au CFAPC [10](#inscription-au-cfapc)](#inscription-au-cfapc)
 
-[2.2.1 Inscription](#inscription)
+[2.2.1 Inscription [10](#inscription)](#inscription)
 
-[2.2.2 Configuration initiale et connexion](#configuration-initiale-et-connexion)
+[2.2.2 Configuration initiale et connexion [11](#configuration-initiale-et-connexion)](#configuration-initiale-et-connexion)
 
-[2.2.3 Messages bidirectionnels](#messages-bidirectionnels)
+[2.2.3 Messages bidirectionnels [11](#messages-bidirectionnels)](#messages-bidirectionnels)
 
-[2.2.4 Configuration des webhook](#configuration-des-webhook)
+[2.2.4 Configuration des webhook [12](#configuration-des-webhook)](#configuration-des-webhook)
 
-[2.2.5 Exigences de présentation et réponses](#exigences-de-présentation-et-réponses)
+[2.2.5 Exigences de présentation et réponses [12](#exigences-de-présentation-et-réponses)](#exigences-de-présentation-et-réponses)
 
-[2.2.5.1.1 Règles opérationnelles et de mise en œuvre](#règles-opérationnelles-et-de-mise-en-œuvre)
+[2.2.5.1.1 Règles opérationnelles et de mise en œuvre [14](#règles-opérationnelles-et-de-mise-en-œuvre)](#règles-opérationnelles-et-de-mise-en-œuvre)
 
-[2.3 Environnements d’essai et de production du CFAPC](#environnements-dessai-et-de-production-du-cfapc)
+[2.3 Environnements d’essai et de production du CFAPC [18](#soumissions-mises-à-jour-en-double-ou-annulées)](#soumissions-mises-à-jour-en-double-ou-annulées)
 
-[2.3.1 Environnement d’essai du CFAPC](#environnement-dessai-du-cfapc)
+[2.3.1 Environnement d’essai du CFAPC [18](#environnement-dessai-du-cfapc)](#environnement-dessai-du-cfapc)
 
-[2.3.2 Environnement de production du CFAPC](#environnement-de-production-du-cfapc)
+[2.3.2 Environnement de production du CFAPC [24](#environnement-de-production-du-cfapc)](#environnement-de-production-du-cfapc)
 
-[3 Caractéristiques des messages du CFAPC](#caractéristiques-des-messages-du-cfapc)
+[3 Caractéristiques des messages du CFAPC [27](#caractéristiques-des-messages-du-cfapc)](#caractéristiques-des-messages-du-cfapc)
 
-[3.1 Formats des messages](#formats-des-messages)
+[3.1 Formats des messages [27](#formats-des-messages)](#formats-des-messages)
 
-[3.2 Versions prises en charge des messages du CFAPC](#versions-prises-en-charge-des-messages-du-cfapc)
+[3.2 Versions prises en charge des messages du CFAPC [28](#versions-prises-en-charge-des-messages-du-cfapc)](#versions-prises-en-charge-des-messages-du-cfapc)
 
-[3.2.1 Versions Cargo-XML prises en charge](#versions-cargo-xml-prises-en-charge)
+[3.2.1 Versions Cargo-XML prises en charge [28](#versions-cargo-xml-prises-en-charge)](#versions-cargo-xml-prises-en-charge)
 
-[3.2.2 Versions C-IMP prises en charge](#versions-c-imp-prises-en-charge)
+[3.2.2 Versions C-IMP prises en charge [28](#versions-c-imp-prises-en-charge)](#versions-c-imp-prises-en-charge)
 
-[3.2.3 Versions CAMIR prises en charge](#versions-camir-prises-en-charge)
+[3.2.3 Versions CAMIR prises en charge [29](#versions-camir-prises-en-charge)](#versions-camir-prises-en-charge)
 
-[3.3 Réponses aux messages Cargo-XML](#réponses-aux-messages-cargo-xml)
+[3.3 Réponses aux messages Cargo-XML [29](#réponses-aux-messages-cargo-xml)](#réponses-aux-messages-cargo-xml)
 
-[3.3.1 Réponses aux messages XFNM](#réponses-aux-messages-xfnm)
+[3.3.1 Réponses aux messages XFNM [29](#réponses-aux-messages-xfnm)](#réponses-aux-messages-xfnm)
 
-[3.3.2 Messages d’avis de statut XCSN](#messages-davis-de-statut-xcsn)
+[3.3.2 Messages d’avis de statut XCSN [34](#messages-davis-de-statut-xcsn)](#messages-davis-de-statut-xcsn)
 
-[3.4 Réponses aux messages CAMIR](#réponses-aux-messages-camir)
+[3.4 Réponses aux messages CAMIR [41](#réponses-aux-messages-camir)](#réponses-aux-messages-camir)
 
-[3.4.1 Messages de rapport d’erreur préliminaire (PER)](#messages-de-rapport-derreur-préliminaire-per)
+[3.4.1 Messages de rapport d’erreur préliminaire (PER) [41](#messages-de-rapport-derreur-préliminaire-per)](#messages-de-rapport-derreur-préliminaire-per)
 
-[3.4.2 Messages d’avis de statut préliminaire (PSN)](#messages-davis-de-statut-préliminaire-psn)
+[3.4.2 Messages d’avis de statut préliminaire (PSN) [44](#messages-davis-de-statut-préliminaire-psn)](#messages-davis-de-statut-préliminaire-psn)
 
-[3.4.3 Codes de réponse HTTP](#codes-de-réponse-http)
+[3.4.3 Codes de réponse HTTP [45](#codes-de-réponse-http)](#codes-de-réponse-http)
 
-[3.5 Exemples de messages du CFAPC](#exemples-de-messages-du-cfapc)
+[3.5 Exemples de messages du CFAPC [46](#exemples-de-messages-du-cfapc)](#exemples-de-messages-du-cfapc)
 
-[3.5.1 Exemple de présentation d’un message Cargo-XML](#exemple-de-présentation-dun-message-cargo-xml)
+[3.5.1 Exemple de présentation d’un message Cargo-XML [46](#exemple-de-présentation-dun-message-cargo-xml)](#exemple-de-présentation-dun-message-cargo-xml)
 
-[3.5.2 Exemple de présentation d’un message C-IMP](#exemple-de-présentation-dun-message-c-imp)
+[3.5.2 Exemple de présentation d’un message C-IMP [51](#exemple-de-présentation-dun-message-c-imp)](#exemple-de-présentation-dun-message-c-imp)
 
-[4 Diagramme du ciblage du CFAPC](#diagramme-du-ciblage-du-cfapc)
+[4 Diagramme du ciblage du CFAPC [55](#diagramme-du-ciblage-du-cfapc)](#diagramme-du-ciblage-du-cfapc)
 
-[5 Glossaire](#glossaire)
+[5 Glossaire [56](#glossaire)](#glossaire)
 
-[6 Caractères et descriptions inacceptables](#caractères-et-descriptions-inacceptables)
+[6 Caractères et descriptions inacceptables [57](#caractères-et-descriptions-inacceptables)](#caractères-et-descriptions-inacceptables)
 
-[6.1 Caractères inacceptables dans le nom ou l’adresse de l’expéditeur/du destinataire ou dans la description des marchandises](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)
+[6.1 Caractères inacceptables dans le nom ou l’adresse de l’expéditeur/du destinataire ou dans la description des marchandises [57](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)
 
-[6.2 Descriptions de marchandises inacceptables](#descriptions-de-marchandises-inacceptables)
+[6.2 Descriptions de marchandises inacceptables [58](#descriptions-de-marchandises-inacceptables)](#descriptions-de-marchandises-inacceptables)
 
-[6.3 Données insuffisantes/de mauvaise qualité](#données-insuffisantesde-mauvaise-qualité)
+[6.3 Données insuffisantes/de mauvaise qualité [59](#données-insuffisantesde-mauvaise-qualité)](#données-insuffisantesde-mauvaise-qualité)
 
-[7 Modèles de courriels](#modèles-de-courriels)
+[7 Modèles de courriels [61](#modèles-de-courriels)](#modèles-de-courriels)
 
-[7.1 Demande de renseignements](#demande-de-renseignements)
+[7.1 Demande de renseignements [61](#demande-de-renseignements)](#demande-de-renseignements)
 
-[7.2 Demande de vérification](#demande-de-vérification)
+[7.2 Demande de vérification [62](#demande-de-vérification)](#demande-de-vérification)
 
-[7.3 Ne pas charger](#ne-pas-charger)
+[7.3 Ne pas charger [63](#ne-pas-charger)](#ne-pas-charger)
 
-[7.4 Données insuffisantes/de mauvaise qualité](#données-insuffisantesde-mauvaise-qualité-1)
+[7.4 Données insuffisantes/de mauvaise qualité [64](#données-insuffisantesde-mauvaise-qualité-1)](#données-insuffisantesde-mauvaise-qualité-1)
+
+[7.5 Panne imprévue du système [65](#panne-imprévue-du-système)](#panne-imprévue-du-système)
 
 Historique des modifications
 
-| Date | Version | Section(s) | Description/motif |
-|----|----|----|----|
-| 26 jan. 2024 | 1 |  | Diffusion initiale |
-| 10 avril 2024 | 1.1 | 2.2.5.1 Éléments de données du CFAPC | Remarque sur l’heure de départ |
-|  |  | 2.3.1 Environnements d’essai et de production du CFAPC | Clarifications sur les mises à l’essai |
-|  |  | 3.3.1 Réponses aux messages XFNM | Mise à jour de la définition du INVALID_HOUSE_BILL_NBR |
-|  |  | 3.4.1 Messages de rapport d’erreur préliminaire (PER) | Mise à jour de la définition du INVALID_HOUSE_BILL_NBR et des messages d’erreur CAMIR PER |
-|  |  | \*Nouvelle section\* 6 sur les descriptions des marchandises | Exemples de descriptions de marchandises acceptables et inacceptables afin d’éviter des erreurs de données insuffisantes  |
-| 6 mai 2024         | 1.2 | 2.3.1.1 Mise à l’essai de la présentation des données | Mise à jour de la section afin de fournir des paramètres sur l'analyse des données soumises |
-| 27 juin 2024 | 1.3 | 2.2.5.1 Éléments de données du CFAPC | Remarque : Les transitaires doivent mettre à jour le connaissement interne avec le numéro de référence du connaissement principal une fois que celui-ci est connu |
-|  |  | \*Nouvelle section\* 2.2.5.1.1 Règles opérationnelles et de mise en œuvre | Décrit les règles opérationnelles et les règles de mise en œuvre concernant les éléments de données du CFAPC |
-|  |  | 2.2.5.3 Partie responsable | Changement à l’en-tête de partie responsable lorsque ce champ ne s’applique pas |
-|  |  | Nouvelle section 2.3.1.2 Tester automatiquement les procédures d’atténuation des risques (RFI, RFS et DNL) pour les implémentations bidirectionnelles | Tester automatiquement les messages d’atténuation des risques pour les implémentations bidirectionnelles |
-|  |  | 3.3.1 Réponses aux messages XFNM | Nouveaux codes de message d’erreur pour routage non valide et synchronisation non valide |
-|  |  | 3.3.2 Messages d’avis de statut XCSN | Nouvel exemple XCSN pour un message d’évaluation terminée du CFAPC |
-|  |  | 3.3.2 Messages d’avis de statut XCSN | Nouvel exemple XCSN pour un RFI d’un connaissement interne |
-|  |  | 3.4.1 Messages de rapport d’erreur préliminaire (PER) | Nouveaux codes de message d’erreur pour routage non valide et synchronisation non valide |
-|  |  | 6\. Caractères et descriptions inacceptables | Ajout de messages d’erreur générés manuellement |
-|  |  | \*New section\* 6.3 Données insuffisantes/de mauvaise qualité | Réponses d’erreur générés manuellement |
-|  |  | \*New section\* 7 Modèles de courriels | Modèles de courriels pour RFI/RFS/DNL et Données insuffisantes/de mauvaise qualité |
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 28%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr>
+<th>Date</th>
+<th>Version</th>
+<th>Section(s)</th>
+<th>Description/motif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26 jan. 2024</td>
+<td>1</td>
+<td></td>
+<td>Diffusion initiale</td>
+</tr>
+<tr>
+<td rowspan="5">10 avril 2024</td>
+<td rowspan="5">1.1</td>
+<td>2.2.5.1 Éléments de données du CFAPC</td>
+<td>Remarque sur l’heure de départ</td>
+</tr>
+<tr>
+<td>2.3.1 Environnements d’essai et de production du CFAPC</td>
+<td>Clarifications sur les mises à l’essai</td>
+</tr>
+<tr>
+<td>3.3.1 Réponses aux messages XFNM</td>
+<td>Mise à jour de la définition du INVALID_HOUSE_BILL_NBR</td>
+</tr>
+<tr>
+<td>3.4.1 Messages de rapport d’erreur préliminaire (PER)</td>
+<td>Mise à jour de la définition du INVALID_HOUSE_BILL_NBR et des messages d’erreur CAMIR PER</td>
+</tr>
+<tr>
+<td>*Nouvelle section* 6 sur les descriptions des marchandises</td>
+<td>Exemples de descriptions de marchandises acceptables et inacceptables afin d’éviter des erreurs de données insuffisantes </td>
+</tr>
+<tr>
+<td>6 mai 2024        </td>
+<td>1.2</td>
+<td>2.3.1.1 Mise à l’essai de la présentation des données</td>
+<td>Mise à jour de la section afin de fournir des paramètres sur l'analyse des données soumises</td>
+</tr>
+<tr>
+<td rowspan="11">27 juin 2024</td>
+<td rowspan="11">1.3</td>
+<td>2.2.5.1 Éléments de données du CFAPC</td>
+<td>Remarque : Les transitaires doivent mettre à jour le connaissement interne avec le numéro de référence du connaissement principal une fois que celui-ci est connu</td>
+</tr>
+<tr>
+<td>*Nouvelle section* 2.2.5.1.1 Règles opérationnelles et de mise en œuvre</td>
+<td>Décrit les règles opérationnelles et les règles de mise en œuvre concernant les éléments de données du CFAPC</td>
+</tr>
+<tr>
+<td>2.2.5.3 Partie responsable</td>
+<td>Changement à l’en-tête de partie responsable lorsque ce champ ne s’applique pas</td>
+</tr>
+<tr>
+<td>Nouvelle section 2.3.1.2 Tester automatiquement les procédures d’atténuation des risques (RFI, RFS et DNL) pour les implémentations bidirectionnelles</td>
+<td>Tester automatiquement les messages d’atténuation des risques pour les implémentations bidirectionnelles</td>
+</tr>
+<tr>
+<td>3.3.1 Réponses aux messages XFNM</td>
+<td>Nouveaux codes de message d’erreur pour routage non valide et synchronisation non valide</td>
+</tr>
+<tr>
+<td>3.3.2 Messages d’avis de statut XCSN</td>
+<td>Nouvel exemple XCSN pour un message d’évaluation terminée du CFAPC</td>
+</tr>
+<tr>
+<td>3.3.2 Messages d’avis de statut XCSN</td>
+<td>Nouvel exemple XCSN pour un RFI d’un connaissement interne</td>
+</tr>
+<tr>
+<td>3.4.1 Messages de rapport d’erreur préliminaire (PER)</td>
+<td>Nouveaux codes de message d’erreur pour routage non valide et synchronisation non valide</td>
+</tr>
+<tr>
+<td>6. Caractères et descriptions inacceptables</td>
+<td>Ajout de messages d’erreur générés manuellement</td>
+</tr>
+<tr>
+<td><p>*Nouvelle section*</p>
+<p>6.3 Données insuffisantes/de mauvaise qualité</p></td>
+<td>Réponses d’erreur générés manuellement</td>
+</tr>
+<tr>
+<td><p>*Nouvelle section*</p>
+<p>7 Modèles de courriels</p></td>
+<td>Modèles de courriels pour RFI/RFS/DNL et Données insuffisantes/de mauvaise qualité</td>
+</tr>
+<tr>
+<td rowspan="7">17 octobre 2024</td>
+<td rowspan="7">1.4</td>
+<td>2.2.5.1.1 Règles opérationnelles et de mise en œuvre</td>
+<td><p>Définitions pour courrier et valise diplomatique</p>
+<p>Format des champs d’adresses et des numéros MAWB spécifié</p>
+<p>Champs de données non-obligatoires acceptés</p></td>
+</tr>
+<tr>
+<td>2.2.5.4 Types de réponses</td>
+<td>Clarification que les messages FFM recevront des réponses aux messages</td>
+</tr>
+<tr>
+<td><p>*nouvelle section*</p>
+<p>2.2.5.5 Soumissions mises à jour, en double, ou annulées</p></td>
+<td>Explication du fonctionnement du système de CFAPC lorsque des messages mis à jour ou en double sont envoyés</td>
+</tr>
+<tr>
+<td>2.3.2.1 Soutien du CFAPC lors d’une panne</td>
+<td>Section renommée; ajout de directives sur la continuité des opérations en cas de panne de système</td>
+</tr>
+<tr>
+<td>3.3.1 Réponses aux messages XFNM</td>
+<td><p>Ajout d’une référence au FFM dans le tableau d’exemples, sous accusé de réception et « BAD_WBL_FORMAT »</p>
+<p>Ajout de « l’Image 5 » Réponse au message de FFM (accusé de réception)</p></td>
+</tr>
+<tr>
+<td>3.4.1 Messages de rapport d’erreur préliminaire (PER)</td>
+<td>Ajout d’une référence au FFM dans le tableau d’exemples PER, sous « BAD_WBL _FORMAT »</td>
+</tr>
+<tr>
+<td>3.4.2 Messages d’avis de statut préliminaire (PSN)</td>
+<td>Ajout d’un exemple de réponse au message FFM dans le tableau d’exemples PSN</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>3.5.2 Exemple de présentation d’un message C-IMP</td>
+<td>Ajout d’un exemple d’accusé de réception au message FFM (« Image 15 »)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>7 Modèles de courriels</td>
+<td>Ajout d’un exemple de courriel pour une panne imprévue du système de CFAPC *Section 7.5*</td>
+</tr>
+</tbody>
+</table>
 
 # Aperçu
 
@@ -359,7 +487,7 @@ Le programme CFAPC peut également accepter d’autres éléments de données so
 
 **Remarque :** Les messages de regroupement ne satisfont pas généralement à ces exigences car ceux-ci ne contiennent pas nécessairement les noms et les adresses des expéditeurs d’origine, ni la description de chaque unité de fret, auquel cas tous les connaissements internes connexes sont nécessaires. Bien que le système puisse accepter une description du fret telle que « regroupement », cette description ne satisfait pas aux exigences réglementaires.
 
-**Remarque :** Le présentateur des données peut soumettre un connaissement interne avant de connaître le numéro du connaissement aérien principal et peut laisser ce dernier en blanc (p. ex., lorsque c’est un transitaire qui présente les données sur le connaissement interne pour le transporteur aérien). <span class="mark">Une fois connu le numéro du connaissement aérien principal, le connaissement interne doit être présenté à nouveau par le transitaire avec le numéro du connaissement aérien principal avant le départ</span>. Ce sont les transporteurs aériens qui demeurent responsables de se conformer aux exigences réglementaires sur toutes les données à soumettre (y compris lorsque ces données sont présentées par d’autres participants).
+**Remarque :** Le présentateur des données peut soumettre un connaissement interne avant de connaître le numéro du connaissement aérien principal et peut laisser ce dernier en blanc (p. ex., lorsque c’est un transitaire qui présente les données sur le connaissement interne pour le transporteur aérien). Une fois connu le numéro du connaissement aérien principal, le connaissement interne doit être présenté à nouveau par le transitaire avec le numéro du connaissement aérien principal avant le départ. Ce sont les transporteurs aériens qui demeurent responsables de se conformer aux exigences réglementaires sur toutes les données à soumettre (y compris lorsque ces données sont présentées par d’autres participants).
 
 En plus des éléments de données « 7+1 », le programme CFAPC demande aussi que les renseignements suivants soient fournis dès que possible après le départ du vol à partir du dernier point de départ et avant son arrivée au Canada :
 
@@ -381,7 +509,9 @@ Les règles suivantes spécifient les formats de données et fournissent des con
 
 - On suppose que l’heure est en temps universel coordonné (UTC);
 
-- Les numéros du connaissement aérien principal devraient contenir un maximum de 13 caractères.
+- Adresse : pour les adresses d’expéditeur et de destinataire, le système PACT exige, **au minimum,** des données dans les champs \< Address Line 1 \> et \< Country \>. Si le code postal n’est pas disponible, le nœud doit être inclus mais doit rester vide, p. ex., \<PostcodeCode\>\</PostcodeCode\>Les numéros du connaissement aérien principal devraient contenir un maximum de 13 caractères et leur format devrait être aligné avec le format défini dans la Résolution 600a de l’IATA et la pratique recommandée 1675 :
+
+  - Un numéro de série qui contient le code de transporteur aérien de l’IATA à 3 chiffres, suivi d’un trait d’union, suivi d’un numéro de série à 8 chiffres comprenant le chiffre de contrôle placé à la position d’extrême droite;
 
 - Les expéditions de regroupement sont reconnues par les indicateurs suivants dans le connaissement aérien principal :
 
@@ -389,11 +519,17 @@ Les règles suivantes spécifient les formats de données et fournissent des con
 
   - Pour les messages FWB en C-IMP, utilisez NC pour le champ de description des marchandises pour les regroupements et NG pour les expéditions directes;
 
-- Le code de système harmonisé (code SH) n’est pas obligatoire pour la description des marchandises. Les transmetteurs de données ne sont pas tenus de supprimer les codes HS de la lettre de transport aérien avant de la soumettre.
+- Le code de système harmonisé (code SH) n’est pas obligatoire pour la description des marchandises. Les transmetteurs de données ne sont pas tenus de supprimer les codes HS de la lettre de transport aérien avant de la soumettre;
 
 - Le nombre total d’unités représente le nombre de pièces de fret dans une expédition. La plus petite unité d’emballage externe représente une pièce de fret. Les articles individuels emballés d’une telle façon qu’il soit impossible de les diviser sans défaire l’emballage représentent une seule pièce de fret;
 
-- Le poids est mesuré en kilogrammes.
+- Le poids est mesuré en kilogrammes;
+
+- À l’exception du courrier et des valises diplomatiques, les données présentées en plus des champs de données obligatoires pour le CFAPC n’ont pas besoin d’être enlevées lors de la soumission. Par exemple, les champs de données tels que : « Sender Qualifier » ou « Recipient Qualifier » ne sont pas exigés par le CFAPC mais ne produiront pas de message d’erreur du système CFAPC.
+
+- Le courrier est tout objet indivisible (messages, renseignements, fonds ou marchandises), transmis par des opérateurs postaux désignés, à partir du moment où il est accepté au dépôt jusqu’à ce qu’il soit livré;
+
+- Valise diplomatique: conformément à la norme internationale énoncée dans l’article 27 de la Convention de Vienne sur les relations diplomatiques, les colis constituant la valise diplomatique doivent porter des marques extérieures visibles de leur caractère et ne peuvent contenir que des documents diplomatiques ou des objets à usage officiel.
 
 #### Données d’en‑tête à transmettre
 
@@ -472,7 +608,7 @@ Tableau 2 : Données d’en-tête des demandes du CFAPC
 
 #### Partie responsable
 
-La valeur de l’en‑tête de la partie responsable est un code à sept (7) chiffres qui précise quelle partie recevra les avis d’atténuation de tous les risques émis par le CFAPC et qui y répondra. Si le présentateur des données reçoit également et réagit à toutes les mesures d’atténuation des risques, on peut alors <span class="mark">enlever</span> l’en-tête de la partie responsable. Cela vaut pour de nombreux transporteurs aériens et transitaires qui s’occupent eux-mêmes des RFI/RFS/DNL.
+La valeur de l’en‑tête de la partie responsable est un code à sept (7) chiffres qui précise quelle partie recevra les avis d’atténuation de tous les risques émis par le CFAPC et qui y répondra. Si le présentateur des données reçoit également et réagit à toutes les mesures d’atténuation des risques, on peut alors enlever l’en-tête de la partie responsable. Cela vaut pour de nombreux transporteurs aériens et transitaires qui s’occupent eux-mêmes des RFI/RFS/DNL.
 
 Pour les agrégateurs de données et toute autre partie qui présente des données au CFAPC au nom d’un transporteur aérien, mais qui ne s’occupe pas de la gestion des mesures d’atténuation des risques, le code de la partie responsable doit préciser la partie responsable.
 
@@ -508,7 +644,17 @@ Au cas où les données d’envoi contiendraient des indicateurs de risque, le C
 
 - Pour le CAMIR/C-IMP, qui comprend les codes 7H, 7I, 7J, 8H, 8I, 8J, 6H, 6J, et 6I. Voir <u>Messages d’avis de statut préliminaire (PSN)</u>.
 
-- Remarque : Tous les messages du CFAPC contiennent un identifiant de conversation (corps CXML) et/ou un identifiant de corrélation (en‑tête http CXML/CIMP) à titre de référence.
+  **Remarque :** Tous les messages du CFAPC contiennent un identifiant de conversation (corps CXML) et/ou un identifiant de corrélation (en‑tête http CXML/CIMP) à titre de référence.
+
+  **Remarque :** les messages d’accusé de réception ou d’erreur seront envoyés en réponse aux FFM et prendront le même format que les messages de réponse aux soumissions de connaissement aériens. Des exemples se trouvent dans les sections suivantes : [Réponses aux messages XFNM](#réponses-aux-messages-xfnm) et [Messages d’avis de statut préliminaire (PSN).](#messages-davis-de-statut-préliminaire-psn)
+
+#### Soumissions mises à jour, en double, ou annulées
+
+Les participants doivent fournir les mises à jour qui s’appliquent aux soumissions des connaissements internes (FHL) et/ou principaux (FWB), jusqu’au départ du vol.
+
+Lorsqu’un présentateur de données soumet un FHL ou FWB mis à jour ou en double, le système du CFAPC va comparer cette soumission au message précédent, le cas échéant, et va identifier la présente soumission comme étant nouvelle ou mise à jour (une soumission mise à jour comprend aussi les soumissions en double). Les participants recevront une confirmation de réception pour chaque mise à jour qui est soumise. La dernière soumission sera traitée comme la source d’information la plus à jour. Tant que la mise à jour ne change pas l’évaluation des risques du CFAPC, les participants recevront à nouveau le message d’évaluation terminée. Si le HAWB a été lié à un MAWB, toute mise à jour au HAWB subséquente devra inclure le numéro du MAWB qui lui est associé. Les annulations des FHL ou FWB ne sont pas prises en charge par le système.
+
+Le système du CFAPC peut accepter les FFM en double, mis à jour, ou séparés, et considèrera le moment de réception du premier FFM comme l’heure de départ du vol. Les soumissions de FFM mis à jour peuvent servir à soumettre de l’information manquante mais ne supprimeront pas les renseignements qui ont été soumis précédemment. Les annulations des FFM ne sont pas pris en charge par le système.
 
 ## Environnements d’essai et de production du CFAPC 
 
@@ -542,15 +688,29 @@ Fournir tous les éléments de données « 7+1 » afin de recevoir le message d'
 
 - Poids total du fret
 
+Fournir les renseignements du manifeste de vol suivants (après le départ du vol) :
+
+- Date et heure de départ du vol
+
+- Numéro du vol
+
+- Aérodrome de destination
+
+- Liste des numéros des lettres de transport aérien du vol
+
 Fournir au moins un de chacun des messages d'essai suivants :
 
 - Connaissement principal (FWB)
 
 - Connaissement interne (FHL)
 
+- Manifeste du vol (XFFM/FFM)
+
 - Lettre de transport avec poids manquant pour tester les messages d'erreur
 
-- Lettre de transport avec une description des marchandises conformément à la section *6.2 Descriptions de marchandises inacceptables* pour tester les messages d'erreur
+- Lettre de transport avec une description des marchandises conformément à la section [*Descriptions de marchandises inacceptables*](#descriptions-de-marchandises-inacceptables) pour tester les messages d'erreur
+
+- Manifeste de vol avec le numéro de vol manquant, afin de tester le message d’erreur
 
 Le participant sera avisé par le CFAPC s’il y a des problèmes qu’il faut résoudre ou s’il doit soumettre d’autres données d’essai.
 
@@ -704,9 +864,10 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</p></td>
 
 Dans un message FWB, les codes d’essai sont ajoutés dans la ligne de description du produit.
 
+<figure>
 <img src="images/media/image2.png" style="width:3.17334in;height:3.61723in" />
-
-Image 1 : Ajout de codes d’essai aux messages FWB
+<figcaption><p>Image 1: Ajout de codes d’essai aux messages FWB</p></figcaption>
+</figure>
 
 ##### Code d’essai dans les messages XFWB
 
@@ -733,11 +894,45 @@ Après un essai fructueux des procédures d’atténuation des risques, le parti
 
 Après suffisamment d’essais dans l’environnement d’essai du CFAPC et l’approbation d’un représentant du CFAPC de Transports Canada, les participants passeront à l’environnement de production du CFAPC. Il est prévu que les participants commencent à travailler dans cet environnement au plus tard à l’automne 2024.
 
-#### Soutien du CFAPC
+#### Soutien du CFAPC lors d’une panne
 
-Transports Canada a adopté et appuie les systèmes de sécurité essentiels inhérents à un environnement de production qui permettent au CFAPC de fonctionner 24 heures sur 24, 7 jours sur 7. Dans le cas inhabituel où le CFAPC connaîtrait une panne inopinée, Transports Canada avertira les participants lorsqu’une panne est confirmée en leur fournissant d’autres directives. Durant une panne, les participants doivent continuer de présenter des données au CFAPC.
+Transports Canada a adopté et appuie les systèmes de sécurité essentiels inhérents à un environnement de production qui permettent au CFAPC de fonctionner 24 heures sur 24, 7 jours sur 7. Dans le cas où le CFAPC connaîtrait une panne inopinée, Transports Canada avertira les participants lorsqu’une panne est confirmée et lorsqu’elle aura été résolue. Un gabarit de l’avis de Transports Canada attendu par courriel lors d’une panne se trouve à la [section 7](#panne-imprévue-du-système).
 
-Si vous éprouvez des problèmes à vous connecter au CFAPC, veuillez-vous adresser au soutien du CFAPC à l’adresse <pact-information-cfapc@tc.gc.ca>.
+Si les participants rencontrent un problème avec le système du CFAPC qui prévient leur soumission des données ou qui prévient leur réception de l’accusé de réception comme prévu), on demande aux participants de mettre en œuvre une politique de relance exponentielle pendant une période de 15 minutes. Si ces tentatives de soumissions restent infructueuses après 15 minutes et que Transports Canada n’a pas envoyé d’avis de panne, on demande aux participants d’envoyer un courriel à la boîte de courriel du CFAPC (<PACT-Information-CFAPC@tc.gc.ca>) afin d’en informer Transports Canada.
+
+Le soutien à la technologie de l’information (TI) de Transports Canada ne sera disponible que durant les heures d’ouverture via la boîte de courriel Information CFAPC; tout de même, Transports Canada exploite un Centre d’opérations 24h sur 24, 7 jours sur 7, qui pourra être rejoint par courriel après les heures d’ouverture, une fois que le règlement sera en vigueur.
+
+Jusqu’à l’entrée en vigueur du règlement :
+
+Les transporteurs aériens <u>peuvent continuer de transporter</u> le fret lors d’une panne et <u>ne devront pas</u> soumettre les renseignements d’une façon alternative tel que par courriel. Une fois que les transporteurs aériens auront été informés que le panne est résolue, ils devront reprendre leurs opérations régulières et soumettre les données via le système de CFAPC.
+
+Une fois que le règlement sera en vigueur :
+
+Après avoir confirmé la panne, Transports Canada informera les transporteurs aériens par courriel de ce qui suit :
+
+1.  **Panne ayant un impact sur la soumission des données et/ou l’accusé de réception :**
+
+Si la durée escomptée de la panne est de plus de 30 minutes (à partir du moment où les transporteurs aériens ont été informés de la panne), Transports Canada émettra un avis de sûreté sur le Portail de communication sécurisée de Transports Canada qui suspendrait temporairement l’application de l’exigence de « l’accusé de réception ». En conséquence, les transporteurs aériens ne seraient pas pénalisés pour avoir transporté le fret sans avoir reçu « l’accusé de réception » qui suivrait la réception des renseignements 7+1 (typiquement requis conformément au *Règlement canadien de 2012 sur la sûreté aérienne*. Veuillez mettre en file d’attente tous les renseignements à soumettre à Transports Canada une fois que la panne sera résolue. En fonction de la durée de la panne, Transports Canada pourrait lever l’exigence de la mise en file des données, et communiquerait ce changement par courriel.
+
+Une fois que la panne sera résolue, Transports Canada informera les transporteurs aériens par courriel. Transports Canada permettra un délai de grâce de 2 heures à la suite de l’avis de panne résolue, ce qui permettra aux transporteurs aériens de reprendre leurs opérations régulières sans être pénalisés pour avoir transporté le fret sans avoir reçu d’accusé de réception tel que décrit ci-dessus. Les transporteurs aériens devront mettre en file d’attente et envoyer au système du CFAPC tous les renseignements obligatoires sur les expéditions qui ont été transportées durant la panne.
+
+> **Remarque :** Pour les expéditions qui ont reçu un accusé de réception <u>avant</u> que l’avis de sûreté proposé ait été émis, <u>les transporteurs aériens ne doivent pas transporter</u> les expéditions avec une demande de renseignements (RFI), une demande de contrôle (RFS), ou un avis ne pas charger (DNL) en suspens ou non-résolu(e). Ces mesures d’atténuation en suspens pourraient être abordées par courriel lors d’une panne. Toute mesure d’atténuation en suspens devra être résolue avant que le transporteur aérien ne soit autorisé à transporter l’expédition concernée.
+
+2.  **Panne n’ayant pas d’impact sur la soumission des données et/ou l’accusé de réception :**
+
+Si la durée escomptée de la panne est de plus de 30 minutes (à partir du moment où les transporteurs aériens ont été informés de la panne), Transports Canada pourrait émettre une suspension temporaire des exigences réglementaires du programme de CFAPC, au cas par cas. Étant donné que le message « d’évaluation terminée » n’est pas en soi une exigence réglementaire, les transporteurs aériens peuvent continuer de transporter du fret durant la panne, à condition que l’expédition n’ait pas de RFI, RFS, ou DNL en suspens.
+
+**Si un transporteur aérien ou son fournisseur de services délégué subit une panne imprévue :**
+
+Le transporteur aérien doit informer Transports Canada à l’adresse PACT-Information-CFAPC@tc.gc.ca dès que le transporteur aérien prend connaissance de la panne non-planifiée et doit aviser Transports Canada aussitôt que la panne est résolue.
+
+Si la durée escomptée de la panne est de plus de 30 minutes (à partir du moment où le transporteur aérien a informé Transports Canada de la panne), Transports Canada <u>pourrait</u> émettre un avis de sûreté au transporteur aérien en question, pour suspendre temporairement les exigences réglementaires du CFAPC, au cas par cas.
+
+**Pour les interruptions de système prévues/planifiées :**
+
+Les transporteurs aériens ayant planifié une période de non-disponibilité des systèmes doit informer Transports Canada à l’adresse PACT-Information-CFAPC@tc.gc.ca au moins trois (3) jours ouvrables avant l’interruption planifiée. L’équipe du CFAPC fournira des instructions au cas par cas dans ces circonstances.
+
+L’indisponibilité prévue pour l’entretien du système du CFAPC ne devrait pas compter plus de 4,5 heures par année. Les transporteurs aériens seront avertis au moins trois jours ouvrables avant l’interruption planifiée et recevront des instructions supplémentaires.
 
 #### Procédures d’atténuation des risques (RFI, RFS et DNL)
 
@@ -745,7 +940,7 @@ Si les renseignements fournis ne permettent pas de procéder à l’évaluation 
 
 Si d’autres mises à jour ou présentations en double sont transmises au CFAPC après l’envoi du code d’atténuation des risques, d’autres messages de réponse seront expédiés en précisant qu’une « retenue » s’impose jusqu’à ce qu’on ait reçu et évalué la réponse par courriel. Si la réponse par courriel est satisfaisante, le représentant du CFAPC répondra par un courriel de confirmation et un message généré par le système sera expédié pour lever la « retenue ». Toutes les transmissions suivantes seront marquées du statut SF ou CO, selon le format du message de réponse.
 
-Si de multiples participants à la chaîne d’approvisionnement ont déjà envoyé au CFAPC un message sur cet envoi précis, toutes les personnes-ressources connexes en seront averties (messages et courriels de statut), <span class="mark">y compris ceux associés au connaissement aérien principal dans le cas où un RFI/RFS/DNL est émis en référence à un connaissement interne. La référence au connaissement interne sera incluse dans le champ « Associated Reference Document » ainsi que le sujet du courriel qui suit la DDR/RFS/DNL initiale.</span>
+Si de multiples participants à la chaîne d’approvisionnement ont déjà envoyé au CFAPC un message sur cet envoi précis, toutes les personnes-ressources connexes en seront averties (messages et courriels de statut), y compris ceux associés au connaissement aérien principal dans le cas où un RFI/RFS/DNL est émis en référence à un connaissement interne. La référence au connaissement interne sera incluse dans le champ « Associated Reference Document » ainsi que le sujet du courriel qui suit la DDR/RFS/DNL initiale.
 
 **Remarque :** Jusqu’à ce que la « retenue » soit levée, il est interdit au transporteur aérien de transporter le fret à destination du Canada.
 
@@ -966,7 +1161,8 @@ Ce type de message expédie des réponses d’erreur et d’accusé de réceptio
 <tbody>
 <tr>
 <td>Accusé de réception</td>
-<td>Accusé de réception du message reçu sans erreurs</td>
+<td><p>Accusé de réception du message reçu sans erreurs</p>
+<p><em>Remarque : également utilisé en réponse au FFM</em></p></td>
 <td><p>&lt;ram:ConditionCode&gt;Acknowledgement&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;No Errors&lt;/ram:Reason&gt;</p></td>
 </tr>
@@ -1062,7 +1258,8 @@ Ce type de message expédie des réponses d’erreur et d’accusé de réceptio
 </tr>
 <tr>
 <td>BAD_WBL_FORMAT</td>
-<td>On n’a pas pu lire le message</td>
+<td><p>On n’a pas pu lire le message</p>
+<p><em>Remarque : également utilisé en réponse au FFM</em></p></td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;BAD_WBL_FORMAT&lt;/ram:Reason&gt;</p></td>
 </tr>
@@ -1117,14 +1314,19 @@ Tableau 7 : Réponses aux messages XFNM
 
 <figure>
 <img src="images/media/image4.png" style="width:6.25972in;height:5.74306in" alt="A screenshot of a computer code showing an error response from PACT in C-XML format." />
-<figcaption><p>Figure 3 : Réponse d’erreur Cargo-XML</p></figcaption>
+<figcaption><p>Image 3 : Réponse d’erreur Cargo-XML</p></figcaption>
 </figure>
 
 ##### Exemple XFNM — Message de réponse (accusé de réception)
 
 <figure>
 <img src="images/media/image5.png" style="width:6.17795in;height:5.62579in" alt="A screenshot of a computer code showing C-XML acknowledgement response from PACT." />
-<figcaption><p>Figure 4 : Accusé de réception Cargo-XML</p></figcaption>
+<figcaption><p>Image 4 : Accusé de réception Cargo-XML</p></figcaption>
+</figure>
+
+<figure>
+<img src="images/media/image6.png" style="width:6.25972in;height:7.06458in" />
+<figcaption><p>Image 5 : Accusé de réception du FFM en Cargo-XML</p></figcaption>
 </figure>
 
 ### Messages d’avis de statut XCSN
@@ -1145,29 +1347,27 @@ Tableau 8 : Codes de réponse Cargo-XML
 
 ##### Exemple XCSN — Réponse CSN (évaluation terminée)
 
-<img src="images/media/image6.png" style="width:6.93216in;height:7.44319in" />
+<img src="images/media/image7.png" style="width:6.93216in;height:7.44319in" />
 
 <figure>
-<img src="images/media/image7.png" style="width:6.89365in;height:6.67966in" />
-<figcaption><blockquote>
-<p>Figure 5 : Message d’évaluation terminée</p>
-</blockquote></figcaption>
+<img src="images/media/image8.png" style="width:6.89365in;height:6.67966in" />
+<figcaption><p>Image 6 : Message d’évaluation terminée</p></figcaption>
 </figure>
 
 ##### Exemple XCSN - Réponse CSN (RFI)
 
-<img src="images/media/image8.jpeg" style="width:7.1966in;height:7.35652in" />
+<img src="images/media/image9.jpeg" style="width:7.1966in;height:7.35652in" />
 
 <figure>
-<img src="images/media/image9.jpeg" style="width:7.28505in;height:6.36522in" />
-<figcaption><p>Figure 61 : Message de réponse RFI</p></figcaption>
+<img src="images/media/image10.jpeg" style="width:7.28505in;height:6.36522in" />
+<figcaption><p>Image 7 : Message de réponse RFI</p></figcaption>
 </figure>
 
 ##### Exemple XCSN - Réponse CSN (RFI du connaisement interne) 
 
 <figure>
-<img src="images/media/image10.png" style="width:5.69913in;height:7.85512in" />
-<figcaption><p>Figure 7 : Message de réponse RFI (interne)</p></figcaption>
+<img src="images/media/image11.png" style="width:5.69913in;height:7.85512in" />
+<figcaption><p>Image 8 : Message de réponse RFI (interne)</p></figcaption>
 </figure>
 
 ## Réponses aux messages CAMIR
@@ -1285,7 +1485,8 @@ Ce type de message envoie les réponses d’erreur possible suivantes du program
 </tr>
 <tr>
 <td>BAD_WBL_FORMAT</td>
-<td>On n’a pas réussi à lire le message</td>
+<td><p>On n’a pas réussi à lire le message</p>
+<p><em>Remarque : également utilisé en réponse au FFM</em></p></td>
 <td><p>PER</p>
 <p>ERR/400/BAD_WBL_FORMAT</p></td>
 </tr>
@@ -1339,8 +1540,8 @@ Tableau 9 : Messages d’erreur CAMIR
 ##### Exemple PER – Message de réponse (erreur)
 
 <figure>
-<img src="images/media/image11.png" style="width:2.0625in;height:2.83333in" />
-<figcaption><p>Figure 8 : Réponse d’erreur CAMIR</p></figcaption>
+<img src="images/media/image12.png" style="width:2.0625in;height:2.83333in" />
+<figcaption><p>Image 9 : Réponse d’erreur CAMIR</p></figcaption>
 </figure>
 
 ### Messages d’avis de statut préliminaire (PSN)
@@ -1367,6 +1568,12 @@ Ce type de message envoie les réponses possibles suivantes sous format CAMIR du
 <td>SR</td>
 <td><p>PSN</p>
 <p>007-12345678-ABC1022506</p>
+<p>CSN/SR/22NOV1902/NO ERRORS</p></td>
+</tr>
+<tr>
+<td>Message reçu (FFM)</td>
+<td>SR</td>
+<td><p>PSN</p>
 <p>CSN/SR/22NOV1902/NO ERRORS</p></td>
 </tr>
 <tr>
@@ -1469,43 +1676,28 @@ Les messages suivants sont des exemples d’un connaissement aérien principal e
 
 ##### Exemple de présentation d’un connaissement aérien principal
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr>
-<th><img src="images/media/image12.png" style="width:6.25972in;height:7.66736in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 1." /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="images/media/image13.png" style="width:6.25972in;height:6.89861in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 2." /></td>
-</tr>
-<tr>
-<td><img src="images/media/image14.png" style="width:6.25972in;height:6.97986in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 3." /></td>
-</tr>
-<tr>
-<td><p><img src="images/media/image15.png" style="width:6.25972in;height:3.15833in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 4." /></p>
-<p>Figure 9 : Exemple d’un connaissement aérien principal Cargo-XML</p></td>
-</tr>
-</tbody>
-</table>
+| <img src="images/media/image13.png" style="width:6.25972in;height:7.66736in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 1." /> |
+|----|
+| <img src="images/media/image14.png" style="width:6.25972in;height:6.89861in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 2." /> |
+| <img src="images/media/image15.png" style="width:6.25972in;height:6.97986in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 3." /> |
+| <img src="images/media/image16.png" style="width:6.25972in;height:3.15833in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 4." /> |
+
+Image 10 : Exemple d’un connaissement aérien principal Cargo-XML
 
 ##### Réponse (accusé de réception – pas d’erreurs)
 
 <figure>
-<img src="images/media/image16.png" style="width:5.43081in;height:4.05654in" alt="A screenshot of a computer code showing an application and error report response in C-XML format." />
-<figcaption><p>Figure 10 : Accusé de réception Cargo-XML – exemple sans erreurs</p></figcaption>
+<img src="images/media/image17.png" style="width:5.43081in;height:4.05654in" alt="A screenshot of a computer code showing an application and error report response in C-XML format." />
+<figcaption><p>Image 11 : Accusé de réception Cargo-XML – exemple sans erreurs</p></figcaption>
 </figure>
 
 **Exemple du manifeste de vol**
 
-<img src="images/media/image17.jpeg" style="width:5.5in;height:5.01597in" /> 
+<img src="images/media/image18.jpeg" style="width:5.5in;height:5.01597in" /> 
 
 <figure>
-<img src="images/media/image18.jpeg" style="width:5.5in;height:0.97292in" />
-<figcaption><p>Figure 11 : exemple d’un FFM Cargo-XML</p></figcaption>
+<img src="images/media/image19.jpeg" style="width:5.5in;height:0.97292in" />
+<figcaption><p>Image 12 : exemple d’un FFM Cargo-XML</p></figcaption>
 </figure>
 
  
@@ -1517,37 +1709,45 @@ Les messages suivants sont des exemples : de connaissements principal et intern
 ##### Exemple de présentation d’un connaissement principal
 
 <figure>
-<img src="images/media/image19.png" style="width:3.77409in;height:6.16029in" alt="A screenshot of a computer code showing an submitted house waybill in C-IMP." />
-<figcaption><p>Figure 12 : Exemple de présentation d’un connaissement principal C-IMP</p></figcaption>
+<img src="images/media/image20.png" style="width:3.77409in;height:6.16029in" alt="A screenshot of a computer code showing an submitted house waybill in C-IMP." />
+<figcaption><p>Image 13 : Exemple de présentation d’un connaissement principal C-IMP</p></figcaption>
 </figure>
 
 ##### Exemple de réponse d’accusé de réception
 
-<img src="images/media/image20.png" style="width:2.33333in;height:0.71875in" alt="A screenshot of a computer code showing a PSN response in C-IMP format." />
+<figure>
+<img src="images/media/image21.png" style="width:2.33333in;height:0.71875in" alt="A screenshot of a computer code showing a PSN response in C-IMP format." />
+<figcaption><p>Image 14 : Accusé de réception C-IMP</p></figcaption>
+</figure>
 
-Figure 13 : Accusé de réception C-IMP
+<figure>
+<img src="images/media/image22.png" style="width:2.43046in;height:1.05439in" />
+<figcaption><p>Image 15 : Accusé de réception au message FFM en C-IMP</p></figcaption>
+</figure>
 
 ##### Exemple de présentation d’un connaissement interne comportant des erreurs
 
-<img src="images/media/image21.png" style="width:4.02083in;height:3.60417in" alt="A screenshot of a computer code showing a house waybill with errors submission in C-IMP format." />
-
-Figure 14 : Connaissement interne C-IMP comportant des erreurs
+<figure>
+<img src="images/media/image23.png" style="width:4.02083in;height:3.60417in" alt="A screenshot of a computer code showing a house waybill with errors submission in C-IMP format." />
+<figcaption><p>Image 16 : Connaissement interne C-IMP comportant des erreurs</p></figcaption>
+</figure>
 
 ##### Exemple de réponse d’erreur
 
-<img src="images/media/image22.png" style="width:2.09375in;height:0.72917in" alt="A screenshot of a computer code showing an error response in C-IMP format." />
-
-Figure 15 : Exemple de réponse d’erreur
+<figure>
+<img src="images/media/image24.png" style="width:2.09375in;height:0.72917in" alt="A screenshot of a computer code showing an error response in C-IMP format." />
+<figcaption><p>Image 17 : Exemple de réponse d’erreur</p></figcaption>
+</figure>
 
 **Exemple de manifeste de vol**
 
-<img src="images/media/image23.png" style="width:4.02083in;height:3.01042in" /> 
+<img src="images/media/image25.png" style="width:4.02083in;height:3.01042in" /> 
 
-Figure 16 : Message du manifeste de vol en format C-IMP
+Image 18 : Message du manifeste de vol en format C-IMP
 
 # Diagramme du ciblage du CFAPC
 
-<img src="images/media/image26.png" style="width:10.24342in;height:4.51824in" />
+<img src="images/media/image28.png" style="width:10.24342in;height:4.51824in" />
 
 # Glossaire
 
@@ -1651,7 +1851,7 @@ XFFM (Cargo-XML)</td>
 
 La section suivante fournit des exemples de messages qui seront rejetés parce que les détails requis sont manquants.
 
-Si des messages contenant de telles données inacceptables sont envoyés au CFAPC, une erreur synchrone sera envoyée au présentateur et le message sera rejeté. Voir les sections [3.3.1 Réponses aux messages XFNM](#réponses-aux-messages-xfnm) et [3.4.1 Messages de rapport d’erreur préliminaire (PER)](#messages-de-rapport-derreur-préliminaire-per) pour une liste d’erreurs en C-XML et CAMIR. <span class="mark">Ces erreurs sont envoyées immédiatement, mais peuvent également être générées manuellement après examen par un cibleur (voir section [6.3 Données insuffisantes/de mauvaise qualité](#données-insuffisantesde-mauvaise-qualité-1)).</span>
+Si des messages contenant de telles données inacceptables sont envoyés au CFAPC, une erreur synchrone sera envoyée au présentateur et le message sera rejeté. Voir les sections [3.3.1 Réponses aux messages XFNM](#réponses-aux-messages-xfnm) et [3.4.1 Messages de rapport d’erreur préliminaire (PER)](#messages-de-rapport-derreur-préliminaire-per) pour une liste d’erreurs en C-XML et CAMIR. Ces erreurs sont envoyées immédiatement, mais peuvent également être générées manuellement après examen par un cibleur (voir section [6.3 Données insuffisantes/de mauvaise qualité](#_Données_insuffisantes/de_mauvaise)).
 
 ## Caractères inacceptables dans le nom ou l’adresse de l’expéditeur/du destinataire ou dans la description des marchandises
 
@@ -1818,9 +2018,9 @@ La liste suivante donne des exemples de descriptions de marchandises qui ne sont
 
 ## Données insuffisantes/de mauvaise qualité
 
-Lorsqu'un cibleur constate que la qualité des données est insuffisante/de mauvaise qualité dans les <span class="mark">éléments de données CFAPC requis</span>, une erreur est générée manuellement. Voir les sections [3.3.1 Réponses aux messages XFNM](#réponses-aux-messages-xfnm) et [3.4.1 Messages du rapport d'erreur préliminaire (PER)](#messages-de-rapport-derreur-préliminaire-per) pour une liste d'erreurs en C-XML et CAMIR.
+Lorsqu'un cibleur constate que la qualité des données est insuffisante/de mauvaise qualité dans les [éléments de données CFAPC requis](#éléments-de-données-du-cfapc), une erreur est générée manuellement. Voir les sections [3.3.1 Réponses aux messages XFNM](#réponses-aux-messages-xfnm) et [3.4.1 Messages du rapport d'erreur préliminaire (PER)](#messages-de-rapport-derreur-préliminaire-per) pour une liste d'erreurs en C-XML et CAMIR.
 
-Un courriel sera également envoyé pour s'assurer que l'erreur est reçue par les participants qui n'ont pas activé la messagerie bidirectionnelle (voir la section [7.4 Qualité insuffisante/de mauvaise qualité](#données-insuffisantesde-mauvaise-qualité-1) pour un exemple de modèle de courriel).
+Un courriel sera également envoyé pour s'assurer que l'erreur est reçue par les participants qui n'ont pas activé la messagerie bidirectionnelle (voir la section [7.4 Qualité insuffisante/de mauvaise qualité](#_Données_insuffisantes/de_mauvaise) pour un exemple de modèle de courriel).
 
 **<u>Remarque</u>** : Les participants ne sont pas tenus de répondre aux courriels concernant des données insuffisantes/de mauvaise qualité. Lorsqu'un message d'erreur ou un courriel relatif à des données insuffisantes ou de mauvaise qualité est envoyé, la lettre de transport principale ou aérien est renvoyée avec des données modifiées.
 
@@ -1838,7 +2038,7 @@ De: <RFIPACT-DDICFAPC@tc.gc.ca>
 
 CC: <RFIPACT-DDICFAPC@tc.gc.ca>
 
-Transports Canada demande des informations supplémentaires concernant la cargaison identifiée dans la letter de transport aérien (voir l’objet) conformément à la sous-section 741(3) du *Règlement canadien sur la sûreté aérienne, 2012* (RCSA).
+Transports Canada demande des informations supplémentaires concernant la cargaison identifiée dans la lettre de transport aérien (voir l’objet) conformément à la sous-section 741(3) du *Règlement canadien sur la sûreté aérienne, 2012* (RCSA).
 
 Jusqu'à la clôture de cette RFI, il vous est interdit de transporter ce fret sur un vol à destination du Canada, conformément à la sous-section 743 (b) du RCSA.
 
@@ -1983,3 +2183,7 @@ Merci,
 Programme de ciblage du fret aérien préalable au chargement
 
 Transports Canada
+
+## Panne imprévue du système 
+
+<img src="images/media/image29.png" style="width:6.25972in;height:5.86458in" />
