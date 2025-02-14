@@ -1,106 +1,159 @@
-<img src="images/media/image1.jpeg" style="width:8.49653in;height:6.25in" />GUIDE De mise en œuvre TECHNIQUE 2024 DU PROGRAMME DE  
-CIBLAGE du fret AÉRIEN PRÉALABLE  
+<img src="images/media/image1.jpeg" style="width:8.49653in;height:6.25in" />GUIDE De mise en œuvre TECHNIQUE DU PROGRAMME DE CIBLAGE du fret AÉRIEN PRÉALABLE  
 AU CHARGEMENT
 
 Table des matières
 
-[1 Aperçu [7](#aperçu)](#aperçu)
+[1 Aperçu [8](#aperçu)](#aperçu)
 
-[1.1 Contexte [7](#contexte)](#contexte)
+[1.1 Contexte [8](#contexte)](#contexte)
 
-[1.2 Portée [7](#portée)](#portée)
+[1.2 Portée [8](#portée)](#portée)
 
-[1.3 Public visé [8](#public-visé)](#public-visé)
+[1.3 Public visé [9](#public-visé)](#public-visé)
 
-[1.4 Participants nécessaires et admissibles [8](#participants-nécessaires-et-admissibles)](#participants-nécessaires-et-admissibles)
+[1.4 Participants nécessaires et admissibles [9](#participants-nécessaires-et-admissibles)](#participants-nécessaires-et-admissibles)
 
-[1.4.1 Participants nécessaires (transporteurs aériens) [8](#participants-nécessaires-transporteurs-aériens)](#participants-nécessaires-transporteurs-aériens)
+[1.4.1 Participants nécessaires (transporteurs aériens) [9](#participants-nécessaires-transporteurs-aériens)](#participants-nécessaires-transporteurs-aériens)
 
-[1.4.2 Participants admissibles (autres présentateurs de données) [8](#participants-admissibles-autres-présentateurs-de-données)](#participants-admissibles-autres-présentateurs-de-données)
+[1.4.2 Participants admissibles (autres présentateurs de données) [9](#participants-admissibles-autres-présentateurs-de-données)](#participants-admissibles-autres-présentateurs-de-données)
 
-[1.5 Points de contact réglementaires [8](#points-de-contact-réglementaires)](#points-de-contact-réglementaires)
+[1.5 Points de contact réglementaires [9](#points-de-contact-réglementaires)](#points-de-contact-réglementaires)
 
-[1.6 Date d’entrée en vigueur [9](#date-dentrée-en-vigueur)](#date-dentrée-en-vigueur)
+[1.6 Date d’entrée en vigueur [10](#date-dentrée-en-vigueur)](#date-dentrée-en-vigueur)
 
-[2 Connexion au programme CFAPC [10](#connexion-au-programme-cfapc)](#connexion-au-programme-cfapc)
+[2 Connexion au programme CFAPC [11](#connexion-au-programme-cfapc)](#connexion-au-programme-cfapc)
 
-[2.1 Diagramme de ciblage du CFAPC [10](#diagramme-de-ciblage-du-cfapc)](#diagramme-de-ciblage-du-cfapc)
+[2.1 Diagramme de ciblage du CFAPC [11](#diagramme-de-ciblage-du-cfapc)](#diagramme-de-ciblage-du-cfapc)
 
-[2.2 Inscription au CFAPC [10](#inscription-au-cfapc)](#inscription-au-cfapc)
+[2.2 Inscription au CFAPC [11](#inscription-au-cfapc)](#inscription-au-cfapc)
 
-[2.2.1 Inscription [10](#inscription)](#inscription)
+[2.2.1 Inscription [11](#inscription)](#inscription)
 
-[2.2.2 Configuration initiale et connexion [11](#configuration-initiale-et-connexion)](#configuration-initiale-et-connexion)
+[2.2.2 Configuration initiale et connexion [12](#configuration-initiale-et-connexion)](#configuration-initiale-et-connexion)
 
-[2.2.3 Messages bidirectionnels [11](#messages-bidirectionnels)](#messages-bidirectionnels)
+[2.2.3 Messages bidirectionnels [12](#messages-bidirectionnels)](#messages-bidirectionnels)
 
-[2.2.4 Configuration des webhook [12](#configuration-des-webhook)](#configuration-des-webhook)
+[2.2.4 Configuration des webhook [13](#configuration-des-webhook)](#configuration-des-webhook)
 
-[2.2.5 Exigences de présentation et réponses [12](#exigences-de-présentation-et-réponses)](#exigences-de-présentation-et-réponses)
+[2.2.5 Exigences de présentation et réponses [13](#exigences-de-présentation-et-réponses)](#exigences-de-présentation-et-réponses)
 
-[2.2.5.1.1 Règles opérationnelles et de mise en œuvre [14](#règles-opérationnelles-et-de-mise-en-œuvre)](#règles-opérationnelles-et-de-mise-en-œuvre)
+[2.2.5.1 Éléments de données du CFAPC [14](#éléments-de-données-du-cfapc)](#éléments-de-données-du-cfapc)
 
-[2.3 Environnements d’essai et de production du CFAPC [18](#soumissions-mises-à-jour-en-double-ou-annulées)](#soumissions-mises-à-jour-en-double-ou-annulées)
+[2.2.5.1.1 Manifeste de vol (FFM) [15](#manifeste-de-vol-ffm)](#manifeste-de-vol-ffm)
 
-[2.3.1 Environnement d’essai du CFAPC [18](#environnement-dessai-du-cfapc)](#environnement-dessai-du-cfapc)
+[2.2.5.1.2 Règles opérationnelles et de mise en œuvre [15](#règles-opérationnelles-et-de-mise-en-œuvre)](#règles-opérationnelles-et-de-mise-en-œuvre)
 
-[2.3.2 Environnement de production du CFAPC [24](#environnement-de-production-du-cfapc)](#environnement-de-production-du-cfapc)
+[2.2.5.2 Données d’en‑tête à transmettre [16](#données-dentête-à-transmettre)](#données-dentête-à-transmettre)
 
-[3 Caractéristiques des messages du CFAPC [27](#caractéristiques-des-messages-du-cfapc)](#caractéristiques-des-messages-du-cfapc)
+[2.2.5.3 Partie responsable [17](#partie-responsable)](#partie-responsable)
 
-[3.1 Formats des messages [27](#formats-des-messages)](#formats-des-messages)
+[2.2.5.4 Types de réponses [18](#types-de-réponses)](#types-de-réponses)
 
-[3.2 Versions prises en charge des messages du CFAPC [28](#versions-prises-en-charge-des-messages-du-cfapc)](#versions-prises-en-charge-des-messages-du-cfapc)
+[2.2.5.5 Soumissions mises à jour, en double, ou annulées [19](#soumissions-mises-à-jour-en-double-ou-annulées)](#soumissions-mises-à-jour-en-double-ou-annulées)
 
-[3.2.1 Versions Cargo-XML prises en charge [28](#versions-cargo-xml-prises-en-charge)](#versions-cargo-xml-prises-en-charge)
+[2.3 Environnements d’essai et de production du CFAPC [19](#environnements-dessai-et-de-production-du-cfapc)](#environnements-dessai-et-de-production-du-cfapc)
 
-[3.2.2 Versions C-IMP prises en charge [28](#versions-c-imp-prises-en-charge)](#versions-c-imp-prises-en-charge)
+[2.3.1 Environnement d’essai du CFAPC [19](#environnement-dessai-du-cfapc)](#environnement-dessai-du-cfapc)
 
-[3.2.3 Versions CAMIR prises en charge [29](#versions-camir-prises-en-charge)](#versions-camir-prises-en-charge)
+[2.3.1.1 Mise à l’essai de la présentation des données [20](#mise-à-lessai-de-la-présentation-des-données)](#mise-à-lessai-de-la-présentation-des-données)
 
-[3.3 Réponses aux messages Cargo-XML [29](#réponses-aux-messages-cargo-xml)](#réponses-aux-messages-cargo-xml)
+[2.3.1.2 Tester automatiquement les procédures d’atténuation des risques (RFI, RFS et DNL) pour les implémentations bidirectionnelles [20](#tester-automatiquement-les-procédures-datténuation-des-risques-rfi-rfs-et-dnl-pour-les-implémentations-bidirectionnelles)](#tester-automatiquement-les-procédures-datténuation-des-risques-rfi-rfs-et-dnl-pour-les-implémentations-bidirectionnelles)
 
-[3.3.1 Réponses aux messages XFNM [29](#réponses-aux-messages-xfnm)](#réponses-aux-messages-xfnm)
+[Code d’essai dans les messages FWB [23](#code-dessai-dans-les-messages-fwb)](#code-dessai-dans-les-messages-fwb)
 
-[3.3.2 Messages d’avis de statut XCSN [34](#messages-davis-de-statut-xcsn)](#messages-davis-de-statut-xcsn)
+[Code d’essai dans les messages XFWB [23](#code-dessai-dans-les-messages-xfwb)](#code-dessai-dans-les-messages-xfwb)
 
-[3.4 Réponses aux messages CAMIR [41](#réponses-aux-messages-camir)](#réponses-aux-messages-camir)
+[2.3.1.3 Mise à l’essai en direct des procédures d’atténuation des risques (RFI, RFS et DNL) [24](#mise-à-lessai-en-direct-des-procédures-datténuation-des-risques-rfi-rfs-et-dnl)](#mise-à-lessai-en-direct-des-procédures-datténuation-des-risques-rfi-rfs-et-dnl)
 
-[3.4.1 Messages de rapport d’erreur préliminaire (PER) [41](#messages-de-rapport-derreur-préliminaire-per)](#messages-de-rapport-derreur-préliminaire-per)
+[2.3.2 Environnement de production du CFAPC [25](#environnement-de-production-du-cfapc)](#environnement-de-production-du-cfapc)
 
-[3.4.2 Messages d’avis de statut préliminaire (PSN) [44](#messages-davis-de-statut-préliminaire-psn)](#messages-davis-de-statut-préliminaire-psn)
+[2.3.2.1 Soutien du CFAPC lors d’une panne [25](#soutien-du-cfapc-lors-dune-panne)](#soutien-du-cfapc-lors-dune-panne)
 
-[3.4.3 Codes de réponse HTTP [45](#codes-de-réponse-http)](#codes-de-réponse-http)
+[2.3.2.2 Procédures d’atténuation des risques (RFI, RFS et DNL) [27](#procédures-datténuation-des-risques-rfi-rfs-et-dnl)](#procédures-datténuation-des-risques-rfi-rfs-et-dnl)
 
-[3.5 Exemples de messages du CFAPC [46](#exemples-de-messages-du-cfapc)](#exemples-de-messages-du-cfapc)
+[3 Caractéristiques des messages du CFAPC [28](#caractéristiques-des-messages-du-cfapc)](#caractéristiques-des-messages-du-cfapc)
 
-[3.5.1 Exemple de présentation d’un message Cargo-XML [46](#exemple-de-présentation-dun-message-cargo-xml)](#exemple-de-présentation-dun-message-cargo-xml)
+[3.1 Formats des messages [28](#formats-des-messages)](#formats-des-messages)
 
-[3.5.2 Exemple de présentation d’un message C-IMP [51](#exemple-de-présentation-dun-message-c-imp)](#exemple-de-présentation-dun-message-c-imp)
+[3.2 Versions prises en charge des messages du CFAPC [29](#versions-prises-en-charge-des-messages-du-cfapc)](#versions-prises-en-charge-des-messages-du-cfapc)
 
-[4 Diagramme du ciblage du CFAPC [55](#diagramme-du-ciblage-du-cfapc)](#diagramme-du-ciblage-du-cfapc)
+[3.2.1 Versions Cargo-XML prises en charge [29](#versions-cargo-xml-prises-en-charge)](#versions-cargo-xml-prises-en-charge)
 
-[5 Glossaire [56](#glossaire)](#glossaire)
+[3.2.2 Versions C-IMP prises en charge [29](#versions-c-imp-prises-en-charge)](#versions-c-imp-prises-en-charge)
 
-[6 Caractères et descriptions inacceptables [57](#caractères-et-descriptions-inacceptables)](#caractères-et-descriptions-inacceptables)
+[3.2.3 Versions CAMIR prises en charge [30](#versions-camir-prises-en-charge)](#versions-camir-prises-en-charge)
 
-[6.1 Caractères inacceptables dans le nom ou l’adresse de l’expéditeur/du destinataire ou dans la description des marchandises [57](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)
+[3.3 Réponses aux messages Cargo-XML [30](#réponses-aux-messages-cargo-xml)](#réponses-aux-messages-cargo-xml)
 
-[6.2 Descriptions de marchandises inacceptables [58](#descriptions-de-marchandises-inacceptables)](#descriptions-de-marchandises-inacceptables)
+[3.3.1 Réponses aux messages XFNM [30](#réponses-aux-messages-xfnm)](#réponses-aux-messages-xfnm)
 
-[6.3 Données insuffisantes/de mauvaise qualité [59](#données-insuffisantesde-mauvaise-qualité)](#données-insuffisantesde-mauvaise-qualité)
+[Exemple XFNM—Message de réponse (erreur) [33](#exemple-xfnmmessage-de-réponse-erreur)](#exemple-xfnmmessage-de-réponse-erreur)
 
-[7 Modèles de courriels [61](#modèles-de-courriels)](#modèles-de-courriels)
+[Exemple XFNM — Message de réponse (accusé de réception) [34](#exemple-xfnm-message-de-réponse-accusé-de-réception)](#exemple-xfnm-message-de-réponse-accusé-de-réception)
 
-[7.1 Demande de renseignements [61](#demande-de-renseignements)](#demande-de-renseignements)
+[3.3.2 Messages d’avis de statut XCSN [35](#messages-davis-de-statut-xcsn)](#messages-davis-de-statut-xcsn)
 
-[7.2 Demande de vérification [62](#demande-de-vérification)](#demande-de-vérification)
+[Exemple XCSN — Réponse CSN (évaluation terminée) [37](#exemple-xcsn-réponse-csn-évaluation-terminée)](#exemple-xcsn-réponse-csn-évaluation-terminée)
 
-[7.3 Ne pas charger [63](#ne-pas-charger)](#ne-pas-charger)
+[Exemple XCSN - Réponse CSN (RFI) [39](#exemple-xcsn---réponse-csn-rfi)](#exemple-xcsn---réponse-csn-rfi)
 
-[7.4 Données insuffisantes/de mauvaise qualité [64](#données-insuffisantesde-mauvaise-qualité-1)](#données-insuffisantesde-mauvaise-qualité-1)
+[Exemple XCSN - Réponse CSN (RFI du connaissement interne) [41](#exemple-xcsn---réponse-csn-rfi-du-connaissement-interne)](#exemple-xcsn---réponse-csn-rfi-du-connaissement-interne)
 
-[7.5 Panne imprévue du système [65](#panne-imprévue-du-système)](#panne-imprévue-du-système)
+[3.4 Réponses aux messages CAMIR [42](#réponses-aux-messages-camir)](#réponses-aux-messages-camir)
+
+[3.4.1 Messages de rapport d’erreur préliminaire (PER) [42](#messages-de-rapport-derreur-préliminaire-per)](#messages-de-rapport-derreur-préliminaire-per)
+
+[Exemple PER – Message de réponse (erreur) [44](#exemple-per-message-de-réponse-erreur)](#exemple-per-message-de-réponse-erreur)
+
+[3.4.2 Messages d’avis de statut préliminaire (PSN) [45](#messages-davis-de-statut-préliminaire-psn)](#messages-davis-de-statut-préliminaire-psn)
+
+[3.4.3 Codes de réponse HTTP [46](#codes-de-réponse-http)](#codes-de-réponse-http)
+
+[3.5 Exemples de messages du CFAPC [47](#exemples-de-messages-du-cfapc)](#exemples-de-messages-du-cfapc)
+
+[3.5.1 Exemples de présentation d’un message Cargo-XML [47](#exemples-de-présentation-dun-message-cargo-xml)](#exemples-de-présentation-dun-message-cargo-xml)
+
+[Exemple de présentation d’un connaissement aérien principal [48](#exemple-de-présentation-dun-connaissement-aérien-principal)](#exemple-de-présentation-dun-connaissement-aérien-principal)
+
+[Réponse (accusé de réception – pas d’erreurs) [51](#réponse-accusé-de-réception-pas-derreurs)](#réponse-accusé-de-réception-pas-derreurs)
+
+[Exemple du manifeste de vol (FFM) [52](#exemple-du-manifeste-de-vol-ffm)](#exemple-du-manifeste-de-vol-ffm)
+
+[3.5.2 Exemples de présentation d’un message C-IMP [52](#exemples-de-présentation-dun-message-c-imp)](#exemples-de-présentation-dun-message-c-imp)
+
+[Exemple de présentation d’un connaissement principal [53](#exemple-de-présentation-dun-connaissement-principal)](#exemple-de-présentation-dun-connaissement-principal)
+
+[Exemple de réponse d’accusé de réception [53](#exemple-de-réponse-daccusé-de-réception)](#exemple-de-réponse-daccusé-de-réception)
+
+[Exemple de présentation d’un connaissement interne comportant des erreurs [54](#exemple-de-présentation-dun-connaissement-interne-comportant-des-erreurs)](#exemple-de-présentation-dun-connaissement-interne-comportant-des-erreurs)
+
+[Exemple de réponse d’erreur [54](#exemple-de-réponse-derreur)](#exemple-de-réponse-derreur)
+
+[Exemple de manifeste de vol (FFM) [55](#exemple-de-manifeste-de-vol-ffm)](#exemple-de-manifeste-de-vol-ffm)
+
+[4 Diagramme du ciblage du CFAPC [56](#diagramme-du-ciblage-du-cfapc)](#diagramme-du-ciblage-du-cfapc)
+
+[5 Glossaire [57](#glossaire)](#glossaire)
+
+[6 Caractères et descriptions inacceptables [58](#caractères-et-descriptions-inacceptables)](#caractères-et-descriptions-inacceptables)
+
+[6.1 Caractères inacceptables dans le nom ou l’adresse de l’expéditeur/du destinataire ou dans la description des marchandises [58](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)](#caractères-inacceptables-dans-le-nom-ou-ladresse-de-lexpéditeurdu-destinataire-ou-dans-la-description-des-marchandises)
+
+[6.2 Descriptions de marchandises inacceptables [59](#descriptions-de-marchandises-inacceptables)](#descriptions-de-marchandises-inacceptables)
+
+[6.3 Données insuffisantes/de mauvaise qualité [60](#données-insuffisantesde-mauvaise-qualité)](#données-insuffisantesde-mauvaise-qualité)
+
+[7 Modèles de courriels [62](#modèles-de-courriels)](#modèles-de-courriels)
+
+[7.1 Demande de renseignements [62](#demande-de-renseignements)](#demande-de-renseignements)
+
+[7.2 Demande de vérification [63](#demande-de-vérification)](#demande-de-vérification)
+
+[7.3 Ne pas charger [64](#ne-pas-charger)](#ne-pas-charger)
+
+[7.4 Données insuffisantes/de mauvaise qualité [65](#données-insuffisantesde-mauvaise-qualité-1)](#données-insuffisantesde-mauvaise-qualité-1)
+
+[7.5 Panne imprévue du système [66](#panne-imprévue-du-système)](#panne-imprévue-du-système)
 
 Historique des modifications
 
@@ -121,13 +174,13 @@ Historique des modifications
 </thead>
 <tbody>
 <tr>
-<td>26 jan. 2024</td>
+<th>26 jan. 2024</th>
 <td>1</td>
 <td></td>
 <td>Diffusion initiale</td>
 </tr>
 <tr>
-<td rowspan="5">10 avril 2024</td>
+<th rowspan="5">10 avril 2024</th>
 <td rowspan="5">1.1</td>
 <td>2.2.5.1 Éléments de données du CFAPC</td>
 <td>Remarque sur l’heure de départ</td>
@@ -149,13 +202,13 @@ Historique des modifications
 <td>Exemples de descriptions de marchandises acceptables et inacceptables afin d’éviter des erreurs de données insuffisantes </td>
 </tr>
 <tr>
-<td>6 mai 2024        </td>
+<th>6 mai 2024        </th>
 <td>1.2</td>
 <td>2.3.1.1 Mise à l’essai de la présentation des données</td>
 <td>Mise à jour de la section afin de fournir des paramètres sur l'analyse des données soumises</td>
 </tr>
 <tr>
-<td rowspan="11">27 juin 2024</td>
+<th rowspan="11">27 juin 2024</th>
 <td rowspan="11">1.3</td>
 <td>2.2.5.1 Éléments de données du CFAPC</td>
 <td>Remarque : Les transitaires doivent mettre à jour le connaissement interne avec le numéro de référence du connaissement principal une fois que celui-ci est connu</td>
@@ -203,8 +256,8 @@ Historique des modifications
 <td>Modèles de courriels pour RFI/RFS/DNL et Données insuffisantes/de mauvaise qualité</td>
 </tr>
 <tr>
-<td rowspan="7">17 octobre 2024</td>
-<td rowspan="7">1.4</td>
+<th rowspan="9">17 octobre 2024</th>
+<td rowspan="9">1.4</td>
 <td>2.2.5.1.1 Règles opérationnelles et de mise en œuvre</td>
 <td><p>Définitions pour courrier et valise diplomatique</p>
 <p>Format des champs d’adresses et des numéros MAWB spécifié</p>
@@ -237,16 +290,45 @@ Historique des modifications
 <td>Ajout d’un exemple de réponse au message FFM dans le tableau d’exemples PSN</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
 <td>3.5.2 Exemple de présentation d’un message C-IMP</td>
 <td>Ajout d’un exemple d’accusé de réception au message FFM (« Image 15 »)</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
 <td>7 Modèles de courriels</td>
 <td>Ajout d’un exemple de courriel pour une panne imprévue du système de CFAPC *Section 7.5*</td>
+</tr>
+<tr>
+<th rowspan="7">14 février 2025</th>
+<td rowspan="7">1.5</td>
+<td>1.6 Date d’entrée en vigueur</td>
+<td>Changement du texte : « lors de la publication » pour « le 1<sup>er</sup> avril 2025 »</td>
+</tr>
+<tr>
+<td>2.2.5.1.1 Manifeste de vol (FFM)</td>
+<td>Ajout de l’en-tête de section</td>
+</tr>
+<tr>
+<td>2.2.5.2 Données d’entête à transmettre</td>
+<td><p>Changement aux instructions concernant l’ajout d’une partie responsable : « ne doit être appliqué que selon les directives d’un membre de l’équipe du CFAPC »</p>
+<p>Ajout d’instructions pour les transporteurs aériens n’ayant pas de code de l’IATA</p></td>
+</tr>
+<tr>
+<td>2.2.5.3 Partie responsable</td>
+<td>Changement aux instructions concernant l’ajout d’une partie responsable : « ne doit être appliqué que selon les directives d’un membre de l’équipe du CFAPC »</td>
+</tr>
+<tr>
+<td>2.3 Environnements d’essai et de production du CFAPC</td>
+<td>Ajout de l’attente du CFAPC que tous les participants soient intégrés dans l’environnement de production avant le 1<sup>er</sup> avril 2025</td>
+</tr>
+<tr>
+<td>2.3.2 Environnement de production du CFAPC</td>
+<td>Ajout de l’attente du CFAPC que tous les participants soient intégrés dans l’environnement de production avant le 1<sup>er</sup> avril 2025</td>
+</tr>
+<tr>
+<td><p>3.3.1-3.3.2</p>
+<p>3.4.1</p>
+<p>3.5.1-3.5.2</p></td>
+<td>Ajout d’en-tête pour chaque exemple</td>
 </tr>
 </tbody>
 </table>
@@ -341,13 +423,13 @@ Transports Canada exige que les points de contact suivants inscrivent un transpo
 
 ## Date d’entrée en vigueur
 
-Les modifications du *Règlement canadien de 2012 sur la sûreté aérienne* entreront en vigueur lors de leur publication dans la partie II de la *Gazette du Canada*, à l’automne 2024. On escompte des transporteurs aériens qu’ils présentent les éléments de données prescrits au CFAPC et qu’ils soient prêts à répondre aux demandes de Transports Canada (RFI, RFS, DNL) à compter de la date de publication, à défaut de quoi ils sont susceptibles de faire l’objet de sanctions administratives pécuniaires (SAP).
+Le *Règlement modifiant le Règlement canadien de 2012 sur la sûreté aérienne* *(fret aérien)* entrera en vigueur le 1<sup>er</sup> avril 2025. On escompte des transporteurs aériens qu’ils présentent les éléments de données prescrits au CFAPC et qu’ils soient prêts à répondre aux demandes de Transports Canada (RFI, RFS, DNL), à défaut de quoi ils sont susceptibles de faire l’objet de sanctions administratives pécuniaires (SAP).
 
 Depuis l’automne 2023, Transports Canada s’est mis à inscrire certains transporteurs aériens et entend augmenter leur volume progressivement, jusqu’à la date d’entrée en vigueur du Règlement. L’objectif est de s’assurer que les modifications d’ordre technique et opérationnel peuvent être mises à l’épreuve et en œuvre bien avant la date d’entrée en vigueur.
 
 # Connexion au programme CFAPC
 
-Le programme CFAPC utilise une interface de protocole d’application Web (« API Web ») afin d’expédier des messages aux participants et d’en recevoir de leur part en format XML-Cargo, ou C‑IMP/CAMIR. Vous trouverez plus de précisions à la section [3.1 Formats des messages](#formats-des-messages) et à la section [3.2 Versions prises en charge des messages CFAPC](#versions-prises-en-charge-des-messages-du-cfapc).
+Le programme CFAPC utilise une interface de protocole d’application Web (« API Web ») afin d’expédier des messages aux participants et d’en recevoir de leur part en format XML-Cargo, ou C‑IMP/CAMIR. Vous trouverez plus de précisions à la section [3.1 Formats des messages](#formats-des-messages) et à la section [3.2 Versions prises en charge des messages CFAPC](#versions-prises-en-charge-des-messages-du-cfapc).
 
 Cette section donne un aperçu du processus d’inscription technique et fournit les précisions nécessaires à l’agencement, à la connexion et à la mise à l’essai des données présentées au CFAPC.
 
@@ -373,7 +455,7 @@ Une fois l’inscription terminée, l’équipe du CFAPC entrera en rapport avec
 
 Pour amorcer le processus d’inscription, veuillez entrer en rapport avec Transports Canada à l’adresse <pact-information-cfapc@tc.gc.ca> et préciser les personnes-ressources figurant à la section [1.2.2.3 Points de contact réglementaires](#points-de-contact-réglementaires). Un représentant du CFAPC répondra dans les deux (2) jours ouvrables pour obtenir d’autres renseignements et finaliser l’inscription.
 
-**Remarque :** Il est vivement conseillé aux transporteurs aériens de mener à bien ce processus le plus rapidement possible pour qu’ils aient suffisamment de temps pour mettre à l’épreuve avec succès les données qu’ils présentent avant que la conformité ne devienne obligatoire à l’automne 2024.
+**Remarque :** Il est vivement conseillé aux transporteurs aériens de mener à bien ce processus le plus rapidement possible pour qu’ils aient suffisamment de temps pour mettre à l’épreuve avec succès les données qu’ils présentent avant que la conformité ne devienne obligatoire en avril 2025.
 
 ### Configuration initiale et connexion
 
@@ -421,12 +503,12 @@ Les messages bidirectionnels exigent la configuration de solutions logicielles i
 </thead>
 <tbody>
 <tr>
-<td>URL</td>
+<th>URL</th>
 <td>Le périphérique du transporteur aérien auquel le CFAPC enverra des messages.</td>
 <td><a href="https://myaircarrier.com/api/myendpoint">https://myaircarrier.com/api/myendpoint</a></td>
 </tr>
 <tr>
-<td>Secret</td>
+<th>Secret</th>
 <td>Une chaîne configurée par le transporteur aérien qui sera annexée à chaque message de réponse dans l’en‑tête « X‑PACT-SECRET » pour permettre au transporteur aérien de confirmer que le message a bien été reçu du programme CFAPC.</td>
 <td>E6HuaaHIB6knkFyaTuUc934SRz37czVJG<br />
 DM7rBtvKN5AhfWcCP9LRVF0LWx9c17L<br />
@@ -437,12 +519,12 @@ h3gwlP7FEFF4uJdMrkjLxFDejKUV9kjYNR<br />
 R314SuCeEoOyIfV..........</td>
 </tr>
 <tr>
-<td>Type de réponse</td>
+<th>Type de réponse</th>
 <td>Le verbe http qui désigne la mesure relative aux données transmises comme la création ou la mise à jour.</td>
 <td>POST, PUT</td>
 </tr>
 <tr>
-<td>En‑tête</td>
+<th>En‑tête</th>
 <td>Une liste des principales paires de clé – valeur ajoutées aux demandes/réponses qui fournissent des renseignements complémentaires.</td>
 <td><p>« X-MYAIRLINE-REQUIRED-HEADER » : « Custom provided header »</p>
 <p>Pour les messages de type texte (FWB, FHL) « Content-Type » : « text/plain »</p>
@@ -450,8 +532,6 @@ R314SuCeEoOyIfV..........</td>
 </tr>
 </tbody>
 </table>
-
-Tableau 1 : éléments nécessaires pour connexion webhook
 
 ### Exigences de présentation et réponses
 
@@ -463,9 +543,7 @@ Les participants reçoivent une série de messages du programme CFAPC qui préci
 
 Le CFAPC exige sept (7) éléments de données et un numéro de lettre de transport aérien (+1) afin de procéder à l’évaluation des risques de tout le fret aérien entrant. Ces éléments de données « 7+1 » sont reconnus à l’échelle internationale comme concept d’utilisation des renseignements préalables sur le fret (PLACI), et on les estime utiles à l’évaluation des risques, car il est possible de les obtenir au début du cycle de vie d’expédition du fret et que pris ensemble, ils peuvent révéler des tendances qui fixent des limites pour le fret à faible risque.
 
-On s’attend de la part des participants à ce qu’ils soumettent les éléments de données au CFAPC le plus tôt possible avant le chargement et à ce qu’ils fournissent les mises à jour jusqu’au moment du départ du vol (signalé par la soumission des renseignements sur le vol énumérés ci-dessous). Aucune des données reçues après le départ ne sera évaluée.
-
-Les transporteurs aériens sont tenus de soumettre les données obligatoires suivantes (7+1) au CFAPC pour procéder à l’évaluation des risques le plus tôt possible avant le chargement :
+Les transporteurs aériens sont tenus de soumettre les données obligatoires suivantes (7+1) au CFAPC pour procéder à l’évaluation des risques le plus tôt possible avant le chargement et de fournir les mises à jour sur ces données jusqu’au moment du départ du vol (signalé par la soumission des renseignements sur le vol énumérés ci-dessous). Aucune des données reçues après le départ ne sera évaluée :
 
 - Le numéro de lettre de transport aérien (qui comprend le numéro de connaissement interne, s’il y a lieu)
 
@@ -489,6 +567,8 @@ Le programme CFAPC peut également accepter d’autres éléments de données so
 
 **Remarque :** Le présentateur des données peut soumettre un connaissement interne avant de connaître le numéro du connaissement aérien principal et peut laisser ce dernier en blanc (p. ex., lorsque c’est un transitaire qui présente les données sur le connaissement interne pour le transporteur aérien). Une fois connu le numéro du connaissement aérien principal, le connaissement interne doit être présenté à nouveau par le transitaire avec le numéro du connaissement aérien principal avant le départ. Ce sont les transporteurs aériens qui demeurent responsables de se conformer aux exigences réglementaires sur toutes les données à soumettre (y compris lorsque ces données sont présentées par d’autres participants).
 
+#### Manifeste de vol (FFM)
+
 En plus des éléments de données « 7+1 », le programme CFAPC demande aussi que les renseignements suivants soient fournis dès que possible après le départ du vol à partir du dernier point de départ et avant son arrivée au Canada :
 
 - La date du vol;
@@ -503,7 +583,7 @@ En plus des éléments de données « 7+1 », le programme CFAPC demande aussi
 
 **Remarque :** le message FFM répond à ces exigences. Le programme CFAPC acceptera l’heure de soumission du message FFM comme étant équivalente à l’heure de départ.
 
-## Règles opérationnelles et de mise en œuvre
+#### Règles opérationnelles et de mise en œuvre
 
 Les règles suivantes spécifient les formats de données et fournissent des conseils généraux lors de la présentation des éléments de données requis soit en Cargo-XML ou en C-IMP, au programme CFAPC :
 
@@ -527,13 +607,13 @@ Les règles suivantes spécifient les formats de données et fournissent des con
 
 - À l’exception du courrier et des valises diplomatiques, les données présentées en plus des champs de données obligatoires pour le CFAPC n’ont pas besoin d’être enlevées lors de la soumission. Par exemple, les champs de données tels que : « Sender Qualifier » ou « Recipient Qualifier » ne sont pas exigés par le CFAPC mais ne produiront pas de message d’erreur du système CFAPC.
 
-- Le courrier est tout objet indivisible (messages, renseignements, fonds ou marchandises), transmis par des opérateurs postaux désignés, à partir du moment où il est accepté au dépôt jusqu’à ce qu’il soit livré;
+- Le courrier (**hors** portée du CFAPC) est tout objet indivisible (messages, renseignements, fonds ou marchandises), transmis par des opérateurs postaux désignés, à partir du moment où il est accepté au dépôt jusqu’à ce qu’il soit livré;
 
-- Valise diplomatique: conformément à la norme internationale énoncée dans l’article 27 de la Convention de Vienne sur les relations diplomatiques, les colis constituant la valise diplomatique doivent porter des marques extérieures visibles de leur caractère et ne peuvent contenir que des documents diplomatiques ou des objets à usage officiel.
+- Valise diplomatique (**hors** portée du CFAPC): conformément à la norme internationale énoncée dans l’article 27 de la Convention de Vienne sur les relations diplomatiques, les colis constituant la valise diplomatique doivent porter des marques extérieures visibles de leur caractère et ne peuvent contenir que des documents diplomatiques ou des objets à usage officiel.
 
 #### Données d’en‑tête à transmettre
 
-Les données d’en‑tête qui doivent accompagner chaque message envoyé doivent inclure : le symbole, le code de transporteur aérien de l’IATA, et l’identifiant de la partie responsable (au maximum 50 caractères), le cas échéant.
+Les données d’en‑tête qui doivent accompagner chaque message envoyé doivent inclure : le symbole et le code de transporteur aérien de l’IATA. L’identifiant de la partie responsable (au maximum 50 caractères) ne doit être appliqué que selon les directives d’un membre de l’équipe du CFAPC.
 
 Voici un exemple d’en‑tête valide :
 
@@ -567,50 +647,47 @@ Le tableau qui suit contient les données d’en‑tête prescrites et facultati
 </thead>
 <tbody>
 <tr>
-<td><strong>Ocp-Apim-Subscription-Key</strong></td>
+<th><strong>Ocp-Apim-Subscription-Key</strong></th>
 <td>Contient le logiciel qui vous a été remis par un représentant du CFAPC au moment de l’inscription.</td>
 </tr>
 <tr>
-<td><strong>Code du transporteur aérien de l’IATA</strong></td>
+<th><strong>Code du transporteur aérien de l’IATA</strong></th>
 <td><p>Le code à trois chiffres de l’IATA du transporteur aérien qui présente les données.</p>
 <p>Référence : <a href="https://www.iata.org/en/about/members/airline-list/">https://www.iata.org/en/about/members/airline-list/</a> ou</p>
-<p><a href="https://www.iata.org/en/publications/store/airline-coding-directory/">https://www.iata.org/en/publications/store/airline-coding-directory/</a> </p></td>
+<p><a href="https://www.iata.org/en/publications/store/airline-coding-directory/">https://www.iata.org/en/publications/store/airline-coding-directory/</a> </p>
+<p><u><strong>Remarque </strong>: si vous n’avez pas de code à trois chiffres de l’IATA, veuillez envoyer un courriel au compte du CFAPC (</u><a href="mailto:PACT-Information-CFAPC@tc.gc.ca">PACT-Information-CFAPC@tc.gc.ca</a><u>) pour déterminer les alternatives acceptables.</u></p></td>
 </tr>
 <tr>
-<td><strong>Partie responsable</strong> &lt;<em>facultatif</em>&gt;</td>
+<th><strong>Partie responsable</strong> &lt;<em>facultatif</em>&gt;</th>
 <td><p>Code à sept chiffres qui identifie la partie responsable de la réception et de la réponse aux avis d’atténuation des risques, selon le présentateur des données.</p>
 <p>Voir <u>Partie responsable</u> pour plus de précisions.</p></td>
 </tr>
 <tr>
-<td><strong>Accepté</strong></td>
+<th><strong>Accepté</strong></th>
 <td><p>Référence : <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-accept">https://www.rfc-editor.org/rfc/rfc9110.html#name-accept</a></p>
 <p>application/xml pour le fret-XML ou texte/simple pour le C‑IMP</p></td>
 </tr>
 <tr>
-<td><strong>Type de contenu</strong></td>
+<th><strong>Type de contenu</strong></th>
 <td><p>Référence : <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-content-type">https://www.rfc-editor.org/rfc/rfc9110.html#name-content-type</a></p>
 <p>application/xml pour le fret-XML ou texte/simple pour le C‑IMP</p></td>
 </tr>
 <tr>
-<td><strong>Longueur du contenu</strong></td>
+<th><strong>Longueur du contenu</strong></th>
 <td>Référence : <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-content-length">https://www.rfc-editor.org/rfc/rfc9110.html#name-content-length</a><br />
 Taille de la demande</td>
 </tr>
 <tr>
-<td><strong>Agent utilisateur</strong></td>
+<th><strong>Agent utilisateur</strong></th>
 <td><p>Référence : <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-user-agent">https://www.rfc-editor.org/rfc/rfc9110.html#name-user-agent</a></p>
 <p>Contient un renvoi au produit/au commentaire décrivant l’application d’où provient la demande.</p></td>
 </tr>
 </tbody>
 </table>
 
-Tableau 2 : Données d’en-tête des demandes du CFAPC
-
 #### Partie responsable
 
-La valeur de l’en‑tête de la partie responsable est un code à sept (7) chiffres qui précise quelle partie recevra les avis d’atténuation de tous les risques émis par le CFAPC et qui y répondra. Si le présentateur des données reçoit également et réagit à toutes les mesures d’atténuation des risques, on peut alors enlever l’en-tête de la partie responsable. Cela vaut pour de nombreux transporteurs aériens et transitaires qui s’occupent eux-mêmes des RFI/RFS/DNL.
-
-Pour les agrégateurs de données et toute autre partie qui présente des données au CFAPC au nom d’un transporteur aérien, mais qui ne s’occupe pas de la gestion des mesures d’atténuation des risques, le code de la partie responsable doit préciser la partie responsable.
+La valeur de l’en‑tête de la partie responsable est un code à sept (7) chiffres qui est utilisé afin de préciser la tierce partie qui est responsable de répondre à tous les avis d’atténuation de risques émis par le CFAPC (et qui n’est ni le transporteur aérien, ni le présentateur des données). L’identifiant de la partie responsable ne doit être appliqué que selon les directives d’un membre de l’équipe du CFAPC .
 
 Le code de la partie responsable doit contenir sept (7) chiffres et comporter les données suivantes :
 
@@ -662,7 +739,7 @@ Transports Canada propose deux environnements dans le programme CFAPC pour soume
 
 L’environnement d’essai permet aux participants de vérifier les données qu’ils soumettent et de recevoir des réponses du CFAPC dans un espace simulé qui n’affectera pas leurs activités effectives.
 
-L’environnement de production est celui qui offre la plus grande stabilité et le meilleur rendement et il est mis à la disposition des participants dès qu’ils ont procédé avec succès aux essais dans l’environnement d’essai. Lorsque des données réelles sont fournies dans l’environnement de production, le CFAPC aura l’occasion de mieux connaître les données sur le transporteur aérien et de cerner les problèmes de conformité longtemps avant la date d’entrée en vigueur.
+L’environnement de production est celui qui offre la plus grande stabilité et le meilleur rendement et il est mis à la disposition des participants dès qu’ils ont procédé avec succès aux essais dans l’environnement d’essai. Lorsque des données réelles sont fournies dans l’environnement de production, le CFAPC aura l’occasion de mieux connaître les données sur le transporteur aérien et de cerner les problèmes de conformité longtemps avant la date d’entrée en vigueur. On escompte de tous les participants qu’ils soient entièrement opérationnels dans l’environnement de production avant le 1<sup>er</sup> avril 2025.
 
 ### Environnement d’essai du CFAPC
 
@@ -688,7 +765,7 @@ Fournir tous les éléments de données « 7+1 » afin de recevoir le message d'
 
 - Poids total du fret
 
-Fournir les renseignements du manifeste de vol suivants (après le départ du vol) :
+Fournir les renseignements du manifeste de vol (FFM) suivants (après le départ du vol) :
 
 - Date et heure de départ du vol
 
@@ -751,7 +828,7 @@ Lorsqu’ils utilisent l’implémentation bidirectionnelle du CFAPC, les prése
 </thead>
 <tbody>
 <tr>
-<td>CLEAR SHIPMENT PLEASE</td>
+<th>CLEAR SHIPMENT PLEASE</th>
 <td>Réponse de test du CFAPC indiquant que le CFAPC a terminé l'évaluation de l'envoi</td>
 <td>PSN<br />
 000-12344321<br />
@@ -765,7 +842,7 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>RFI SHIPMENT PLEASE</td>
+<th>RFI SHIPMENT PLEASE</th>
 <td>Tester la soumission et la réponse des RFI</td>
 <td>PSN<br />
 000-12344321<br />
@@ -779,7 +856,7 @@ CSN/7H/12JUN1421/PACT ---TESTING---REQUEST FOR INFORMATION HOLD---TESTING--</td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>CLEAR SHIPMENT PLEASE</td>
+<th>CLEAR SHIPMENT PLEASE</th>
 <td>Retirer l'état du test « RFI hold » et remettre l'état de ciblage à la normale</td>
 <td><p>PSN<br />
 000-12344321<br />
@@ -796,7 +873,7 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</p></td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>RFS SHIPMENT PLEASE</td>
+<th>RFS SHIPMENT PLEASE</th>
 <td>Tester la soumission et la réponse des RFS</td>
 <td>PSN<br />
 000-12344321<br />
@@ -810,7 +887,7 @@ CSN/8H/12JUN1421/PACT ---TESTING---REQUEST FOR SCREENING HOLD---TESTING--</td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>CLEAR SHIPMENT PLEASE</td>
+<th>CLEAR SHIPMENT PLEASE</th>
 <td>Retirer l'état du test « RFS hold » et remettre l'état de ciblage à la normale</td>
 <td><p>PSN<br />
 000-12344321<br />
@@ -827,7 +904,7 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</p></td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>DNL SHIPMENT PLEASE</td>
+<th>DNL SHIPMENT PLEASE</th>
 <td>Tester la soumission et la réponse des DNL</td>
 <td>PSN<br />
 000-12344321<br />
@@ -841,7 +918,7 @@ CSN/6H/12JUN1421/PACT ---TESTING---DO NOT LOAD HOLD---TESTING--</td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>CLEAR SHIPMENT PLEASE</td>
+<th>CLEAR SHIPMENT PLEASE</th>
 <td>Retirer l'état du test « DNL hold » et remettre l'état de ciblage à la normale</td>
 <td><p>PSN<br />
 000-12344321<br />
@@ -859,6 +936,13 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</p></td>
 </tr>
 </tbody>
 </table>
+
+1.  
+
+2.  1.  
+    2.  
+    3.  1.  1.  
+            2.  
 
 ##### Code d’essai dans les messages FWB
 
@@ -892,7 +976,7 @@ Après un essai fructueux des procédures d’atténuation des risques, le parti
 
 ### Environnement de production du CFAPC
 
-Après suffisamment d’essais dans l’environnement d’essai du CFAPC et l’approbation d’un représentant du CFAPC de Transports Canada, les participants passeront à l’environnement de production du CFAPC. Il est prévu que les participants commencent à travailler dans cet environnement au plus tard à l’automne 2024.
+Après suffisamment d’essais dans l’environnement d’essai du CFAPC et l’approbation d’un représentant du CFAPC de Transports Canada, les participants passeront à l’environnement de production du CFAPC. On escompte de tous les participants qu’ils soient entièrement opérationnels dans l’environnement de production avant le 1<sup>er</sup> avril 2025.
 
 #### Soutien du CFAPC lors d’une panne
 
@@ -972,28 +1056,28 @@ Le programme CFAPC expédie et reçoit des messages en utilisant les formats Car
 </thead>
 <tbody>
 <tr>
-<td>XFFM</td>
+<th>XFFM</th>
 <td>FFM</td>
 <td></td>
 <td>Renseignements sur le manifeste de vol</td>
 <td>Transporteurs aériens/ présentateurs de données</td>
 </tr>
 <tr>
-<td>XFWB</td>
+<th>XFWB</th>
 <td>FWB</td>
 <td></td>
 <td>Renseignements sur le connaissement aérien principal</td>
 <td>Transporteurs aériens/ présentateurs de données/transitaires de fret</td>
 </tr>
 <tr>
-<td>XFZB</td>
+<th>XFZB</th>
 <td>FHL</td>
 <td></td>
 <td>Renseignements sur le connaissement interne</td>
 <td>Transporteurs aériens/ présentateurs de données/transitaires de fret</td>
 </tr>
 <tr>
-<td>XFNM</td>
+<th>XFNM</th>
 <td></td>
 <td><p>PER (erreur)</p>
 <p>PSN (accusé de réception)</p></td>
@@ -1001,7 +1085,7 @@ Le programme CFAPC expédie et reçoit des messages en utilisant les formats Car
 <td>CFAPC</td>
 </tr>
 <tr>
-<td>XCSN</td>
+<th>XCSN</th>
 <td></td>
 <td>PSN</td>
 <td>Notification d’une « évaluation terminée » ou de la prise ou de la clôture d’une mesure d’atténuation des risques (RFI, RFS, DNL)</td>
@@ -1009,8 +1093,6 @@ Le programme CFAPC expédie et reçoit des messages en utilisant les formats Car
 </tr>
 </tbody>
 </table>
-
-Tableau 3 : Types de messages pris en charge pour la présentation des données du CFAPC et les réponses
 
 ## Versions prises en charge des messages du CFAPC
 
@@ -1032,40 +1114,38 @@ Le système CFAPC envoie et reçoit les messages Cargo-XML et CAMIR/C-IMP en fon
 </thead>
 <tbody>
 <tr>
-<td>XFFM</td>
+<th>XFFM</th>
 <td><ul>
 <li><p>Version 2.00</p></li>
 <li><p>Version 3.00</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>XFWB</td>
+<th>XFWB</th>
 <td><ul>
 <li><p>Version 3.00</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>XFZB</td>
+<th>XFZB</th>
 <td><ul>
 <li><p>Version 3.00</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>XCSN</td>
+<th>XCSN</th>
 <td><ul>
 <li><p>Version 1.00</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>XFNM</td>
+<th>XFNM</th>
 <td><ul>
 <li><p>Version 3.00</p></li>
 </ul></td>
 </tr>
 </tbody>
 </table>
-
-Tableau 4 : Versions Cargo-XML prises en charge pour présentation au programme CFAPC
 
 ### Versions C-IMP prises en charge
 
@@ -1083,21 +1163,21 @@ Tableau 4 : Versions Cargo-XML prises en charge pour présentation au programm
 </thead>
 <tbody>
 <tr>
-<td>FFM</td>
+<th>FFM</th>
 <td><ul>
 <li><p>Version 7</p></li>
 <li><p>Version 8</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>FHL</td>
+<th>FHL</th>
 <td><ul>
 <li><p>Version 4</p></li>
 <li><p>Version 5</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>FWB</td>
+<th>FWB</th>
 <td><ul>
 <li><p>Version 16</p></li>
 <li><p>Version 17</p></li>
@@ -1105,8 +1185,6 @@ Tableau 4 : Versions Cargo-XML prises en charge pour présentation au programm
 </tr>
 </tbody>
 </table>
-
-Tableau 5 : Versions C-IMP prises en charge dans le CFAPC
 
 **Remarque** : chaque ligne d'un message « C-IMP » ne peut pas comporter plus de 69 caractères. Si un message « C-IMP » dépasse 1600 octets, il doit être divisé en deux messages ou plus.
 
@@ -1126,15 +1204,13 @@ Tableau 5 : Versions C-IMP prises en charge dans le CFAPC
 </thead>
 <tbody>
 <tr>
-<td>CAMIR</td>
+<th>CAMIR</th>
 <td><ul>
 <li><p>Version 1</p></li>
 </ul></td>
 </tr>
 </tbody>
 </table>
-
-Tableau 6 : Versions et formats de messages sortants dans le CFAPC
 
 ## Réponses aux messages Cargo-XML
 
@@ -1160,155 +1236,153 @@ Ce type de message expédie des réponses d’erreur et d’accusé de réceptio
 </thead>
 <tbody>
 <tr>
-<td>Accusé de réception</td>
+<th>Accusé de réception</th>
 <td><p>Accusé de réception du message reçu sans erreurs</p>
 <p><em>Remarque : également utilisé en réponse au FFM</em></p></td>
 <td><p>&lt;ram:ConditionCode&gt;Acknowledgement&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;No Errors&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_WBL_LINE</td>
+<th>MISSING_WBL_LINE</th>
 <td>Numéro manquant du connaissement principal</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_WBL_LINE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_HOUSE_BILL_NBR</td>
+<th>MISSING_HOUSE_BILL_NBR</th>
 <td>Numéro manquant du connaissement interne</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_HOUSE_BILL_NBR&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_HOUSE_BILL_NBR</td>
+<th>INVALID_HOUSE_BILL_NBR</th>
 <td>Le numéro du connaissement interne est inexact ou le numéro contient plus de 35 caractères</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_HOUSE_BILL_NBR&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_ADDR</td>
+<th>MISSING_CNE_ADDR</th>
 <td>Adresse manquante du destinataire</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CNE_ADDR&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_CTRY</td>
+<th>MISSING_CNE_CTRY</th>
 <td>Pays manquant du destinataire</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CNE_CTRY&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_NAME</td>
+<th>MISSING_CNE_NAME</th>
 <td>Nom manquant du destinataire</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CNE_NAME&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_WEIGHT</td>
+<th>MISSING_WEIGHT</th>
 <td>Poids manquant du colis</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_WEIGHT&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_WEIGHT</td>
+<th>INVALID_WEIGHT</th>
 <td>Le poids n’est pas un chiffre ou n’a pas pu être extrait</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_WEIGHT&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_BILL_QTY</td>
+<th>MISSING_BILL_QTY</th>
 <td>Le nombre des pièces de fret du connaissement est manquant</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_BILL_QTY&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_BILL_QTY</td>
+<th>INVALID_BILL_QTY</th>
 <td>Le nombre des pièces de fret du connaissement n’est pas un chiffre ou n’a pas pu être extrait</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_BILL_QTY&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_ADDR</td>
+<th>MISSING_SHP_ADDR</th>
 <td>Adresse manquante de l’expéditeur</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_SHP_ADDR&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_CTRY</td>
+<th>MISSING_SHP_CTRY</th>
 <td>Pays manquant de l’expéditeur</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_SHP_CTRY&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_NAME</td>
+<th>MISSING_SHP_NAME</th>
 <td>Nom manquant de l’expéditeur</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_SHP_NAME&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_WT_UNITS</td>
+<th>MISSING_WT_UNITS</th>
 <td>Unités de mesure manquantes des poids</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_WT_UNITS&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_MESSAGE_TYPE</td>
+<th>INVALID_MESSAGE_TYPE</th>
 <td>Il est possible de lire le message, mais on ne peut pas déterminer le type de message</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_MESSAGE_TYPE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>BAD_WBL_FORMAT</td>
+<th>BAD_WBL_FORMAT</th>
 <td><p>On n’a pas pu lire le message</p>
 <p><em>Remarque : également utilisé en réponse au FFM</em></p></td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;BAD_WBL_FORMAT&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CSM_LINE</td>
+<th>MISSING_CSM_LINE</th>
 <td>On n’a pas réussi à extraire les détails de l’envoi</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CSM_LINE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_LINE</td>
+<th>MISSING_CNE_LINE</th>
 <td>On n’a pas réussi à extraire les détails du destinataire</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CNE_LINE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_LINE</td>
+<th>MISSING_SHP_LINE</th>
 <td>On n’a pas réussi à extraire les détails de l’expéditeur</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_SHP_LINE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CARGO_DESC</td>
+<th>MISSING_CARGO_DESC</th>
 <td>Description manquante du fret</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CARGO_DESC&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_ROUTING</td>
+<th>INVALID_ROUTING</th>
 <td>Les codes d’acheminement ne contiennent ni « Canada », ni un code d’aéroport ou de ville au Canada.</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_ROUTING&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_TIMING</td>
+<th>INVALID_TIMING</th>
 <td>Cette expédition est partie et n’est plus dans la portée du programme CFAPC.</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_TIMING&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CONSOL_INDI</td>
+<th>MISSING_CONSOL_INDI</th>
 <td>Ce connaissement aérien principal ressemble à un regroupement (p.ex. fret d’un transitaire à un autre transitaire et/ou contenant une description du fret telle que « regroupement » ou autre formulation similaire) mais ne contient pas l’indicateur de regroupement</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CONSOL_INDI&lt;/ram:Reason&gt;</p></td>
 </tr>
 </tbody>
 </table>
-
-Tableau 7 : Réponses aux messages XFNM
 
 ##### Exemple XFNM—Message de réponse (erreur)
 
@@ -1363,7 +1437,7 @@ Tableau 8 : Codes de réponse Cargo-XML
 <figcaption><p>Image 7 : Message de réponse RFI</p></figcaption>
 </figure>
 
-##### Exemple XCSN - Réponse CSN (RFI du connaisement interne) 
+##### Exemple XCSN - Réponse CSN (RFI du connaissement interne) 
 
 <figure>
 <img src="images/media/image11.png" style="width:5.69913in;height:7.85512in" />
@@ -1394,148 +1468,146 @@ Ce type de message envoie les réponses d’erreur possible suivantes du program
 </thead>
 <tbody>
 <tr>
-<td>MISSING_WBL_LINE</td>
+<th>MISSING_WBL_LINE</th>
 <td>Numéro de connaissement principal manquant</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_WBL_LINE</p></td>
 </tr>
 <tr>
-<td>MISSING_HOUSE_BILL_NBR</td>
+<th>MISSING_HOUSE_BILL_NBR</th>
 <td>Numéro de connaissement interne manquant</td>
 <td><p>PER</p>
 <p>007-54400194-HAW ERR/422/MISSING_HOUSE_BILL_NBR</p></td>
 </tr>
 <tr>
-<td>INVALID_HOUSE_BILL_NBR</td>
+<th>INVALID_HOUSE_BILL_NBR</th>
 <td>Numéro de connaissement interne inexact ou le numéro contient plus de 35 caractères</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_HOUSE_BILL_NBR</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_ADDR</td>
+<th>MISSING_CNE_ADDR</th>
 <td>Adresse manquante du destinataire</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CNE_ADDR</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_CTRY</td>
+<th>MISSING_CNE_CTRY</th>
 <td>Pays manquant du destinataire</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CNE_CTRY</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_NAME</td>
+<th>MISSING_CNE_NAME</th>
 <td>Nom manquant du destinataire</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CNE_NAME</p></td>
 </tr>
 <tr>
-<td>MISSING_WEIGHT</td>
+<th>MISSING_WEIGHT</th>
 <td>Poids manquant du colis</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_WEIGHT</p></td>
 </tr>
 <tr>
-<td>INVALID_WEIGHT</td>
+<th>INVALID_WEIGHT</th>
 <td>Le poids n’est pas un chiffre ou n’a pas pu être extrait</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_WEIGHT</p></td>
 </tr>
 <tr>
-<td>MISSING_BILL_QTY</td>
+<th>MISSING_BILL_QTY</th>
 <td>Le nombre des pièces de fret du connaissement est absent</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_BILL_QTY</p></td>
 </tr>
 <tr>
-<td>INVALID_BILL_QTY</td>
+<th>INVALID_BILL_QTY</th>
 <td>Le nombre des pièces de fret du connaissement n’est pas un chiffre ou n’a pas pu être extrait</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_BILL_QTY</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_ADDR</td>
+<th>MISSING_SHP_ADDR</th>
 <td>Adresse manquante de l’expéditeur</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_SHP_ADDR</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_CTRY</td>
+<th>MISSING_SHP_CTRY</th>
 <td>Pays manquant de l’expéditeur</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_SHP_CTRY</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_NAME</td>
+<th>MISSING_SHP_NAME</th>
 <td>Nom manquant de l’expéditeur</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_SHP_NAME</p></td>
 </tr>
 <tr>
-<td>MISSING_WT_UNITS</td>
+<th>MISSING_WT_UNITS</th>
 <td>Unités de mesure manquantes pour les poids</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_WT_UNITS</p></td>
 </tr>
 <tr>
-<td>INVALID_MESSAGE_TYPE</td>
+<th>INVALID_MESSAGE_TYPE</th>
 <td>Possible de lire le message, mais on n’a pas pu déterminer le type de message</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/400/INVALID_MESSAGE_TYPE</p></td>
 </tr>
 <tr>
-<td>BAD_WBL_FORMAT</td>
+<th>BAD_WBL_FORMAT</th>
 <td><p>On n’a pas réussi à lire le message</p>
 <p><em>Remarque : également utilisé en réponse au FFM</em></p></td>
 <td><p>PER</p>
 <p>ERR/400/BAD_WBL_FORMAT</p></td>
 </tr>
 <tr>
-<td>MISSING_CSM_LINE</td>
+<th>MISSING_CSM_LINE</th>
 <td>On n’a pas réussi à extraire les précisions sur l’envoi</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CSM_LINE</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_LINE</td>
+<th>MISSING_CNE_LINE</th>
 <td>On n’a pas réussi à extraire les précisions sur le destinataire</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CNE_LINE</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_LINE</td>
+<th>MISSING_SHP_LINE</th>
 <td>On n’a pas réussi à extraire les précisions sur l’expéditeur</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_SHP_LINE</p></td>
 </tr>
 <tr>
-<td>MISSING_CARGO_DESC</td>
+<th>MISSING_CARGO_DESC</th>
 <td>Description manquante du fret</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CARGO_DESC</p></td>
 </tr>
 <tr>
-<td>INVALID_ROUTING</td>
+<th>INVALID_ROUTING</th>
 <td>Les codes d’acheminement ne contiennent ni « Canada », ni un code d’aéroport ou de ville au Canada.</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_ROUTING</p></td>
 </tr>
 <tr>
-<td>INVALID_TIMING</td>
+<th>INVALID_TIMING</th>
 <td>Cette expédition est partie et n’est plus dans la portée du programme CFAPC.</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_TIMING</p></td>
 </tr>
 <tr>
-<td>MISSING_CONSOL_INDI</td>
+<th>MISSING_CONSOL_INDI</th>
 <td>Ce connaissement aérien principal ressemble à un regroupement (p.ex. fret d’un transitaire à un autre transitaire et/ou contenant une description du fret telle que « regroupement » ou autre formulation similaire) mais ne contient pas l’indicateur de regroupement</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/ MISSING_CONSOL_INDI</p></td>
 </tr>
 </tbody>
 </table>
-
-Tableau 9 : Messages d’erreur CAMIR
 
 ##### Exemple PER – Message de réponse (erreur)
 
@@ -1564,83 +1636,83 @@ Ce type de message envoie les réponses possibles suivantes sous format CAMIR du
 </thead>
 <tbody>
 <tr>
-<td>Message reçu</td>
+<th>Message reçu</th>
 <td>SR</td>
 <td><p>PSN</p>
 <p>007-12345678-ABC1022506</p>
 <p>CSN/SR/22NOV1902/NO ERRORS</p></td>
 </tr>
 <tr>
-<td>Message reçu (FFM)</td>
+<th>Message reçu (FFM)</th>
 <td>SR</td>
 <td><p>PSN</p>
 <p>CSN/SR/22NOV1902/NO ERRORS</p></td>
 </tr>
 <tr>
-<td>Évaluation terminée</td>
+<th>Évaluation terminée</th>
 <td>SF</td>
 <td><p>PSN</p>
 <p>007-12345678-ABC1022506</p>
 <p>CSN/SF/22NOV1902/ASSESSMENT COMPLETE</p></td>
 </tr>
 <tr>
-<td>RFI</td>
+<th>RFI</th>
 <td>7H</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/7H/22NOV1902/PACT REQUEST FOR INFORMATION HOLD</p></td>
 </tr>
 <tr>
-<td>RFI en place</td>
+<th>RFI en place</th>
 <td>7J</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/7J/22NOV1902/PACT REQUEST FOR INFORMATION HOLD CURRENTLY IN PLACE</p></td>
 </tr>
 <tr>
-<td>RFI résolue</td>
+<th>RFI résolue</th>
 <td>7I</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/7I/22NOV1902/PACT REQUEST FOR INFORMATION HOLD REMOVED</p></td>
 </tr>
 <tr>
-<td>RFS</td>
+<th>RFS</th>
 <td>8H</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/8H/22NOV1902/PACT REQUEST FOR SCREENING HOLD</p></td>
 </tr>
 <tr>
-<td>RFS en place</td>
+<th>RFS en place</th>
 <td>8J</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/8J/22NOV1902/PACT REQUEST FOR SCREENING HOLD CURRENTLY IN PLACE</p></td>
 </tr>
 <tr>
-<td>RFS résolue</td>
+<th>RFS résolue</th>
 <td>8I</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/8I/22NOV1902/PACT REQUEST FOR SCREENING HOLD REMOVED</p></td>
 </tr>
 <tr>
-<td>DNL</td>
+<th>DNL</th>
 <td>6H</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/6H/22NOV1902/PACT DO NOT LOAD HOLD</p></td>
 </tr>
 <tr>
-<td>DNL en place</td>
+<th>DNL en place</th>
 <td>6J</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/6J/22NOV1902/PACT DO NOT LOAD HOLD CURRENTLY IN PLACE</p></td>
 </tr>
 <tr>
-<td>DNL résolu</td>
+<th>DNL résolu</th>
 <td>6I</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
@@ -1648,8 +1720,6 @@ Ce type de message envoie les réponses possibles suivantes sous format CAMIR du
 </tr>
 </tbody>
 </table>
-
-Tableau 10 : Réponses d’accusé de réception et d’atténuation CAMIR
 
 ### Codes de réponse HTTP
 
@@ -1670,11 +1740,11 @@ Tableau 11 : Codes de réponse HTTP
 
 Les messages suivants donnent des exemples de données présentées et de réponses escomptées à la fois en format Cargo-XML et CAMIR.
 
-### Exemple de présentation d’un message Cargo-XML
+### Exemples de présentation d’un message Cargo-XML
 
 Les messages suivants sont des exemples d’un connaissement aérien principal et d’une réponse d’accusé de réception en format Cargo-XML.
 
-##### Exemple de présentation d’un connaissement aérien principal
+#### Exemple de présentation d’un connaissement aérien principal
 
 | <img src="images/media/image13.png" style="width:6.25972in;height:7.66736in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 1." /> |
 |----|
@@ -1684,14 +1754,14 @@ Les messages suivants sont des exemples d’un connaissement aérien principal e
 
 Image 10 : Exemple d’un connaissement aérien principal Cargo-XML
 
-##### Réponse (accusé de réception – pas d’erreurs)
+#### Réponse (accusé de réception – pas d’erreurs)
 
 <figure>
 <img src="images/media/image17.png" style="width:5.43081in;height:4.05654in" alt="A screenshot of a computer code showing an application and error report response in C-XML format." />
 <figcaption><p>Image 11 : Accusé de réception Cargo-XML – exemple sans erreurs</p></figcaption>
 </figure>
 
-**Exemple du manifeste de vol**
+#### Exemple du manifeste de vol (FFM)
 
 <img src="images/media/image18.jpeg" style="width:5.5in;height:5.01597in" /> 
 
@@ -1702,44 +1772,44 @@ Image 10 : Exemple d’un connaissement aérien principal Cargo-XML
 
  
 
-### Exemple de présentation d’un message C-IMP
+### Exemples de présentation d’un message C-IMP
 
 Les messages suivants sont des exemples : de connaissements principal et interne, d’une réponse d’accusé de réception et d’une réponse d’erreur, en format C-IMP et CAMIR. Le dernier exemple représente un message de type FFM d’un manifeste de vol, en format C-IMP.
 
-##### Exemple de présentation d’un connaissement principal
+#### Exemple de présentation d’un connaissement principal
 
 <figure>
 <img src="images/media/image20.png" style="width:3.77409in;height:6.16029in" alt="A screenshot of a computer code showing an submitted house waybill in C-IMP." />
 <figcaption><p>Image 13 : Exemple de présentation d’un connaissement principal C-IMP</p></figcaption>
 </figure>
 
-##### Exemple de réponse d’accusé de réception
+#### Exemple de réponse d’accusé de réception
 
 <figure>
 <img src="images/media/image21.png" style="width:2.33333in;height:0.71875in" alt="A screenshot of a computer code showing a PSN response in C-IMP format." />
-<figcaption><p>Image 14 : Accusé de réception C-IMP</p></figcaption>
+<figcaption><p>Image 14 : Accusé de réception CAMIR</p></figcaption>
 </figure>
 
 <figure>
 <img src="images/media/image22.png" style="width:2.43046in;height:1.05439in" />
-<figcaption><p>Image 15 : Accusé de réception au message FFM en C-IMP</p></figcaption>
+<figcaption><p>Image 15 : Accusé de réception au message FFM en CAMIR</p></figcaption>
 </figure>
 
-##### Exemple de présentation d’un connaissement interne comportant des erreurs
+#### Exemple de présentation d’un connaissement interne comportant des erreurs
 
 <figure>
 <img src="images/media/image23.png" style="width:4.02083in;height:3.60417in" alt="A screenshot of a computer code showing a house waybill with errors submission in C-IMP format." />
 <figcaption><p>Image 16 : Connaissement interne C-IMP comportant des erreurs</p></figcaption>
 </figure>
 
-##### Exemple de réponse d’erreur
+#### Exemple de réponse d’erreur
 
 <figure>
 <img src="images/media/image24.png" style="width:2.09375in;height:0.72917in" alt="A screenshot of a computer code showing an error response in C-IMP format." />
-<figcaption><p>Image 17 : Exemple de réponse d’erreur</p></figcaption>
+<figcaption><p>Image 17 : Exemple de réponse d’erreur en CAMIR</p></figcaption>
 </figure>
 
-**Exemple de manifeste de vol**
+#### Exemple de manifeste de vol (FFM)
 
 <img src="images/media/image25.png" style="width:4.02083in;height:3.01042in" /> 
 
@@ -1764,84 +1834,80 @@ Image 18 : Message du manifeste de vol en format C-IMP
 </thead>
 <tbody>
 <tr>
-<td>API</td>
+<th>API</th>
 <td>Interface de programmation d’application</td>
 </tr>
 <tr>
-<td>C-IMP</td>
+<th>C-IMP</th>
 <td>Procédures de message d’échange de fret. Protocole de message et norme créés par l’IATA.</td>
 </tr>
 <tr>
-<td>Cargo-XML</td>
+<th>Cargo-XML</th>
 <td>Norme XML créée par l’IATA utilisée dans les communications électroniques.</td>
 </tr>
 <tr>
-<td>CAMIR</td>
+<th>CAMIR</th>
 <td>Type de réponse du programme CFAPC (en réponse au C-IMP)</td>
 </tr>
 <tr>
-<td>CSN/XCSN</td>
+<th>CSN/XCSN</th>
 <td>Type de message de réponse à un avis de statut douanier</td>
 </tr>
 <tr>
-<td>Data Submitter</td>
+<th>Data Submitter</th>
 <td>Présentateur de données : l’entité qui présente les renseignements numériques de la lettre de transport au CFAPC.</td>
 </tr>
 <tr>
-<td>DNL</td>
+<th>DNL</th>
 <td>Ne pas charger</td>
 </tr>
 <tr>
-<td>FFM (C-IMP)<br />
-XFFM (Cargo-XML)</td>
+<th>FFM (C-IMP)<br />
+XFFM (Cargo-XML)</th>
 <td>Message du manifeste de vol</td>
 </tr>
 <tr>
-<td>AGV/AGM</td>
+<th>AGV/AGM</th>
 <td>Agent général des ventes/de manutention</td>
 </tr>
 <tr>
-<td>HAWB, HAWB#</td>
+<th>HAWB, HAWB#</th>
 <td>Connaissement aérien interne, numéro du connaissement aérien interne</td>
 </tr>
 <tr>
-<td>IATA</td>
+<th>IATA</th>
 <td>Association du transport aérien international</td>
 </tr>
 <tr>
-<td>LPD</td>
+<th>LPD</th>
 <td>Dernier point de départ. Dernière escale à l’itinéraire avant de partir à destination du Canada.</td>
 </tr>
 <tr>
-<td>MAWB, MAWB#</td>
+<th>MAWB, MAWB#</th>
 <td>Connaissement aérien principal, numéro du connaissement aérien principal</td>
 </tr>
 <tr>
-<td>CFAPC</td>
+<th>CFAPC</th>
 <td>Ciblage du fret aérien préalable au chargement</td>
 </tr>
 <tr>
-<td>Participant au CFAPC</td>
-<td>L’entité réglementée qui est tenue de participer au CFAPC. Il s’agit toujours du transporteur aérien qui exploite le vol entre le dernier point de départ avant d’arriver au Canada.</td>
-</tr>
-<tr>
-<td>PER</td>
+<th>PER</th>
 <td>Rapport d’erreur préliminaire. Réponse d’erreur du CFAPC en format C-IMP.</td>
 </tr>
 <tr>
-<td>PSN</td>
+<th>PSN</th>
 <td>Avis de statut préliminaire. Réponse d’accusé de réception du CFAPC en format C-IMP.</td>
 </tr>
 <tr>
-<td>RFI</td>
+<th>RFI</th>
 <td>Demande de renseignements</td>
 </tr>
 <tr>
-<td>RFS</td>
+<th>RFS</th>
 <td>Demande de vérification</td>
 </tr>
 <tr>
-<td>XFNM</td>
+<th>XFNM</th>
 <td>Message de réponse envoyé en format Cargo-XML.</td>
 </tr>
 </tbody>

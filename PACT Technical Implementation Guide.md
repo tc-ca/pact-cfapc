@@ -1,105 +1,160 @@
 <img src="images/media/image1.jpeg" style="width:8.5in;height:6.74792in" />Pre-Load Air Cargo Targeting (PACT)
 
-TECHNICAL Implementation Guide 2024
+TECHNICAL Implementation Guide
 
-**Contents**  
-  
-  
-[1 Overview [7](#overview)](#overview)
+**Contents**
 
-[1.1 Background [7](#background)](#background)
+[1 Overview [8](#overview)](#overview)
 
-[1.2 Scope [7](#scope)](#scope)
+[1.1 Background [8](#background)](#background)
 
-[1.3 Target Audience [7](#target-audience)](#target-audience)
+[1.2 Scope [8](#scope)](#scope)
 
-[1.4 Required and Eligible Participants [8](#required-and-eligible-participants)](#required-and-eligible-participants)
+[1.3 Target Audience [8](#target-audience)](#target-audience)
 
-[1.4.1 Required Participants (Air Carriers) [8](#required-participants-air-carriers)](#required-participants-air-carriers)
+[1.4 Required and Eligible Participants [9](#required-and-eligible-participants)](#required-and-eligible-participants)
 
-[1.4.2 Eligible Participants (Other Data Submitters) [8](#eligible-participants-other-data-submitters)](#eligible-participants-other-data-submitters)
+[1.4.1 Required Participants (Air Carriers) [9](#required-participants-air-carriers)](#required-participants-air-carriers)
 
-[1.5 Mandatory Points of Contact [8](#mandatory-points-of-contact)](#mandatory-points-of-contact)
+[1.4.2 Eligible Participants (Other Data Submitters) [9](#eligible-participants-other-data-submitters)](#eligible-participants-other-data-submitters)
 
-[1.6 Effective Date [9](#effective-date)](#effective-date)
+[1.5 Mandatory Points of Contact [9](#mandatory-points-of-contact)](#mandatory-points-of-contact)
 
-[2 Connecting to the PACT System [10](#connecting-to-the-pact-system)](#connecting-to-the-pact-system)
+[1.6 Effective Date [10](#effective-date)](#effective-date)
 
-[2.1 PACT Targeting Process Flow [10](#pact-targeting-process-flow)](#pact-targeting-process-flow)
+[2 Connecting to the PACT System [11](#connecting-to-the-pact-system)](#connecting-to-the-pact-system)
 
-[2.2 PACT Onboarding [10](#pact-onboarding)](#pact-onboarding)
+[2.1 PACT Targeting Process Flow [11](#pact-targeting-process-flow)](#pact-targeting-process-flow)
 
-[2.2.1 Registration [10](#registration)](#registration)
+[2.2 PACT Onboarding [11](#pact-onboarding)](#pact-onboarding)
 
-[2.2.2 Initial Setup and Connection [11](#initial-setup-and-connection)](#initial-setup-and-connection)
+[2.2.1 Registration [11](#registration)](#registration)
 
-[2.2.3 Two-Way Messaging [11](#two-way-messaging)](#two-way-messaging)
+[2.2.2 Initial Setup and Connection [12](#initial-setup-and-connection)](#initial-setup-and-connection)
 
-[2.2.4 Webhook Setup [11](#webhook-setup)](#webhook-setup)
+[2.2.3 Two-Way Messaging [12](#two-way-messaging)](#two-way-messaging)
 
-[2.2.5 Submission Requirements and Responses [12](#submission-requirements-and-responses)](#submission-requirements-and-responses)
+[2.2.4 Webhook Setup [12](#webhook-setup)](#webhook-setup)
 
-[2.3 PACT Test and Production Environments [17](#submission-updates-duplicates-and-cancellations)](#submission-updates-duplicates-and-cancellations)
+[2.2.5 Submission Requirements and Responses [13](#submission-requirements-and-responses)](#submission-requirements-and-responses)
 
-[2.3.1 PACT Testing Environment [18](#pact-testing-environment)](#pact-testing-environment)
+[2.2.5.1 PACT Data Elements [14](#pact-data-elements)](#pact-data-elements)
 
-[2.3.2 PACT Production Environment [24](#pact-production-environment)](#pact-production-environment)
+[2.2.5.1.1 Flight Manifest (FFM) [14](#flight-manifest-ffm)](#flight-manifest-ffm)
 
-[3 PACT Message Specifications [27](#pact-message-specifications)](#pact-message-specifications)
+[2.2.5.1.2 Business and Implementation Rules [15](#business-and-implementation-rules)](#business-and-implementation-rules)
 
-[3.1 Message Formats [27](#message-formats)](#message-formats)
+[2.2.5.2 Header Data Required for Transmission [16](#header-data-required-for-transmission)](#header-data-required-for-transmission)
 
-[3.2 Supported Versions for PACT Messages [28](#supported-versions-for-pact-messages)](#supported-versions-for-pact-messages)
+[2.2.5.3 Responsible Party [17](#responsible-party)](#responsible-party)
 
-[3.2.1 Supported Cargo-XML Versions [28](#supported-cargo-xml-versions)](#supported-cargo-xml-versions)
+[2.2.5.4 Response Types [18](#response-types)](#response-types)
 
-[3.2.2 Supported C-IMP Versions [28](#supported-c-imp-versions)](#supported-c-imp-versions)
+[2.2.5.5 Submission Updates, Duplicates, and Cancellations [18](#submission-updates-duplicates-and-cancellations)](#submission-updates-duplicates-and-cancellations)
 
-[3.2.3 Supported CAMIR Versions [29](#supported-camir-versions)](#supported-camir-versions)
+[2.3 PACT Test and Production Environments [19](#pact-test-and-production-environments)](#pact-test-and-production-environments)
 
-[3.3 Cargo-XML Message Responses [29](#cargo-xml-message-responses)](#cargo-xml-message-responses)
+[2.3.1 PACT Testing Environment [19](#pact-testing-environment)](#pact-testing-environment)
 
-[3.3.1 XFNM Message Responses [29](#xfnm-message-responses)](#xfnm-message-responses)
+[2.3.1.1 Testing Data Submission [19](#testing-data-submission)](#testing-data-submission)
 
-[3.3.2 XCSN Status Notification Messages [35](#xcsn-status-notification-messages)](#xcsn-status-notification-messages)
+[2.3.1.2 Testing Risk Mitigation (RFI, RFS and DNL) Procedures Automatically for Two-way Implementations [20](#testing-risk-mitigation-rfi-rfs-and-dnl-procedures-automatically-for-two-way-implementations)](#testing-risk-mitigation-rfi-rfs-and-dnl-procedures-automatically-for-two-way-implementations)
 
-[3.4 CAMIR Message Responses [41](#camir-message-responses)](#camir-message-responses)
+[Test Codes in FWB Messages [22](#test-codes-in-fwb-messages)](#test-codes-in-fwb-messages)
 
-[3.4.1 Preliminary Error Report (PER) Messages [41](#preliminary-error-report-per-messages)](#preliminary-error-report-per-messages)
+[Test Codes in XFWB Messages [23](#test-codes-in-xfwb-messages)](#test-codes-in-xfwb-messages)
 
-[3.4.2 Preliminary Status Notification (PSN) Messages [43](#preliminary-status-notification-psn-messages)](#preliminary-status-notification-psn-messages)
+[2.3.1.3 Live Testing of Risk Mitigation (RFI, RFS and DNL) Procedures [24](#live-testing-of-risk-mitigation-rfi-rfs-and-dnl-procedures)](#live-testing-of-risk-mitigation-rfi-rfs-and-dnl-procedures)
 
-[3.4.3 HTTP Response Codes [45](#http-response-codes)](#http-response-codes)
+[2.3.2 PACT Production Environment [25](#pact-production-environment)](#pact-production-environment)
 
-[3.5 PACT Message Examples [46](#pact-message-examples)](#pact-message-examples)
+[2.3.2.1 PACT Support During Outages [25](#pact-support-during-outages)](#pact-support-during-outages)
 
-[3.5.1 Cargo-XML Message Submission Example [46](#cargo-xml-message-submission-example)](#cargo-xml-message-submission-example)
+[2.3.2.2 Risk Mitigation (RFI, RFS and DNL) Procedures [27](#risk-mitigation-rfi-rfs-and-dnl-procedures)](#risk-mitigation-rfi-rfs-and-dnl-procedures)
 
-[3.5.2 C-IMP Message Submission Example [52](#c-imp-message-submission-example)](#c-imp-message-submission-example)
+[3 PACT Message Specifications [28](#pact-message-specifications)](#pact-message-specifications)
 
-[4 PACT Targeting Process Flow [55](#pact-targeting-process-flow-1)](#pact-targeting-process-flow-1)
+[3.1 Message Formats [28](#message-formats)](#message-formats)
 
-[5 Glossary [56](#glossary)](#glossary)
+[3.2 Supported Versions for PACT Messages [29](#supported-versions-for-pact-messages)](#supported-versions-for-pact-messages)
 
-[6 Unacceptable Characters and Descriptions [57](#unacceptable-characters-and-descriptions)](#unacceptable-characters-and-descriptions)
+[3.2.1 Supported Cargo-XML Versions [29](#supported-cargo-xml-versions)](#supported-cargo-xml-versions)
 
-[6.1 Unacceptable Characters in Shipper/Consignee Name, Address or Commodity Description Fields [57](#unacceptable-characters-in-shipperconsignee-name-address-or-commodity-description-fields)](#unacceptable-characters-in-shipperconsignee-name-address-or-commodity-description-fields)
+[3.2.2 Supported C-IMP Versions [29](#supported-c-imp-versions)](#supported-c-imp-versions)
 
-[6.2 Unacceptable Commodity Descriptions [57](#unacceptable-commodity-descriptions)](#unacceptable-commodity-descriptions)
+[3.2.3 Supported CAMIR Versions [30](#supported-camir-versions)](#supported-camir-versions)
 
-[6.3 Insufficient/Poor Data Quality [59](#insufficientpoor-data-quality)](#insufficientpoor-data-quality)
+[3.3 Cargo-XML Message Responses [30](#cargo-xml-message-responses)](#cargo-xml-message-responses)
 
-[7 Email Templates [60](#email-templates)](#email-templates)
+[3.3.1 XFNM Message Responses [30](#xfnm-message-responses)](#xfnm-message-responses)
 
-[7.1 Request for Information (Open and Closed) [60](#request-for-information-open-and-closed)](#request-for-information-open-and-closed)
+[XFNM Example—Response Message (Error) [33](#xfnm-exampleresponse-message-error)](#xfnm-exampleresponse-message-error)
 
-[7.2 Request for Screening (Open and Closed) [61](#request-for-screening-open-and-closed)](#request-for-screening-open-and-closed)
+[XFNM Example—Response Message (Acknowledgement) [34](#xfnm-exampleresponse-message-acknowledgement)](#xfnm-exampleresponse-message-acknowledgement)
 
-[7.3 Do No Load (Open and Closed) [62](#do-no-load-open-and-closed)](#do-no-load-open-and-closed)
+[3.3.2 XCSN Status Notification Messages [36](#xcsn-status-notification-messages)](#xcsn-status-notification-messages)
 
-[7.4 Insufficient/Poor Data Quality [63](#insufficientpoor-data-quality-1)](#insufficientpoor-data-quality-1)
+[XCSN Example—CSN Response (Assessment Complete) [37](#xcsn-examplecsn-response-assessment-complete)](#xcsn-examplecsn-response-assessment-complete)
 
-[7.5 Unplanned System Outage [64](#unplanned-system-outage)](#unplanned-system-outage)
+[XCSN Example—CSN Response (RFI) [39](#xcsn-examplecsn-response-rfi)](#xcsn-examplecsn-response-rfi)
+
+[XCSN Example – CSN Response (RFI from House Waybill) [41](#xcsn-example-csn-response-rfi-from-house-waybill)](#xcsn-example-csn-response-rfi-from-house-waybill)
+
+[3.4 CAMIR Message Responses [42](#camir-message-responses)](#camir-message-responses)
+
+[3.4.1 Preliminary Error Report (PER) Messages [42](#preliminary-error-report-per-messages)](#preliminary-error-report-per-messages)
+
+[PER Example—Response Message (Error) [44](#per-exampleresponse-message-error)](#per-exampleresponse-message-error)
+
+[3.4.2 Preliminary Status Notification (PSN) Messages [44](#preliminary-status-notification-psn-messages)](#preliminary-status-notification-psn-messages)
+
+[3.4.3 HTTP Response Codes [46](#http-response-codes)](#http-response-codes)
+
+[3.5 PACT Message Examples [47](#pact-message-examples)](#pact-message-examples)
+
+[3.5.1 Cargo-XML Message Submission Examples [47](#cargo-xml-message-submission-examples)](#cargo-xml-message-submission-examples)
+
+[Master Air Waybill Submission Example [48](#master-air-waybill-submission-example)](#master-air-waybill-submission-example)
+
+[Response (Acknowledgement-No Errors) [51](#response-acknowledgement-no-errors)](#response-acknowledgement-no-errors)
+
+[Flight Manifest (FFM) Example [52](#flight-manifest-ffm-example)](#flight-manifest-ffm-example)
+
+[3.5.2 C-IMP Message Submission Examples [53](#c-imp-message-submission-examples)](#c-imp-message-submission-examples)
+
+[Master Waybill Submission Example [54](#master-waybill-submission-example)](#master-waybill-submission-example)
+
+[Acknowledgement Response Example [54](#acknowledgement-response-example)](#acknowledgement-response-example)
+
+[House Waybill Submission with Errors Example [55](#house-waybill-submission-with-errors-example)](#house-waybill-submission-with-errors-example)
+
+[Error Response Example [55](#error-response-example)](#error-response-example)
+
+[Flight Manifest (FFM) Example [56](#flight-manifest-ffm-example-1)](#flight-manifest-ffm-example-1)
+
+[4 PACT Targeting Process Flow [57](#pact-targeting-process-flow-1)](#pact-targeting-process-flow-1)
+
+[5 Glossary [58](#glossary)](#glossary)
+
+[6 Unacceptable Characters and Descriptions [59](#unacceptable-characters-and-descriptions)](#unacceptable-characters-and-descriptions)
+
+[6.1 Unacceptable Characters in Shipper/Consignee Name, Address or Commodity Description Fields [59](#unacceptable-characters-in-shipperconsignee-name-address-or-commodity-description-fields)](#unacceptable-characters-in-shipperconsignee-name-address-or-commodity-description-fields)
+
+[6.2 Unacceptable Commodity Descriptions [59](#unacceptable-commodity-descriptions)](#unacceptable-commodity-descriptions)
+
+[6.3 Insufficient/Poor Data Quality [61](#insufficientpoor-data-quality)](#insufficientpoor-data-quality)
+
+[7 Email Templates [62](#email-templates)](#email-templates)
+
+[7.1 Request for Information (Open and Closed) [62](#request-for-information-open-and-closed)](#request-for-information-open-and-closed)
+
+[7.2 Request for Screening (Open and Closed) [63](#request-for-screening-open-and-closed)](#request-for-screening-open-and-closed)
+
+[7.3 Do No Load (Open and Closed) [64](#do-no-load-open-and-closed)](#do-no-load-open-and-closed)
+
+[7.4 Insufficient/Poor Data Quality [65](#insufficientpoor-data-quality-1)](#insufficientpoor-data-quality-1)
+
+[7.5 Unplanned System Outage [66](#unplanned-system-outage)](#unplanned-system-outage)
 
 Change History
 
@@ -120,13 +175,13 @@ Change History
 </thead>
 <tbody>
 <tr>
-<td>Jan 26, 2024</td>
+<th>Jan 26, 2024</th>
 <td>1</td>
 <td></td>
 <td>Initial release</td>
 </tr>
 <tr>
-<td rowspan="5">April 10, 2024</td>
+<th rowspan="5">April 10, 2024</th>
 <td rowspan="5">1.1</td>
 <td>2.2.5.1 PACT Data Elements</td>
 <td>Note on departure time</td>
@@ -148,13 +203,13 @@ Change History
 <td>Examples of acceptable and unacceptable commodity descriptions to avoid insufficient data errors</td>
 </tr>
 <tr>
-<td>May 6, 2024</td>
+<th>May 6, 2024</th>
 <td>1.2</td>
 <td>2.3.1.1 Testing Data Submission</td>
 <td>Updated section to provide parameters on testing submitted data</td>
 </tr>
 <tr>
-<td rowspan="11">June 27, 2024</td>
+<th rowspan="11">June 27, 2024</th>
 <td rowspan="11">1.3</td>
 <td>2.2.5.1 PACT Data Elements</td>
 <td>Note: freight forwarders must update the house waybill with the master reference once known</td>
@@ -201,7 +256,7 @@ Change History
 <td>Email templates for RFI/RFS/DNL and Insufficient/Poor Data Quality</td>
 </tr>
 <tr>
-<td rowspan="7">October 17, 2024</td>
+<th rowspan="7">October 17, 2024</th>
 <td rowspan="7">1.4</td>
 <td>2.2.5.1.1 Business and Implementation Rules</td>
 <td><p>Definitions for mail and diplomatic bags</p>
@@ -234,16 +289,49 @@ Change History
 <td>Added FFM reference in PSN examples under SR</td>
 </tr>
 <tr>
-<td></td>
+<th></th>
 <td></td>
 <td>3.5.2 C-IMP Message Submission Example</td>
 <td>Added “Figure 15” Response Message to FFM (Acknowledgement)</td>
 </tr>
 <tr>
-<td></td>
+<th></th>
 <td></td>
 <td>7. Email Templates</td>
 <td>Added email example for unplanned PACT system outage (*Section 7.5*)</td>
+</tr>
+<tr>
+<th rowspan="7">February 14, 2025</th>
+<td rowspan="7">1.5</td>
+<td>1.6 Effective Date</td>
+<td>Changed from “upon publication” to April 1, 2025</td>
+</tr>
+<tr>
+<td>2.2.5.1.1 Flight Manifest (FFM)</td>
+<td>Added section heading</td>
+</tr>
+<tr>
+<td>2.2.5.2 Header Data Required for Transmission</td>
+<td><p>Changed instructions for responsible party to “only as directed by a member of the PACT team”</p>
+<p>Added instructions for air carriers without an IATA code.</p></td>
+</tr>
+<tr>
+<td>2.2.5.3 Responsible Party</td>
+<td>Changed instructions for responsible party to “only as directed by a member of the PACT team”</td>
+</tr>
+<tr>
+<td>2.3 PACT Test and Production Environments</td>
+<td>Added expectation to be in production before April 1, 2025</td>
+</tr>
+<tr>
+<td>2.3.2 PACT Production Environment</td>
+<td>Added expectation to be in production before April 1, 2025</td>
+</tr>
+<tr>
+<td><p>3.3.1-3.3.2</p>
+<p>3.4.1</p>
+<p>3.5.1-3.5.2</p></td>
+<td>Added sub headers for each example</td>
 </tr>
 </tbody>
 </table>
@@ -266,7 +354,7 @@ The *Canadian Aviation Security Regulations, 2012* apply to air carriers who tra
 
 The regulations, and therefore the PACT Program, do **<u>NOT</u>** apply to the following:
 
-- Mail
+Mail
 
 - Diplomatic or consular bags
 
@@ -274,11 +362,11 @@ The regulations, and therefore the PACT Program, do **<u>NOT</u>** apply to the 
 
 - Passengers’ carry-on baggage
 
-- Air cargo transported on an outbound flight, departing Canada
+  Air cargo transported on an outbound flight, departing Canada
 
 - Air cargo on domestic flights within Canada
 
-- Cargo that arrives in Canada via another mode of transportation, such as by road, sea, or rail (including where the last leg of a flight is transported via truck to Canada).
+  Cargo that arrives in Canada via another mode of transportation, such as by road, sea, or rail (including where the last leg of a flight is transported via truck to Canada).
 
 ## Target Audience
 
@@ -306,39 +394,39 @@ Transport Canada requires the following points of contact to register an air car
 
 1.  **Primary Cargo Security Contact**: A representative of the company who is responsible for compliance with Transport Canada rules and regulations.
 
-- Name:
+    Name:
 
-- Title:
+    Title:
 
-- Phone \#:
+    Phone \#:
 
-- Email:
+    Email:
 
 2.  **24/7 Contact**: A contact who is available 24/7 that can respond urgently to Requests for Information (RFI), Requests for Screening (RFS) and Do Not Load (DNL) notices. This contact must have access to additional shipment information and be able to initiate screening procedures in response to a potential threat to air cargo. This contact can be a shared inbox so long as it is monitored 24/7. 
 
-- Name:
+    Name:
 
-- Title:
+    Title:
 
-- Phone \#:
+    Phone \#:
 
-- Email:
+    Email:
 
 3.  **Technical Contact**: A contact that can initiate system connectivity between the air carrier and Transport Canada and provide technical support for the data exchange, including responding to system outages.
 
-- Name:
+    Name:
 
-- Company (if different than the air carrier):
+    Company (if different than the air carrier):
 
-- Title:
+    Title:
 
-- Phone \#:
+    Phone \#:
 
-- Email:
+    Email:
 
 ## Effective Date 
 
-The *Canadian Aviation Security Regulations, 2012* will come into effect upon publication in the *Canada Gazette*, Part II in Fall 2024. Air carriers will be expected to submit the required data elements to the PACT system and be ready to respond to Transport Canada requests (RFIs, RFSs, DNLs) as of the date of publication or they can be subject to administrative monetary penalties (AMPs).
+The amendments to the *Canadian Aviation Security Regulations, 2012 (Air Cargo)* will come into force on April 1, 2025. Air carriers will be expected to submit the required data elements to the PACT system and be ready to respond to Transport Canada requests (RFIs, RFSs, DNLs) or they can be subject to administrative monetary penalties (AMPs).
 
 Beginning in Fall 2023, Transport Canada started onboarding select air carriers and aims to increase the volume gradually leading up to the effective date of the regulations. The objective is to ensure any technical and operational modifications can be tested and implemented well in advance of the effective date.
 
@@ -360,17 +448,17 @@ Before submitting data to PACT, air carriers must contact Transport Canada for a
 
 After the registration is complete, the PACT team will contact the air carrier or their participant with the following connection information:
 
-- A token for authentication
+A token for authentication
 
 - The endpoint URL for the PACT test environment
 
-- Connection instructions, including the required header information
+  Connection instructions, including the required header information
 
 ### Registration
 
 To begin the registration process, contact Transport Canada at <pact-information-cfapc@tc.gc.ca> and identify the contacts listed in section [1.2.2.3 Mandatory Points of Contacts](#mandatory-points-of-contact). A PACT representative will reply within 2 business days to obtain additional information and complete the registration.
 
-**Note**: It is recommended that air carriers complete this process as soon as possible so they have enough time to successfully test their data submissions before mandatory compliance is required in the fall of 2024.
+**Note**: It is recommended that air carriers complete this process as soon as possible so they have enough time to successfully test their data submissions before mandatory compliance is required in April 2025.
 
 ### Initial Setup and Connection
 
@@ -388,13 +476,13 @@ Two-way messaging is available through the web API so that participants receive 
 
 To connect to a participant’s API, Transport Canada requires the following information:
 
-- API connection details (PACT can connect to multiple endpoints).
+API connection details (PACT can connect to multiple endpoints).
 
-- Preferred message format (Cargo-XML or C-IMP) and version (See section [3.2 Supported Versions for PACT Messages](#supported-versions-for-pact-messages)).
+Preferred message format (Cargo-XML or C-IMP) and version (See section [3.2 Supported Versions for PACT Messages](#supported-versions-for-pact-messages)).
 
 **Note**: Different formats can be selected for submission and receipt.
 
-- Any additional requirements for connection, if required.
+Any additional requirements for connection, if required.
 
 After confirming connection information, the PACT team will send implementation teams the required information for receiving messages from PACT asynchronously. Asynchronous messaging requires that webhooks are set up to be received from the PACT server.
 
@@ -418,12 +506,12 @@ Two-way messaging requires integrated software solutions to be set up to receive
 </thead>
 <tbody>
 <tr>
-<td>URL</td>
+<th>URL</th>
 <td>The air carrier’s endpoint, to which PACT will send messages.</td>
 <td><a href="https://myaircarrier.com/api/myendpoint">https://myaircarrier.com/api/myendpoint</a></td>
 </tr>
 <tr>
-<td>Secret</td>
+<th>Secret</th>
 <td>A string set by the air carrier that will be attached to each response message in the header “X-PACT-SECRET” as a way for the air carrier to validate the message came from the PACT system.</td>
 <td>E6HuaaHIB6knkFyaTuUc934SRz37czVJG<br />
 DM7rBtvKN5AhfWcCP9LRVF0LWx9c17L<br />
@@ -434,12 +522,12 @@ h3gwlP7FEFF4uJdMrkjLxFDejKUV9kjYNR<br />
 R314SuCeEoOyIfV..........</td>
 </tr>
 <tr>
-<td>ResponseType</td>
+<th>ResponseType</th>
 <td>HTTP verb that denotes the action for transmitted data such as creating or updating.</td>
 <td>POST, PUT</td>
 </tr>
 <tr>
-<td>Headers</td>
+<th>Headers</th>
 <td>A list of key value pairs added to requests/responses that provide additional information.</td>
 <td><p>“X-MYAIRLINE-REQUIRED-HEADER”: “Custom provided header”</p>
 <p>For text-based messages (FWB, FHL): “Content-Type”: “text/plain”</p>
@@ -447,8 +535,6 @@ R314SuCeEoOyIfV..........</td>
 </tr>
 </tbody>
 </table>
-
-Table 1: Required Elements for Webhook Setup
 
 ### Submission Requirements and Responses
 
@@ -458,11 +544,9 @@ Participants will receive a series of messages from the PACT system that will co
 
 #### PACT Data Elements
 
-PACT requires 7 data elements and an air waybill number (+1) in order to complete its risk assessment of all inbound air cargo. These “7+1” data elements are internationally recognized as Pre-Loading Advanced Cargo Information (PLACI), and they have been found useful for risk assessment because they can be obtained early in the cargo shipment lifecycle and taken together, can reveal trends that establish thresholds for low-risk cargo.
+PACT requires 7 data elements and an air waybill number (+1) in order to complete its risk assessment of all inbound air cargo. These “7+1” data elements are internationally recognized as Pre-Loading Advance Cargo Information (PLACI), and they have been found useful for risk assessment because they can be obtained early in the cargo shipment lifecycle and taken together, can reveal trends that establish thresholds for low-risk cargo.
 
-Participants are expected to submit the data elements to PACT as early as possible before loading and must provide any updates up to the departure of the flight (marked by the flight departure information). Any data received after departure will not be assessed.
-
-Air carriers are required to submit the following mandatory data (7+1) to PACT for risk assessment as early as possible before loading:
+Air carriers are required to submit the following mandatory data (7+1) to PACT for risk assessment as early as possible before loading and must provide any updates up to the departure of the flight (marked by the flight departure information). Any data received after departure will not be assessed.
 
 - Air waybill number (includes house bill number if applicable)
 
@@ -485,6 +569,8 @@ The PACT system can also accept additional data elements if the mandatory elemen
 **Note:** Consolidation messages do not typically satisfy these requirements as they may lack the original shipper names and addresses and a piece-level description of the cargo. While the system will accept “consol” or “consolidation” for the cargo description, this would not be considered compliant with the regulations, in which case all associated house waybills would be required.
 
 **Note**: A data submitter may submit a house waybill before the master air waybill number (MAWB) is known and leave the MAWB number blank (e.g., in the case where a freight forwarder is submitting house-level data for the air carrier). Once the master air waybill number is known, the house waybill must be resubmitted by the freight forwarder with the master air waybill number included before departure. Air carriers remain liable for compliance with the regulatory requirements with respect to all data submissions (including those submitted at the house level by other data submitters).
+
+##### Flight Manifest (FFM)
 
 In addition to the 7+1 pre-load data elements, PACT also requires the following flight information as soon as feasible after the flight’s departure from its LPD before arrival in Canada:
 
@@ -516,7 +602,7 @@ The following rules specify data formats and provide general guidance when submi
 
 - Consolidated shipments are recognized by the following indicators in the master air waybill:
 
-  - For Cargo-XML XFWB messages, use document code 741 for consolidations and 740 for direct shipments;
+- For Cargo-XML XFWB messages, use document code 741 for consolidations and 740 for direct shipments;
 
   - For C-IMP FWB messages, use NC for the goods description field for consolidations and NG for direct shipments;
 
@@ -528,21 +614,21 @@ The following rules specify data formats and provide general guidance when submi
 
 - With the exception of mail and diplomatic bags, data that is submitted in fields other than those mandated by PACT does not need to be removed during submission. For example, data fields such as Sender or Recipient Qualifier are not required by PACT but will not result in an error message from the PACT system;
 
-- Mail is any indivisible mailable matter (message, information, funds or goods), transmitted by designated postal operators, from the time it is posted to the time it is delivered;
+- Mail (**not** in scope for PACT) is any indivisible mailable matter (message, information, funds or goods), transmitted by designated postal operators, from the time it is posted to the time it is delivered;
 
-- Diplomatic bag: in keeping with the international standard set out in Article 27 of the Vienna Convention on Diplomatic Relations, packages constituting a diplomatic bag must bear visible external marks of their character and may contain only diplomatic documents or articles intended for official use.
+  Diplomatic bag (**not** in scope for PACT): in keeping with the international standard set out in Article 27 of the Vienna Convention on Diplomatic Relations, packages constituting a diplomatic bag must bear visible external marks of their character and may contain only diplomatic documents or articles intended for official use.
 
 #### Header Data Required for Transmission
 
-The header data required for each transmitted message must include: the token, the air carrier’s IATA airline code, and a responsible party identifier (maximum 50 characters), as applicable.
+The header data required for each transmitted message must include: the token and the air carrier’s IATA airline code. The responsible party identifier (maximum 50 characters) should only be applied as directed by a member of the PACT team.
 
 An example of a valid header is:
 
-- Ocp-Apim-Subscription-Key: abcd
+Ocp-Apim-Subscription-Key: abcd
 
-- Iata-Airline-Code: 014
+Iata-Airline-Code: 014
 
-- Responsible-Party: PACTPW8 (if applicable)
+Responsible-Party: PACTPW8 (if applicable)
 
 - Accept: text/plain
 
@@ -568,51 +654,48 @@ The following table provides required and optional header data for PACT requests
 </thead>
 <tbody>
 <tr>
-<td><strong>Ocp-Apim-Subscription-Key</strong></td>
+<th><strong>Ocp-Apim-Subscription-Key</strong></th>
 <td>Contains the token given to you by a PACT representative at registration.</td>
 </tr>
 <tr>
-<td><strong>Iata-Airline-Code</strong></td>
+<th><strong>Iata-Airline-Code</strong></th>
 <td><p>The three-digit IATA code for the air carrier that is submitting the data.</p>
 <p>Reference: <a href="https://www.iata.org/en/about/members/airline-list/">https://www.iata.org/en/about/members/airline-list/</a> or</p>
-<p><a href="https://www.iata.org/en/publications/store/airline-coding-directory/">https://www.iata.org/en/publications/store/airline-coding-directory/</a></p></td>
+<p><a href="https://www.iata.org/en/publications/store/airline-coding-directory/">https://www.iata.org/en/publications/store/airline-coding-directory/</a></p>
+<p><strong>Note</strong>: if you do not have a three-digit IATA code, please email the PACT inbox (<a href="mailto:PACT-Information-CFAPC@tc.gc.ca">PACT-Information-CFAPC@tc.gc.ca</a>) to determine acceptable alternatives.</p></td>
 </tr>
 <tr>
-<td><strong>Responsible-Party</strong><br />
-&lt;<em>if applicable</em>&gt;</td>
+<th><strong>Responsible-Party</strong><br />
+&lt;<em>if applicable</em>&gt;</th>
 <td><p>A seven-digit code that identifies the party responsible for receiving and responding to risk mitigation notifications, depending on the data submitter.</p>
 <p>See <a href="#responsible-party">Responsible Party</a> for more details.</p></td>
 </tr>
 <tr>
-<td><strong>Accept</strong></td>
+<th><strong>Accept</strong></th>
 <td><p>Reference: <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-accept">https://www.rfc-editor.org/rfc/rfc9110.html#name-accept</a></p>
 <p>application/xml for Cargo-XML or text/plain for C-IMP</p></td>
 </tr>
 <tr>
-<td><strong>Content-Type</strong></td>
+<th><strong>Content-Type</strong></th>
 <td><p>Reference: <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-content-type">https://www.rfc-editor.org/rfc/rfc9110.html#name-content-type</a></p>
 <p>application/xml for Cargo-XML or text/plain for C-IMP</p></td>
 </tr>
 <tr>
-<td><strong>Content-Length</strong></td>
-<td>Reference: <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-content-length">https://www.rfc-editor.org/rfc/rfc9110.html#name-content-length</a><br />
-Size of request</td>
+<th><strong>Content-Length</strong></th>
+<td>Reference: <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-content-length">https://www.rfc-editor.org/rfc/rfc9110.html#name-content-length<br />
+</a>Size of request</td>
 </tr>
 <tr>
-<td><strong>User-Agent</strong></td>
+<th><strong>User-Agent</strong></th>
 <td><p>Reference: <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-user-agent">https://www.rfc-editor.org/rfc/rfc9110.html#name-user-agent</a></p>
 <p>Contains a reference to the product/comment describing what application the request is being sent from</p></td>
 </tr>
 </tbody>
 </table>
 
-Table 2: Header Data for PACT Requests
-
 #### Responsible Party
 
-The Responsible Party header value is a 7-digit code that identifies which party will receive and respond to all risk mitigation notifications initiated by PACT. If the data submitter also receives and responds to all risk mitigation measures, then the Responsible Party header can be removed. This is true for many air carriers and freight forwarders who handle RFI/RFS/DNLs themselves.
-
-For data aggregators and any other parties that submit data to PACT on behalf of an air carrier but do not manage risk mitigation measures, the Responsible Party code must indicate the party that is responsible.
+The Responsible Party header value is a 7-digit code that is used to identify a third party that is responsible for responding to all risk mitigation notifications initiated by PACT and that is not the air carrier or the data submitter. The responsible party identifier should only be applied as directed by the PACT team.
 
 The Responsible Party code should be 7 digits and include the following data:
 
@@ -620,11 +703,11 @@ The Responsible Party code should be 7 digits and include the following data:
 
 - A single letter to denote the PACT environment:
 
-- A “**P”** to indicate the production environment
+  A “**P”** to indicate the production environment
 
-- An “**A**” for the testing environment
+  An “**A**” for the testing environment
 
-- The IATA two-character air carrier designator (or agreed upon two-character code to designate organizations outside of IATA, such as GSAs)
+  The IATA two-character air carrier designator (or agreed upon two-character code to designate organizations outside of IATA, such as GSAs)
 
 For example: **PACTPW8**
 
@@ -642,9 +725,9 @@ After submitting the mandatory data for evaluation, PACT conducts a risk assessm
 
 In the case where the shipment data contains risk indicators, PACT could transmit codes to reflect an RFI, RFS or DNL. Implementation teams must ensure test scenarios include measures to handle codes in the chosen format type:
 
-- For C-XML, that includes RI, RS and CD codes. See <u>XCSN Status Notification Messages</u>.
+For C-XML, that includes RI, RS and CD codes. See <u>XCSN Status Notification Messages</u>.
 
-- For CAMIR/C-IMP, that includes 7H, 7I, 7J, 8H, 8I, 8J, 6H, 6J, and 6I codes. See <u>Preliminary Status Notification (PSN) Messages</u>.
+For CAMIR/C-IMP, that includes 7H, 7I, 7J, 8H, 8I, 8J, 6H, 6J, and 6I codes. See <u>Preliminary Status Notification (PSN) Messages</u>.
 
 **Note**: All messages from PACT include a Conversation Identifier (CXML body) and/or Correlation Identifier (CXML/CIMP http headers) for reference.
 
@@ -665,6 +748,8 @@ Transport Canada offers two PACT system environments for submitting data: a test
 The test environment allows participants to test their data submissions and to receive responses from PACT in a simulated space that will not affect their actual operations.
 
 The production environment provides the greatest stability and performance and will be made available to participants once they have successfully completed testing in the test environment. Providing real data in the production environment provides PACT an opportunity to familiarize itself with the air carrier’s data and identify any compliance issues well in advance of the effective date.
+
+All participants are expected to be fully operational in the production environment ahead of April 1, 2025.
 
 ### PACT Testing Environment
 
@@ -690,7 +775,7 @@ Provide completed 7+1 to receive acknowledgement message:
 
 - Total weight of the cargo
 
-Provide the following flight manifest information (after the flight’s departure):
+Provide the following flight manifest (FFM) information (after the flight’s departure):
 
 - Date and departure time of the flight
 
@@ -710,9 +795,9 @@ Provide at least one of each of the following test messages:
 
 - Waybill with missing weight to test error message
 
-- Waybill with a commodity description from <u>Unacceptable Commodity Descriptions</u> to test error message
+  Waybill with a commodity description from <u>Unacceptable Commodity Descriptions</u> to test error message
 
-- Flight manifest with missing flight number to test error message
+  Flight manifest with missing flight number to test error message
 
 The participant will be notified by PACT if there were any issues that need to be resolved or if additional test data is required.
 
@@ -722,7 +807,7 @@ When using a two-way implementation to PACT, data submitters can test risk mitig
 
 - CLEAR SHIPMENT PLEASE
 
-- RFI SHIPMENT PLEASE
+  RFI SHIPMENT PLEASE
 
 - CLEAR SHIPMENT PLEASE
 
@@ -755,7 +840,7 @@ It is recommended to run CLEAR SHIPMENT PLEASE after each risk mitigation test c
 </thead>
 <tbody>
 <tr>
-<td>CLEAR SHIPMENT PLEASE</td>
+<th>CLEAR SHIPMENT PLEASE</th>
 <td>Test response from PACT to indicate that PACT has finished assessing the shipment</td>
 <td>PSN<br />
 000-12344321<br />
@@ -769,7 +854,7 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>RFI SHIPMENT PLEASE</td>
+<th>RFI SHIPMENT PLEASE</th>
 <td>Test RFI submission and response</td>
 <td>PSN<br />
 000-12344321<br />
@@ -783,7 +868,7 @@ CSN/7H/12JUN1421/PACT ---TESTING---REQUEST FOR INFORMATION HOLD---TESTING--</td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>CLEAR SHIPMENT PLEASE</td>
+<th>CLEAR SHIPMENT PLEASE</th>
 <td>Clear the test RFI hold status and return targeting status to normal</td>
 <td><p>PSN<br />
 000-12344321<br />
@@ -800,7 +885,7 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</p></td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>RFS SHIPMENT PLEASE</td>
+<th>RFS SHIPMENT PLEASE</th>
 <td>Test RFS submission and response</td>
 <td>PSN<br />
 000-12344321<br />
@@ -814,7 +899,7 @@ CSN/8H/12JUN1421/PACT ---TESTING---REQUEST FOR SCREENING HOLD---TESTING--</td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>CLEAR SHIPMENT PLEASE</td>
+<th>CLEAR SHIPMENT PLEASE</th>
 <td>Clear the test RFS hold status and return targeting status to normal</td>
 <td><p>PSN<br />
 000-12344321<br />
@@ -831,7 +916,7 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</p></td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>DNL SHIPMENT PLEASE</td>
+<th>DNL SHIPMENT PLEASE</th>
 <td>Test DNL submission and response</td>
 <td>PSN<br />
 000-12344321<br />
@@ -845,7 +930,7 @@ CSN/6H/12JUN1421/PACT ---TESTING---DO NOT LOAD HOLD---TESTING--</td>
 &lt;/BusinessHeaderDocument&gt;</td>
 </tr>
 <tr>
-<td>CLEAR SHIPMENT PLEASE</td>
+<th>CLEAR SHIPMENT PLEASE</th>
 <td>Clear the test DNL hold status and return targeting status to normal</td>
 <td><p>PSN<br />
 000-12344321<br />
@@ -869,7 +954,7 @@ CSN/SF/12JUN1421/PACT ---TESTING---ASSESSMENT COMPLETE---TESTING--</p></td>
 In an FWB message, test codes are added in the commodity description line.
 
 <figure>
-<img src="images/media/image2.png" style="width:3.17334in;height:3.61723in" />
+<img src="images/media/image2.png" style="width:3.15823in;height:3.6in" />
 <figcaption><p>Figure 1: Adding test codes to FWB messages</p></figcaption>
 </figure>
 
@@ -878,7 +963,7 @@ In an FWB message, test codes are added in the commodity description line.
 In a XFWB message, enter the test code between the first \<ram:identification\>\</ram:identification\> tags within the first \<IncludedMasterConsignmentitem\> tags. Delete any remaining \<ram:IncludedMasterConsignmentItem\> tags before submitting. If the XFWB message has multiple \<ram:identification\>\</ram:identification\> tags, no response will be sent.
 
 <figure>
-<img src="images/media/image3.png" style="width:4.1057in;height:4.38604in" />
+<img src="images/media/image3.png" style="width:4.0974in;height:4.37717in" />
 <figcaption><p>Figure 2: Adding test codes to XFWB messages</p></figcaption>
 </figure>
 
@@ -896,7 +981,7 @@ After a successful test of risk mitigation procedures, the participant will be a
 
 ###  PACT Production Environment
 
-After sufficient testing in the PACT test environment and approval from a PACT representative from Transport Canada, participants would move to the PACT production environment. It is expected that participants begin submitting to this environment by the fall of 2024 at the latest.
+After sufficient testing in the PACT test environment and approval from a PACT representative from Transport Canada, participants would move to the PACT production environment. All participants are expected to be fully operational in the production environment ahead of April 1, 2025.
 
 #### PACT Support During Outages
 
@@ -977,28 +1062,28 @@ The PACT system sends and receives messages using Cargo-XML and CAMIR/C-IMP mess
 </thead>
 <tbody>
 <tr>
-<td>XFFM</td>
+<th>XFFM</th>
 <td>FFM</td>
 <td></td>
 <td>Flight manifest information</td>
 <td>Air carriers/data submitters</td>
 </tr>
 <tr>
-<td>XFWB</td>
+<th>XFWB</th>
 <td>FWB</td>
 <td></td>
 <td>Master air waybill information</td>
 <td>Air carriers/data submitters/freight forwarders</td>
 </tr>
 <tr>
-<td>XFZB</td>
+<th>XFZB</th>
 <td>FHL</td>
 <td></td>
 <td>House waybill information</td>
 <td>Air carriers/data submitters/freight forwarders</td>
 </tr>
 <tr>
-<td>XFNM</td>
+<th>XFNM</th>
 <td></td>
 <td><p>PER (error)</p>
 <p>PSN (acknowledgement)</p></td>
@@ -1006,7 +1091,7 @@ The PACT system sends and receives messages using Cargo-XML and CAMIR/C-IMP mess
 <td>PACT</td>
 </tr>
 <tr>
-<td>XCSN</td>
+<th>XCSN</th>
 <td></td>
 <td>PSN</td>
 <td>Notification of an “assessment complete” or the opening or closing of a risk mitigation action (RFI, RFS, DNL)</td>
@@ -1014,8 +1099,6 @@ The PACT system sends and receives messages using Cargo-XML and CAMIR/C-IMP mess
 </tr>
 </tbody>
 </table>
-
-Table 3: Message Types Supported for PACT Data Submission and Responses
 
 ## Supported Versions for PACT Messages
 
@@ -1037,40 +1120,38 @@ The PACT system sends and receives Cargo-XML and CAMIR/C-IMP message formats bas
 </thead>
 <tbody>
 <tr>
-<td>XFFM</td>
+<th>XFFM</th>
 <td><ul>
 <li><p>Version 2.00</p></li>
 <li><p>Version 3.00</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>XFWB</td>
+<th>XFWB</th>
 <td><ul>
 <li><p>Version 3.00</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>XFZB</td>
+<th>XFZB</th>
 <td><ul>
 <li><p>Version 3.00</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>XCSN</td>
+<th>XCSN</th>
 <td><ul>
 <li><p>Version 1.00</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>XFNM</td>
+<th>XFNM</th>
 <td><ul>
 <li><p>Version 3.00</p></li>
 </ul></td>
 </tr>
 </tbody>
 </table>
-
-Table 4: Supported Cargo-XML Versions for PACT Submission
 
 ### Supported C-IMP Versions
 
@@ -1088,21 +1169,21 @@ Table 4: Supported Cargo-XML Versions for PACT Submission
 </thead>
 <tbody>
 <tr>
-<td>FFM</td>
+<th>FFM</th>
 <td><ul>
 <li><p>Version 7</p></li>
 <li><p>Version 8</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>FHL</td>
+<th>FHL</th>
 <td><ul>
 <li><p>Version 4</p></li>
 <li><p>Version 5</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>FWB</td>
+<th>FWB</th>
 <td><ul>
 <li><p>Version 16</p></li>
 <li><p>Version 17</p></li>
@@ -1110,8 +1191,6 @@ Table 4: Supported Cargo-XML Versions for PACT Submission
 </tr>
 </tbody>
 </table>
-
-Table 5: Supported C-IMP Versions in PACT
 
 **Note**: Each line in a C-IMP message cannot be longer than 69 characters. If a C-IMP message is longer than 1600 bytes, it must be split into two or more messages.
 
@@ -1131,15 +1210,13 @@ Table 5: Supported C-IMP Versions in PACT
 </thead>
 <tbody>
 <tr>
-<td>CAMIR</td>
+<th>CAMIR</th>
 <td><ul>
 <li><p>Version 1</p></li>
 </ul></td>
 </tr>
 </tbody>
 </table>
-
-Table 6: PACT Outbound Message Types and Versions
 
 ## Cargo-XML Message Responses
 
@@ -1165,147 +1242,147 @@ This message type sends error and acknowledgement responses from the PACT system
 </thead>
 <tbody>
 <tr>
-<td>Acknowledgement</td>
+<th>Acknowledgement</th>
 <td><p>Acknowledgement of received message without errors</p>
 <p><em>Note: Also used in response to FFM</em></p></td>
 <td><p>&lt;ram:ConditionCode&gt;Acknowledgement&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;No Errors&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_WBL_LINE</td>
+<th>MISSING_WBL_LINE</th>
 <td>Master waybill number missing</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_WBL_LINE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_HOUSE_BILL_NBR</td>
+<th>MISSING_HOUSE_BILL_NBR</th>
 <td>House waybill number missing</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_HOUSE_BILL_NBR&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_HOUSE_BILL_NBR</td>
+<th>INVALID_HOUSE_BILL_NBR</th>
 <td>House waybill number is not correct, or number is greater than 35 characters</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_HOUSE_BILL_NBR&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_ADDR</td>
+<th>MISSING_CNE_ADDR</th>
 <td>Missing consignee address</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CNE_ADDR&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_CTRY</td>
+<th>MISSING_CNE_CTRY</th>
 <td>Missing consignee country</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CNE_CTRY&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_NAME</td>
+<th>MISSING_CNE_NAME</th>
 <td>Missing consignee name</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CNE_NAME&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_WEIGHT</td>
+<th>MISSING_WEIGHT</th>
 <td>Missing package weight</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_WEIGHT&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_WEIGHT</td>
+<th>INVALID_WEIGHT</th>
 <td>Weight is not a number or could not be extracted</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_WEIGHT&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_BILL_QTY</td>
+<th>MISSING_BILL_QTY</th>
 <td>Waybill piece count is missing</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_BILL_QTY&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_BILL_QTY</td>
+<th>INVALID_BILL_QTY</th>
 <td>Waybill piece count is not a number or could not be extracted</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_BILL_QTY&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_ADDR</td>
+<th>MISSING_SHP_ADDR</th>
 <td>Missing shipper address</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_SHP_ADDR&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_CTRY</td>
+<th>MISSING_SHP_CTRY</th>
 <td>Missing shipper country</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_SHP_CTRY&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_NAME</td>
+<th>MISSING_SHP_NAME</th>
 <td>Missing shipper name</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_SHP_NAME&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_WT_UNITS</td>
+<th>MISSING_WT_UNITS</th>
 <td>Missing units of measurement for weights</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_WT_UNITS&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_MESSAGE_TYPE</td>
+<th>INVALID_MESSAGE_TYPE</th>
 <td>Can read message, but could not determine the type of message</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_MESSAGE_TYPE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>BAD_WBL_FORMAT</td>
+<th>BAD_WBL_FORMAT</th>
 <td><p>Could not read message</p>
 <p><em>Note: Also used in response to FFM</em></p></td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;BAD_WBL_FORMAT&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CSM_LINE</td>
+<th>MISSING_CSM_LINE</th>
 <td>Failed to extract consignment details</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CSM_LINE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_LINE</td>
+<th>MISSING_CNE_LINE</th>
 <td>Failed to extract consignee details</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CNE_LINE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_LINE</td>
+<th>MISSING_SHP_LINE</th>
 <td>Failed to extract shipper details</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_SHP_LINE&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CARGO_DESC</td>
+<th>MISSING_CARGO_DESC</th>
 <td>Missing cargo description</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CARGO_DESC&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_ROUTING</td>
+<th>INVALID_ROUTING</th>
 <td>Routing codes do not contain Canada or airport/city code in Canada.</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_ROUTING&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>INVALID_TIMING</td>
+<th>INVALID_TIMING</th>
 <td>This shipment has departed and is no longer in scope for PACT</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;INVALID_TIMING&lt;/ram:Reason&gt;</p></td>
 </tr>
 <tr>
-<td>MISSING_CONSOL_INDI</td>
+<th>MISSING_CONSOL_INDI</th>
 <td>This master air waybill looks like a consolidation (e.g. freight forwarder to freight forwarder and/or commodity description is “consolidation” or similar) but is missing the consolidation indicator.</td>
 <td><p>&lt;ram:ConditionCode&gt;Error&lt;/ram:ConditionCode&gt;</p>
 <p>&lt;ram:Reason&gt;MISSING_CONSOL_INDI&lt;/ram:Reason&gt;</p></td>
@@ -1313,16 +1390,14 @@ This message type sends error and acknowledgement responses from the PACT system
 </tbody>
 </table>
 
-Table 7: XFNM Message Responses
-
-XFNM Example—Response Message (Error)
+##### XFNM Example—Response Message (Error)
 
 <figure>
 <img src="images/media/image4.png" style="width:6.25972in;height:5.74306in" alt="A screenshot of a computer code showing an error response from PACT in C-XML format." />
 <figcaption><p>Figure 3: Cargo-XML Error Response</p></figcaption>
 </figure>
 
-XFNM Example—Response Message (Acknowledgement)
+##### XFNM Example—Response Message (Acknowledgement)
 
 <figure>
 <img src="images/media/image5.png" style="width:6.17795in;height:5.62579in" alt="A screenshot of a computer code showing C-XML acknowledgement response from PACT." />
@@ -1350,28 +1425,28 @@ The XCSN message type creates or updates a status notification message. This mes
 
 Table 8: Cargo-XML Response Codes
 
-XCSN Example—CSN Response (Assessment Complete)
+##### XCSN Example—CSN Response (Assessment Complete)
 
-<img src="images/media/image7.png" style="width:6.89213in;height:7.39962in" />
+<img src="images/media/image7.png" style="width:6.86793in;height:7.37364in" />
 
 <figure>
-<img src="images/media/image8.png" style="width:6.78147in;height:6.57156in" />
+<img src="images/media/image8.png" style="width:6.75629in;height:6.54717in" />
 <figcaption><p>Figure 6: Assessment Complete Message</p></figcaption>
 </figure>
 
-XCSN Example—CSN Response (RFI)
+##### XCSN Example—CSN Response (RFI)
 
-<img src="images/media/image9.jpeg" style="width:7.25in;height:7.40925in" />
+<img src="images/media/image9.jpg" style="width:7.25in;height:7.40925in" />
 
 <figure>
-<img src="images/media/image10.jpeg" style="width:7.29447in;height:6.375in" />
+<img src="images/media/image10.jpg" style="width:7.29447in;height:6.375in" />
 <figcaption><p>Figure 7: RFI Response Message</p></figcaption>
 </figure>
 
-XCSN Example – CSN Response (RFI from House Waybill)
+##### XCSN Example – CSN Response (RFI from House Waybill) 
 
 <figure>
-<img src="images/media/image11.png" style="width:5.69913in;height:7.85512in" />
+<img src="images/media/image11.png" style="width:5.69089in;height:7.84375in" />
 <figcaption><p>Figure 8: RFI Response Message (House)</p></figcaption>
 </figure>
 
@@ -1399,140 +1474,140 @@ This message type sends the following possible error responses from the PACT sys
 </thead>
 <tbody>
 <tr>
-<td>MISSING_WBL_LINE</td>
+<th>MISSING_WBL_LINE</th>
 <td>Master waybill number missing</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_WBL_LINE</p></td>
 </tr>
 <tr>
-<td>MISSING_HOUSE_BILL_NBR</td>
+<th>MISSING_HOUSE_BILL_NBR</th>
 <td>House waybill number missing</td>
 <td><p>PER</p>
 <p>007-54400194-HAW ERR/422/MISSING_HOUSE_BILL_NBR</p></td>
 </tr>
 <tr>
-<td>INVALID_HOUSE_BILL_NBR</td>
+<th>INVALID_HOUSE_BILL_NBR</th>
 <td>House waybill number is not correct, or number is greater than 35 characters</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_HOUSE_BILL_NBR</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_ADDR</td>
+<th>MISSING_CNE_ADDR</th>
 <td>Missing consignee address</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CNE_ADDR</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_CTRY</td>
+<th>MISSING_CNE_CTRY</th>
 <td>Missing consignee country</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CNE_CTRY</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_NAME</td>
+<th>MISSING_CNE_NAME</th>
 <td>Missing consignee name</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CNE_NAME</p></td>
 </tr>
 <tr>
-<td>MISSING_WEIGHT</td>
+<th>MISSING_WEIGHT</th>
 <td>Missing package weight</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_WEIGHT</p></td>
 </tr>
 <tr>
-<td>INVALID_WEIGHT</td>
+<th>INVALID_WEIGHT</th>
 <td>Weight is not a number or could not be extracted</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_WEIGHT</p></td>
 </tr>
 <tr>
-<td>MISSING_BILL_QTY</td>
+<th>MISSING_BILL_QTY</th>
 <td>Waybill piece count is missing</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_BILL_QTY</p></td>
 </tr>
 <tr>
-<td>INVALID_BILL_QTY</td>
+<th>INVALID_BILL_QTY</th>
 <td>Waybill piece count is not a number or could not be extracted</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_BILL_QTY</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_ADDR</td>
+<th>MISSING_SHP_ADDR</th>
 <td>Missing shipper address</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_SHP_ADDR</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_CTRY</td>
+<th>MISSING_SHP_CTRY</th>
 <td>Missing shipper country</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_SHP_CTRY</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_NAME</td>
+<th>MISSING_SHP_NAME</th>
 <td>Missing shipper name</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_SHP_NAME</p></td>
 </tr>
 <tr>
-<td>MISSING_WT_UNITS</td>
+<th>MISSING_WT_UNITS</th>
 <td>Missing units of measurement for weights</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_WT_UNITS</p></td>
 </tr>
 <tr>
-<td>INVALID_MESSAGE_TYPE</td>
+<th>INVALID_MESSAGE_TYPE</th>
 <td>Can read message, but could not determine the type of message</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/400/INVALID_MESSAGE_TYPE</p></td>
 </tr>
 <tr>
-<td>BAD_WBL_FORMAT</td>
+<th>BAD_WBL_FORMAT</th>
 <td><p>Could not read message</p>
 <p><em>Note: Also used in response to FFM</em></p></td>
 <td><p>PER</p>
 <p>ERR/400/BAD_WBL_FORMAT</p></td>
 </tr>
 <tr>
-<td>MISSING_CSM_LINE</td>
+<th>MISSING_CSM_LINE</th>
 <td>Failed to extract consignment details</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CSM_LINE</p></td>
 </tr>
 <tr>
-<td>MISSING_CNE_LINE</td>
+<th>MISSING_CNE_LINE</th>
 <td>Failed to extract consignee details</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CNE_LINE</p></td>
 </tr>
 <tr>
-<td>MISSING_SHP_LINE</td>
+<th>MISSING_SHP_LINE</th>
 <td>Failed to extract shipper details</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_SHP_LINE</p></td>
 </tr>
 <tr>
-<td>MISSING_CARGO_DESC</td>
+<th>MISSING_CARGO_DESC</th>
 <td>Missing cargo description</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/MISSING_CARGO_DESC</p></td>
 </tr>
 <tr>
-<td>INVALID_ROUTING</td>
+<th>INVALID_ROUTING</th>
 <td>Routing codes do not contain Canada or airport/city code in Canada.</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_ROUTING</p></td>
 </tr>
 <tr>
-<td>INVALID_TIMING</td>
+<th>INVALID_TIMING</th>
 <td>This shipment has departed and is no longer in scope for PACT.</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/INVALID_TIMING</p></td>
 </tr>
 <tr>
-<td>MISSING_CONSOL_INDI</td>
+<th>MISSING_CONSOL_INDI</th>
 <td>This master waybill looks like a consolidation (e.g. freight forwarder to freight forwarder and/or commodity description is “consolidation” or similar) but is missing the consolidation indicator</td>
 <td><p>PER</p>
 <p>007-12345678-HAW0123456 ERR/422/ MISSING_CONSOL_INDI</p></td>
@@ -1540,9 +1615,7 @@ This message type sends the following possible error responses from the PACT sys
 </tbody>
 </table>
 
-Table 9: CAMIR Error Messages
-
-PER Example—Response Message (Error)
+##### PER Example—Response Message (Error)
 
 <figure>
 <img src="images/media/image12.png" style="width:2.0625in;height:2.83333in" />
@@ -1569,83 +1642,83 @@ This message type sends the following possible responses in CAMIR format from th
 </thead>
 <tbody>
 <tr>
-<td>Message Received</td>
+<th>Message Received</th>
 <td>SR</td>
 <td><p>PSN</p>
 <p>007-12345678-ABC1022506</p>
 <p>CSN/SR/22NOV1902/NO ERRORS</p></td>
 </tr>
 <tr>
-<td>Message Received (FFM)</td>
+<th>Message Received (FFM)</th>
 <td>SR</td>
 <td><p>PSN</p>
 <p>CSN/SR/22NOV1902/NO ERRORS</p></td>
 </tr>
 <tr>
-<td>Assessment Complete</td>
+<th>Assessment Complete</th>
 <td>SF</td>
 <td><p>PSN</p>
 <p>007-12345678-ABC1022506</p>
 <p>CSN/SF/22NOV1902/ASSESSMENT COMPLETE</p></td>
 </tr>
 <tr>
-<td>RFI</td>
+<th>RFI</th>
 <td>7H</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/7H/22NOV1902/ PACT REQUEST FOR INFORMATION HOLD</p></td>
 </tr>
 <tr>
-<td>RFI In Place</td>
+<th>RFI In Place</th>
 <td>7J</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/7J/22NOV1902/PACT REQUEST FOR INFORMATION HOLD CURRENTLY IN PLACE</p></td>
 </tr>
 <tr>
-<td>RFI Resolved</td>
+<th>RFI Resolved</th>
 <td>7I</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/7I/22NOV1902/ PACT REQUEST FOR INFORMATION HOLD REMOVED</p></td>
 </tr>
 <tr>
-<td>RFS</td>
+<th>RFS</th>
 <td>8H</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/8H/22NOV1902/PACT REQUEST FOR SCREENING HOLD</p></td>
 </tr>
 <tr>
-<td>RFS In Place</td>
+<th>RFS In Place</th>
 <td>8J</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/8J/22NOV1902/PACT REQUEST FOR SCREENING HOLD CURRENTLY IN PLACE</p></td>
 </tr>
 <tr>
-<td>RFS Resolved</td>
+<th>RFS Resolved</th>
 <td>8I</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/8I/22NOV1902/ PACT REQUEST FOR SCREENING HOLD REMOVED</p></td>
 </tr>
 <tr>
-<td>DNL</td>
+<th>DNL</th>
 <td>6H</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/6H/22NOV1902/PACT DO NOT LOAD HOLD</p></td>
 </tr>
 <tr>
-<td>DNL In Place</td>
+<th>DNL In Place</th>
 <td>6J</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
 <p>CSN/6J/22NOV1902/PACT DO NOT LOAD HOLD CURRENTLY IN PLACE</p></td>
 </tr>
 <tr>
-<td>DNL Resolved</td>
+<th>DNL Resolved</th>
 <td>6I</td>
 <td><p>PSN</p>
 <p>007-12345678- ABC31022506</p>
@@ -1653,8 +1726,6 @@ This message type sends the following possible responses in CAMIR format from th
 </tr>
 </tbody>
 </table>
-
-Table 10: CAMIR Acknowledgement and Mitigation Responses
 
 ### HTTP Response Codes
 
@@ -1675,11 +1746,11 @@ Table 11: HTTP Response Codes
 
 The following sample messages provide examples of data submissions and expected responses in both Cargo-XML and CAMIR.
 
-### Cargo-XML Message Submission Example
+### Cargo-XML Message Submission Examples
 
 The following messages show examples of a master air waybill and acknowledgement response in Cargo-XML.
 
-Master Air Waybill Submission Example
+#### Master Air Waybill Submission Example
 
 <table>
 <colgroup>
@@ -1687,77 +1758,77 @@ Master Air Waybill Submission Example
 </colgroup>
 <thead>
 <tr>
-<th><img src="images/media/image13.png" style="width:5.7677in;height:7.0647in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 1." /></th>
+<th><img src="images/media/image13.png" style="width:5.76591in;height:7.0625in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 1." /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img src="images/media/image14.png" style="width:6.25972in;height:6.89861in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 2." /></td>
+<th><img src="images/media/image14.png" style="width:6.25972in;height:6.89861in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 2." /></th>
 </tr>
 <tr>
-<td><img src="images/media/image15.png" style="width:6.25972in;height:6.97986in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 3." /></td>
+<th><img src="images/media/image15.png" style="width:6.25972in;height:6.97986in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 3." /></th>
 </tr>
 <tr>
-<td><p><img src="images/media/image16.png" style="width:6.25972in;height:3.15833in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 4." /></p>
-<p>Figure 10: Cargo-XML Master Air Waybill Example</p></td>
+<th><p><img src="images/media/image16.png" style="width:6.25972in;height:3.15833in" alt="A screenshot of a computer code showing a submitted master air waybill in C-XML format-Part 4." /></p>
+<p>Figure 10: Cargo-XML Master Air Waybill Example</p></th>
 </tr>
 </tbody>
 </table>
 
-Response (Acknowledgement-No Errors)
+#### Response (Acknowledgement-No Errors)
 
 <figure>
-<img src="images/media/image17.png" style="width:5.43081in;height:4.05654in" alt="A screenshot of a computer code showing an application and error report response in C-XML format." />
+<img src="images/media/image17.png" style="width:5.40344in;height:4.03609in" alt="A screenshot of a computer code showing an application and error report response in C-XML format." />
 <figcaption><p>Figure 11: Cargo-XML Acknowledgement—No Errors Example</p></figcaption>
 </figure>
 
-Flight Manifest Example
+#### Flight Manifest (FFM) Example
 
-<img src="images/media/image18.jpeg" style="width:7.1041in;height:6.47917in" />
+<img src="images/media/image18.jpg" style="width:7.1041in;height:6.47917in" />
 
 <figure>
-<img src="images/media/image19.jpeg" style="width:6.90625in;height:1.222in" />
+<img src="images/media/image19.jpg" style="width:6.90625in;height:1.222in" />
 <figcaption><p>Figure 12: C-XML FFM Example</p></figcaption>
 </figure>
 
-### C-IMP Message Submission Example
+### C-IMP Message Submission Examples
 
 The following are examples of master and house waybills with acknowledgement and error responses in C-IMP and CAMIR. The final example contains flight manifest information in the FFM C-IMP message type.
 
-Master Waybill Submission Example
+#### Master Waybill Submission Example
 
 <figure>
 <img src="images/media/image20.png" style="width:3.77162in;height:6.15625in" alt="A screenshot of a computer code showing an submitted house waybill in C-IMP." />
 <figcaption><p>Figure 13: C-IMP Master Waybill Submission Example</p></figcaption>
 </figure>
 
-Acknowledgement Response Example
+#### Acknowledgement Response Example
 
 <figure>
 <img src="images/media/image21.png" style="width:2.33333in;height:0.71875in" alt="A screenshot of a computer code showing a PSN response in C-IMP format." />
-<figcaption><p>Figure 14: C-IMP Acknowledgement Response</p></figcaption>
+<figcaption><p>Figure 14: CAMIR Acknowledgement Response</p></figcaption>
 </figure>
 
 <figure>
-<img src="images/media/image22.png" style="width:2.43046in;height:1.05439in" />
-<figcaption><p>Figure 15: C-IMP Acknowledgement Response to FFM</p></figcaption>
+<img src="images/media/image22.png" style="width:2.42514in;height:1.05208in" />
+<figcaption><p>Figure 15: CAMIR Acknowledgement Response to FFM</p></figcaption>
 </figure>
 
-House Waybill Submission with Errors Example
+#### House Waybill Submission with Errors Example 
 
 <figure>
 <img src="images/media/image23.png" style="width:4.02083in;height:3.60417in" alt="A screenshot of a computer code showing a house waybill with errors submission in C-IMP format." />
 <figcaption><p>Figure 16: C-IMP House Waybill with Errors</p></figcaption>
 </figure>
 
-Error Response Example
+#### Error Response Example
 
 <figure>
 <img src="images/media/image24.png" style="width:2.09375in;height:0.72917in" alt="A screenshot of a computer code showing an error response in C-IMP format." />
-<figcaption><p>Figure 17: Error Response Example</p></figcaption>
+<figcaption><p>Figure 17: CAMIR Error Response Example</p></figcaption>
 </figure>
 
-Flight Manifest Example
+#### Flight Manifest (FFM) Example 
 
 <figure>
 <img src="images/media/image25.png" style="width:4.02083in;height:3.01042in" />
@@ -1766,7 +1837,7 @@ Flight Manifest Example
 
 # PACT Targeting Process Flow
 
-<img src="images/media/image28.jpeg" style="width:10.02246in;height:4.25in" />
+<img src="images/media/image28.jpg" style="width:10.02246in;height:4.25in" />
 
 # Glossary
 
@@ -1783,84 +1854,80 @@ Flight Manifest Example
 </thead>
 <tbody>
 <tr>
-<td>API</td>
+<th>API</th>
 <td>Application Programming Interface</td>
 </tr>
 <tr>
-<td>C-IMP</td>
+<th>C-IMP</th>
 <td>Cargo Interchange Message Procedures. A message protocol and standard created by IATA.</td>
 </tr>
 <tr>
-<td>Cargo-XML</td>
+<th>Cargo-XML</th>
 <td>XML standard created by IATA used in electronic communication.</td>
 </tr>
 <tr>
-<td>CAMIR</td>
+<th>CAMIR</th>
 <td>Customs Automated Manifest Interface Requirements. A PACT system response type (in response to C-IMP).</td>
 </tr>
 <tr>
-<td>CSN/XCSN</td>
+<th>CSN/XCSN</th>
 <td>Customs Status Notification response message type</td>
 </tr>
 <tr>
-<td>Data Submitter</td>
+<th>Data Submitter</th>
 <td>The entity submitting digital waybill information to PACT.</td>
 </tr>
 <tr>
-<td>DNL</td>
+<th>DNL</th>
 <td>Do Not Load</td>
 </tr>
 <tr>
-<td>FFM (C-IMP)<br />
-XFFM (Cargo-XML)</td>
+<th>FFM (C-IMP)<br />
+XFFM (Cargo-XML)</th>
 <td>Flight manifest message</td>
 </tr>
 <tr>
-<td>GSA/GHA</td>
+<th>GSA/GHA</th>
 <td>General Sales Agent/Ground Handling Agent</td>
 </tr>
 <tr>
-<td>HAWB, HAWB#</td>
+<th>HAWB, HAWB#</th>
 <td>House air waybill, house waybill number</td>
 </tr>
 <tr>
-<td>IATA</td>
+<th>IATA</th>
 <td>International Air Transport Association</td>
 </tr>
 <tr>
-<td>LPD</td>
+<th>LPD</th>
 <td>Last Point of Departure. The last stop in a routing before departing for Canada.</td>
 </tr>
 <tr>
-<td>MAWB, MAWB#</td>
+<th>MAWB, MAWB#</th>
 <td>Master air waybill, master waybill number</td>
 </tr>
 <tr>
-<td>PACT</td>
+<th>PACT</th>
 <td>Pre-load Air Cargo Targeting</td>
 </tr>
 <tr>
-<td>PACT Participant</td>
-<td>The regulated entity required to participate in PACT. This is always the air carrier operating the flight from the last point of departure before entering Canada.</td>
-</tr>
-<tr>
-<td>PER</td>
+<th>PER</th>
 <td>Preliminary Error Report. Error response from PACT in C-IMP format.</td>
 </tr>
 <tr>
-<td>PSN</td>
+<th>PSN</th>
 <td>Preliminary Status Notification. Acknowledgement response from PACT in C-IMP format.</td>
 </tr>
 <tr>
-<td>RFI</td>
+<th>RFI</th>
 <td>Request for Information</td>
 </tr>
 <tr>
-<td>RFS</td>
+<th>RFS</th>
 <td>Request for Screening</td>
 </tr>
 <tr>
-<td>XFNM</td>
+<th>XFNM</th>
 <td>Response message sent in Cargo-XML format.</td>
 </tr>
 </tbody>
@@ -1927,7 +1994,7 @@ The following list shows examples of commodity descriptions that do not contain 
 
 - Company names
 
-- Component
+  Component
 
 - Consumer
 
@@ -1987,7 +2054,7 @@ The following list shows examples of commodity descriptions that do not contain 
 
 - Personal effects
 
-- Pieces, pces
+  Pieces, pces
 
 - Pre-addressed parcel
 
@@ -1997,7 +2064,7 @@ The following list shows examples of commodity descriptions that do not contain 
 
 - Returned goods
 
-- Said to contain, STC
+  Said to contain, STC
 
 - Sample
 
@@ -2169,7 +2236,7 @@ To: 24/7 Contact
 
 CC: <RFIPACT-DDICFAPC@tc.gc.ca>
 
-The Do Not Load (DNL) notice has been cancelled. The cargo identified in this airwaybill (see subject line) is no longer prohibited from being transported on a flight to Canada.
+The Do Not Load (DNL) notice has been cancelled. The cargo identified in this air waybill (see subject line) is no longer prohibited from being transported on a flight to Canada.
 
 This DNL is closed.
 
