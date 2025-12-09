@@ -6,7 +6,7 @@ The Pre-load Air Cargo Targeting (PACT) Program aims to identify and apply mitig
 
 The PACT Implementation Guide contains information on how air carriers and third-party data submitters can connect and submit the required flight information to the PACT program for air cargo arriving in Canada. This guide is for technical teams who have been tasked with implementing a connection to PACT on the behalf of air carriers flying air cargo to Canada.
 
-[PACT Technical Implementation Guide.pdf](https://github.com/tc-ca/pact-cfapc/blob/main/PACT%20Technical%20Implementation%20Guide%20v1.9.pdf)
+[PACT Technical Implementation Guide](https://github.com/tc-ca/pact-cfapc/blob/main/PACT%20Technical%20Implementation%20Guide%20v1.9.pdf)
 
 
 # Qu’est-ce le programme de ciblage du fret aérien préalable au chargement? 
